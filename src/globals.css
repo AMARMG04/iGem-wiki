@@ -48,6 +48,10 @@ body {
 
 .scroll-section-outer {
   overflow: hidden;
+  /* background-image: url('https://static.igem.wiki/teams/4608/wiki/backgrounds/team-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; */
 }
 
 .scroll-section-inner {

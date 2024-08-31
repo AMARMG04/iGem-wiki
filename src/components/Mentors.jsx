@@ -24,13 +24,13 @@ const teachers = [
 function Mentors() {
   return (
 
-    <section className="mt-10">
+    <section className="mt-10" data-aos="zoom-out">
           
       <h1 className="text-[50px] font-semibold p-10">Principal Investigators</h1>
       {
       teachers.map((teacher,index) => (
-    <div className="mentor mb-16 flex">
-      <div className=" w-2/5 flex items-center justify-center">
+    <div className="mentor mb-16  lg:flex">
+      <div className=" w-2/5 flex  items-center justify-center ">
         <img src={MentorImg} className="w-80" alt="" />
       </div>
       
@@ -38,7 +38,7 @@ function Mentors() {
 
 <h1 className="text-[50px] mb-10">{teacher.name}</h1>
 <h3 className="font-medium mb-6">{teacher.position}</h3>
-<h4>{teacher.description}</h4>
+<h4 className="p-4 ">{teacher.description}</h4>
 </div>
 </div>
         ))
