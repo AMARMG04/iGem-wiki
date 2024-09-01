@@ -1,9 +1,24 @@
+/* .section {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.slide {
+  padding: 2rem;
+} */
 .section {
     text-align: center;
-    font-size: 3rem;
+  font-size: 3rem;
+    display: flex;
+    flex-direction: row; /* This enables horizontal layout for slides */
   }
   
   .slide {
+    width: 100vw; /* Ensures each slide takes up full screen width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2rem;
+
   }
   
