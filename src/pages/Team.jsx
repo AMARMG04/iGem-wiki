@@ -148,4 +148,3 @@ function ScrollSection() {
 }
 
 export default ScrollSection;
-
