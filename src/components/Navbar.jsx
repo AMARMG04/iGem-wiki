@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 // import logo from "../assets/logo.png"
 // import { navItems } from "./../constants"
@@ -37,11 +37,11 @@ const Navbar = () => {
                    Play a game
                   </a>
                 </div>
-                {/* <div className="lg:hidden md:flex flex-col justify-end">
+                <div className="lg:hidden md:flex flex-col justify-end">
                   <button onClick={toggleNavbar}>
                     {mobileDrawerOpen ? <X /> : <Menu />}
                   </button>
-                </div> */}
+                </div>
             </div>
             {mobileDrawerOpen && (
             <div  className = "fixed right-0 z-20 bg-blue-gray-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">

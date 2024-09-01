@@ -3,6 +3,7 @@ import Fullcalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import "./calender.css"
 
 function Calendar() {
   const [popoverInfo, setPopoverInfo] = useState({
@@ -59,6 +60,7 @@ function Calendar() {
 
   return (
     <div>
+        <div className="border-[1px] p-7 rounded-2xl shadow-md ">
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}
@@ -71,7 +73,7 @@ function Calendar() {
         events={events}
         eventClick={handleEventClick}
       />
-
+</div>
       {popoverInfo.visible && (
         <div
           className="absolute bg-white p-4 rounded-lg shadow-lg z-50"
