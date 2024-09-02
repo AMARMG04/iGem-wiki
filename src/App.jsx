@@ -1,8 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./index.css";
-import "./globals.css";
-import Team from "./pages/Team";
 import Protocol from "./components/Protocol"
 import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
