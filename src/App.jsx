@@ -12,7 +12,7 @@ import TeamMembers from "./pages/TeamMembers";
 
 function App() {
   return (
-    <div className="">
+    <div className="font-quick">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
