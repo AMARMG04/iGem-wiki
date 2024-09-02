@@ -1,30 +1,8 @@
 import React from 'react'
+import { contents } from '../data/table';
 
 const Parts = () => {
 
-  const contents = [
-    {
-      type: "Basic",
-      part: "BBa_J23104",
-      name: "AGM1",
-      description: "RBS based on Elowitz repressilator",
-      new: "existing",
-    },
-    {
-      type: "Basic",
-      part: "BBa_J23104",
-      name: "AGM1",
-      description: "RBS based on Elowitz repressilator",
-      new: "existing",
-    }, 
-    {
-      type: "Basic",
-      part: "BBa_J23104",
-      name: "AGM1",
-      description: "RBS based on Elowitz repressilator",
-      new: "existing",
-    },
-  ];
 
   return (
     <div className='m-11'>
@@ -39,9 +17,10 @@ const Parts = () => {
               {contents.map((item, index) => (
                 <li key={index} className='text-sm text-gray-700'>
                   <a href={`#$table1`} className='hover:text-blue-500'>
-                    {item.name}
+                    Parts Collection
                   </a>
                 </li>
+                
               ))}
             </ul>
           </div>
