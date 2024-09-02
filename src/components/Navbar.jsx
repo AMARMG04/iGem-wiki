@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
   console.log(navItems[1].href);
   return (
-    <nav className="sticky top-10 m-10 z-50 py-6 backdrop-blur-lg shadow-[0_5px_60px_-15px_rgba(0,0,0,0.3)] rounded-full border-gray-700/80">
+    <nav className="sticky top-10 mx-10 mt-10 z-50 py-6 backdrop-blur-lg shadow-[0_5px_60px_-15px_rgba(0,0,0,0.3)] rounded-full border-gray-700/80">
       <div className="container px-4 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
