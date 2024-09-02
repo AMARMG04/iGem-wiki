@@ -3,12 +3,12 @@ import Home from "./pages/Home";
 import "./index.css";
 import "./globals.css";
 import Team from "./pages/Team";
-import Team2 from "./pages/Team2";
 import Protocol from "./components/Protocol"
 import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
 import Parts from "./pages/Parts";
-// import Mentors from './components/Mentors'
+import Mentors from './pages/Mentors'
+import TeamMembers from "./pages/TeamMembers";
 
 function App() {
   return (
@@ -16,10 +16,9 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/team_members" element={<Team />} />
+        <Route path="/team_members" element={<TeamMembers />} />
+        <Route path="/mentors" element={<Mentors />} />
         <Route path="/notebook" element={<NoteBook />} />
-        <Route path="/team2" element={<Team2 />} />
-
         <Route path="/parts" element={<Parts />} />
         <Route path="/protocols" element={<Protocol />} />
 

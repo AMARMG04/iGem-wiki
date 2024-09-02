@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Hero from "../components/Hero";
-import Mentors from "../components/Mentors";
+import Mentors from "../pages/Mentors";
 import LinkedIn from "../assets/image.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
