@@ -7,7 +7,7 @@ import Team2 from "./pages/Team2";
 import Protocol from "./components/Protocol"
 import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
-import Protocol from "./components/Protocol";
+import Parts from "./pages/Parts";
 // import Mentors from './components/Mentors'
 
 function App() {
