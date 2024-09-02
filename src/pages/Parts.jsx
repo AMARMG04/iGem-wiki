@@ -5,13 +5,13 @@ const Parts = () => {
 
 
     return (
-        <div className='m-11'>
+        <div className='m-11 font-general'>
 
             <div className='grid grid-cols-3 gap-4 '>
 
                 {/* Table of Contents */}
                 <div className='col-span-1'>
-                    <div className='table-contents shadow-[0_5px_60px_-23px_rgba(0,0,0,0.3)]  p-4 rounded-lg  sticky top-44'>
+                    <div className='table-contents h-[700px] shadow-[0_5px_60px_-23px_rgba(0,0,0,0.3)]  p-4 rounded-lg  sticky top-44'>
                         <h2 className='text-[30px] font-bold mb-4'>Table of Contents</h2>
                         <ul className='space-y-2'>
                             {links.map((item, index) => (

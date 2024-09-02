@@ -13,3 +13,15 @@
         scrollbar-width: none;  /* Firefox */
   }
 }
+
+@font-face {
+    font-family: "Medium";
+    src: local("GeneralSansMedium"),
+    url("./src/fonts/GeneralSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Medium";
+    src: local("QuicksandMedium"),
+    url("./src/fonts/Quicksand-Medium.otf") format("opentype");
+}
