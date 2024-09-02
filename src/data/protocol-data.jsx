@@ -85,6 +85,15 @@ const protocols = [
               </tr>
             </tbody>
           </table>
+          <div className="mt-4">
+          <strong>Consumables:</strong>
+          <ul className="list-disc list-inside">
+            <li>Tris-EDTA (TE) Buffer</li>
+            <li>SDS</li>
+            <li>Proteinase K</li>
+            <li>Phenol:Chloroform:Isoamyl Alcohol</li>
+          </ul>
+        </div>
         </div>
       </div>
     ),
