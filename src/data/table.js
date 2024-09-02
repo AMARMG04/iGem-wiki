@@ -11,6 +11,7 @@ export const links = [
         label: "Composite Parts",
         href: "table3"
       },
+      
     
 ];
 
@@ -37,4 +38,39 @@ export const contents = [
       description: "RBS based on Elowitz repressilator",
       new: "existing",
     },
+    {
+        type: "Basic",
+        part: "BBa_J23104",
+        name: "AGM1",
+        description: "RBS based on Elowitz repressilator",
+        new: "existing",
+      },
+      {
+        type: "Basic",
+        part: "BBa_J23104",
+        name: "AGM1",
+        description: "RBS based on Elowitz repressilator",
+        new: "existing",
+      },
+      {
+        type: "Basic",
+        part: "BBa_J23104",
+        name: "AGM1",
+        description: "RBS based on Elowitz repressilator",
+        new: "existing",
+      },
+      {
+        type: "Basic",
+        part: "BBa_J23104",
+        name: "AGM1",
+        description: "RBS based on Elowitz repressilator",
+        new: "existing",
+      },
+      {
+        type: "Basic",
+        part: "BBa_J23104",
+        name: "AGM1",
+        description: "RBS based on Elowitz repressilator",
+        new: "existing",
+      },
   ];
