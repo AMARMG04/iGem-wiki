@@ -11,8 +11,6 @@ export const links = [
         label: "Composite Parts",
         href: "table3"
       },
-      
-    
 ];
 
 
