@@ -7,22 +7,19 @@ import Team2 from "./pages/Team2";
 
 import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
-import TeamMembers from "./pages/TeamMembers";
-import Parts from "./pages/Parts";
+import Protocol from "./components/Protocol";
 // import Mentors from './components/Mentors'
 
 function App() {
   return (
-    <div className="m-10 scroll-smooth">
+    <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/team_members" element={<TeamMembers />} />
+        <Route path="/team_members" element={<Team />} />
         <Route path="/notebook" element={<NoteBook />} />
         <Route path="/team2" element={<Team2 />} />
-        <Route path="/parts" element={<Parts />} />
-
-
+        <Route path ="/protocol" element={<Protocol/>} />
       </Routes>
       {/* <Mentors /> */}
     </div>
