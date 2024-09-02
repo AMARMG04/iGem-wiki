@@ -22,7 +22,6 @@ function App() {
         <Route path="/team2" element={<Team2 />} />
         <Route path="/parts" element={<Parts />} />
 
-
       </Routes>
       {/* <Mentors /> */}
     </div>
