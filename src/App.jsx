@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./index.css";
 import Protocol from "./components/Protocol"
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
 import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
@@ -11,8 +11,9 @@ import HumanPractices from "./components/HumanPractices";
 
 function App() {
   return (
-    <div className="font-quick">
-      <Navbar />
+    <div className="">
+      
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team_members" element={<TeamMembers />} />

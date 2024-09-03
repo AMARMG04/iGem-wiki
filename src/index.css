@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&display=swap');
+
 
 @layer utilities {
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -24,4 +26,10 @@
     font-family: "Medium";
     src: local("QuicksandMedium"),
     url("./src/fonts/Quicksand-Medium.otf") format("opentype");
+}
+
+.font-keania{
+    font-family: "Keania One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
