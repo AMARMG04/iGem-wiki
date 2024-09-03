@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
               href="#"
-              className="bg-gradient-to-r from-blue-500 to-blue-400  py-2 px-3 rounded-md text-white"
+              className="bg-gradient-to-r from-blue-500 to-blue-400  py-2 px-3 rounded-md text-black"
             >
               Play a game
             </a>

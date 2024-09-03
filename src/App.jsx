@@ -8,12 +8,13 @@ import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
 import HumanPractices from "./components/HumanPractices";
+import NewNavbar from "./components/NewNavbar";
 
 function App() {
   return (
     <div className="">
       
-      {/* <Navbar /> */}
+      <NewNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team_members" element={<TeamMembers />} />
