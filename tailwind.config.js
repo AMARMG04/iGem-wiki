@@ -6,9 +6,12 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily :{
-        general: ["Light","sans-serif"],
-        quick: ["Medium","sans-serif"]
+      colors: {
+        customCream: '#FFFAE9',
+      },
+      fontFamily: {
+        general: ["Light", "sans-serif"],
+        quick: ["Medium", "sans-serif"],
       },
     },
   },

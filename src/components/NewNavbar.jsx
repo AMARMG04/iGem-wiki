@@ -31,7 +31,7 @@ const NewNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
   return (
-    <nav className="sticky top-0 z-10  backdrop-blur-lg bg-white/60">
+    <nav className="sticky top-0 z-10  backdrop-blur-lg bg-black ">
         <div className="container px-4 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
                 <div className="flex items-center flex-shrink-0">
@@ -39,7 +39,7 @@ const NewNavbar = () => {
                 </div>
                 <ul className="hidden lg:flex  space-x-12 lg:gap-8 xl:gap-12">
                     {navItems.map((item, index) => (
-                     <li key={index} className='text-black'>
+                     <li key={index} className='text-white'>
                        <a href={navItems.href} className='text-[18px]'>{item.label}</a>
                      </li>
 

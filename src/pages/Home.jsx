@@ -27,11 +27,16 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-white h-screen relative">
+    //     <div className="bg-customCream '#FFFAE9',
+    //  h-screen relative">
+    <div
+      className="bg-black '#FFFAE9',
+ h-screen relative"
+    >
       {/* <NewNavbar /> */}
       <div className="text-black lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-[120px] font-keania">
+          <h1 className="text-center text-white text-[120px] font-keania">
             MICROPLASTICS
           </h1>
           <img
@@ -41,20 +46,38 @@ const Home = () => {
             className="lg:w-[500] xl:w-[650px] h-auto absolute top-[115px]"
           />
         </div>
-        <div className="absolute left-24 top-60 p-4 py-6 rounded-xl text-white bg-violet-800 border border-violet-100">
+
+        <div
+          className="absolute left-24 top-60 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white "
+          style={{
+            boxShadow:
+              "0px 0px 1175.5799560546875px 0 #680783, 0px 0px 671.760009765625px 0 #680783, 0px 0px 391.8599853515625px 0 #680783, 0px 0px 195.92999267578125px 0 #680783, 0px 0px 55.97999954223633px 0 #680783, 0px 0px 27.989999771118164px 0 #680783",
+          }}
+        >
           <h2 className="text-xl font-quick">PLASTIC MANUFACTURED</h2>
-          <p className="text-3xl text-center my-2">400 Million Tons</p>
+          <p className="text-3xl text-center my-2 font-keania">
+            400 Million Tons
+          </p>
           <p className="text-right text-3xl">/ year</p>
         </div>
-        <div className="absolute left-36 top-[450px] p-4 py-6 rounded-xl text-white bg-violet-800 border border-violet-100">
+
+        <div className="absolute left-36 top-[450px] p-4 py-6 rounded-xl text-white bg-violet-800 shadow-lg shadow-purple-800 ">
           <h2 className="text-xl font-quick">PLASTIC MANUFACTURED</h2>
-          <p className="text-3xl text-center my-2">400 Million Tons</p>
+          <p className="text-3xl text-center my-2 font-keania">
+            400 Million Tons
+          </p>
           <p className="text-right text-3xl">/ year</p>
         </div>
-        <div className="absolute right-24 top-[250px] p-4 py-6 h-80 rounded-xl text-white bg-violet-800 border border-violet-100">
-          <h2 className="text-xl font-quick">PLASTIC MANUFACTURED</h2>
-          <p className="text-3xl text-center my-2">400 Million Tons</p>
-          <p className="text-right text-3xl">/ year</p>
+        <div className="absolute right-24 top-[250px] p-4 w-[300px] py-6 h-auto rounded-xl text-white bg-violet-800 shadow-lg shadow-purple-800">
+          <h2 className="text-xl text-center font-quick">
+            DEPRICIATED MARINE ECOSYSTEM VALUE
+          </h2>
+          <p className="text-3xl text-center my-2 font-keania">$400 Million</p>
+          <p className="text-3xl text-center my-2 font-keania">To</p>
+          <p className="text-3xl text-center my-2 font-keania">$2500 Million</p>
+        </div>
+        <div className="absolute right-24 top-[550px] p-4 w-[300px] py-6 h-auto rounded-xl text-white bg-transparent border border-purple-700 shadow-md shadow-purple-800">
+          <h2 className="text-xl text-center font-quick">SCROLL DOWN</h2>
         </div>
       </div>
       {/* The next section to trigger the image movement */}
