@@ -7,6 +7,7 @@ import NoteBook from "./pages/NoteBook";
 import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
+import HumanPractices from "./components/HumanPractices";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
         <Route path="/notebook" element={<NoteBook />} />
         <Route path="/parts" element={<Parts />} />
         <Route path="/protocols" element={<Protocol />} />
-
+        <Route path="/hs" element={<HumanPractices />} />
       </Routes>
       {/* <Mentors /> */}
     </div>
