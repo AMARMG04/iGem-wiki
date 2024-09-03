@@ -50,7 +50,7 @@ const Protocol = () => {
         </ul>
       </div>
 
-      <div className="w-full md:w-3/4 p-4 overflow-y-auto protocol-content reveal">
+      <div className="w-full md:w-3/4 p-4 overflow-y-auto protocol-content reveal pb-20">
         {protocols.map((protocol, index) => (
           <div
             key={protocol.id}
