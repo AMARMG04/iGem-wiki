@@ -35,10 +35,10 @@ const Protocol = () => {
           {protocols.map((protocol, index) => (
             <li key={protocol.id}>
               <button
-                className={`flex items-center p-2 text-gray-700 w-full text-left transition-colors duration-300 ${
+                className={`flex items-center p-2 text-gray-700 w-full text-left transition-all duration-300 transform rounded-lg shadow-md ${
                   activeIndex === index
-                    ? 'bg-[#fb923c] text-white'
-                    : 'hover:bg-[#fb923c] hover:text-white'
+                    ? 'bg-[#fb923c] text-white shadow-orange-500/50 scale-105'
+                    : 'hover:bg-[#fb923c] hover:text-white hover:shadow-lg hover:shadow-orange-500/50 hover:scale-105'
                 }`}
                 onClick={() => toggleAccordion(index)}
               >
