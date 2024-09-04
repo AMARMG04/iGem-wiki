@@ -58,7 +58,9 @@
     url("./src/fonts/Nohemi-ExtraBold.ttf") format("truetype");
 }
 
-
+html{
+    height:max-content;
+}
 .font-keania{
     font-family: "Keania One", sans-serif;
   font-weight: 400;

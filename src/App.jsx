@@ -17,7 +17,7 @@ import Footer from "./components/Footer"
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="bg-black h-full">
       <CircleTrail/>
       <NewNavbar />
       <Routes>
