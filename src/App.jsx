@@ -9,11 +9,12 @@ import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
 import HumanPractices from "./components/HumanPractices";
 import NewNavbar from "./components/NewNavbar";
+import CircleTrail from "./components/CircleTrail";
 
 function App() {
   return (
     <div className="bg-black">
-      
+      <CircleTrail/>
       <NewNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
