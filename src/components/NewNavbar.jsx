@@ -40,13 +40,13 @@ const NewNavbar = () => {
                 <ul className="hidden lg:flex  space-x-12 lg:gap-8 xl:gap-12">
                     {navItems.map((item, index) => (
                      <li key={index} className='text-white'>
-                       <a href={navItems.href} className='text-[15px]'>{item.label}</a>
+                       <a href={navItems.href} className='text-[15px] font-nohemi_r'>{item.label}</a>
                      </li>
 
                     ))}
                 </ul>
                 <div className="hidden lg:flex justify-center space-x-12 items-center">
-                  <a href="#" className='text-white bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-3 rounded-md'>
+                  <a href="#" className='text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-3 rounded-md'>
                     Play A Game
                   </a>
                 </div>
