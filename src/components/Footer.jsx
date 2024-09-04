@@ -1,8 +1,10 @@
 import React from "react";
+import Marquee from "./Marquee"
 
 const Footer = () => {
   return (
-    <div className="text-white bg-[#081c21] w-full h-[700px] p-10">
+    <div className="text-white bg-hero-bg bg-center">
+      <div className="backdrop-blur-lg bg-black/20 w-full p-8">
       <div className="grid grid-cols-1 gap-40">
         <div className="flex justify-start items-center">
           <img src="/src/assets/logo.png" alt="logo" className="w-[400px]" />
@@ -38,13 +40,16 @@ const Footer = () => {
 
               <div className="flex flex-col gap-4">
                 <h1 className="font-nohemi_m text-2xl">Social Media</h1>
-                <div>
-                    <img src="" alt="" />
-                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <h1 className="text-center font-nohemi_m text-2xl my-4">Sponsers</h1>
+      <div className=" bg-white">
+        <Marquee></Marquee>
+
+      </div>
       </div>
     </div>
   );
