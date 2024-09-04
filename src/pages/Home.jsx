@@ -141,14 +141,14 @@ const Home = () => {
         </div>
 
 <div>
-  <section className="new-sec">
+  <section className="new-sec ">
 <div className="wave wave1"></div>
 <div className="wave wave2"></div>
 <div className="wave wave3"></div>
 <div className="wave wave4"></div>
 
   </section>
-  <div className="bg-white h-screen">
+  <div className="bg-white h-screen wdiv">
 
 </div>
 </div>
