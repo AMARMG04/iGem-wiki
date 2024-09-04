@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import fishImage from '../assets/fish.png'; // Import your fish image here
 import fishImage2 from '../assets/fish2.png';
+import Police from '../assets/police.png'
 
 gsap.registerPlugin(ScrollTrigger);
 AOS.init();
@@ -17,6 +18,8 @@ const Ocean = () => {
   const fish4Ref = useRef(null);
   const fish5Ref = useRef(null);
   const fish6Ref = useRef(null);
+
+  const policeRef = useRef(null);
 
   // Create an array of refs for the particle divs
   const particlesRefs = useRef([]);
@@ -31,6 +34,17 @@ const Ocean = () => {
       { ref: fish5Ref, start: 'top bottom', end: 'bottom top', xStart: '100%', xEnd: '-100%' },
       { ref: fish6Ref, start: 'top bottom', end: 'bottom top', xStart: '100%', xEnd: '-100%' },
     ];
+
+
+    gsap.to(policeRef.current, {
+      x: "100vw", // Moves the police image to the right as you scroll
+      scrollTrigger: {
+        trigger: policeRef.current,
+        start: "top 0%", // Animation starts when the top of the trigger hits the top of the viewport
+        end: "bottom 30%", // Animation ends when the bottom of the trigger hits the top of the viewport
+        scrub: 1, // Smooth scrolling effect
+      },
+    });
 
     fishAnimations.forEach(({ ref, start, end, xStart, xEnd }) => {
       gsap.fromTo(
@@ -55,12 +69,12 @@ const Ocean = () => {
           scrollTrigger: {
             trigger: particle,
             start: "top 50%", // Adjust start position based on view
-            end: "bottom 50%", // Adjust end position
+            end: "bottom 20%", // Adjust end position
             scrub: 80,
-             // To debug and see scroll points
+            // To debug and see scroll points
           },
-          
-          y: "150vh", // Moves particle down as you scroll
+
+          y: "190vh", // Moves particle down as you scroll
           ease: "power2.out",
         });
       }
@@ -124,50 +138,19 @@ const Ocean = () => {
 
       {/* Particle Elements */}
       <div className='particles'>
-      <div className='flex justify-between '>
-        <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
-        <div className='rounded-full bg-blue-600 w-[9px] h-[10px] mt-8' ref={addToRefs}></div>
-        <div className='rounded-full bg-green-600 w-[9px] h-[13px] mt-20' ref={addToRefs}></div>
-        <div className='rounded-full bg-red-600 w-[9px] h-[9px] mt-18' ref={addToRefs}></div>
-        <div className='rounded-full bg-yellow-600 w-[9px] h-[10px] mt-14' ref={addToRefs}></div>
-        <div className='rounded-full bg-green-600 w-[9px] h-[13px]' ref={addToRefs}></div>
-        <div className='rounded-full bg-pink-600 w-[9px] h-[10px] mt-10' ref={addToRefs}></div>
-        <div className='rounded-full bg-yellow-600 w-[9px] h-[12px]' ref={addToRefs}></div>
-        <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
-      </div>
-
-      {/* Content Sections */}
-      <div className='grid grid-rows-1'>
-        <div className='flex flex-col items-end justify-end pt-35'>
-          <div
-            data-aos='fade-left'
-            className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
-          >
-            <h1 className='text-[50px] font-nohemi_m my-7'>What is it?</h1>
-            <p className='font-nohemi_l'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
-              Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
-              maxime adipisci deserunt sit corporis voluptates!
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className='grid grid-rows-1'>
-        <div className='flex flex-col items-start justify-start pt-35'>
-          <div
-            data-aos='fade-left'
-            className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
-          >
-            <h1 className='text-[50px] font-nohemi_m my-7'>Why is it?</h1>
-            <p className='font-nohemi_l'>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
-              Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
-              maxime adipisci deserunt sit corporis voluptates!
-            </p>
-          </div>
+        <div className='flex justify-between '>
+          <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
+          <div className='rounded-full bg-blue-600 w-[9px] h-[10px] mt-8' ref={addToRefs}></div>
+          <div className='rounded-full bg-green-600 w-[9px] h-[13px] mt-20' ref={addToRefs}></div>
+          <div className='rounded-full bg-red-600 w-[9px] h-[9px] mt-18' ref={addToRefs}></div>
+          <div className='rounded-full bg-yellow-600 w-[9px] h-[10px] mt-14' ref={addToRefs}></div>
+          <div className='rounded-full bg-green-600 w-[9px] h-[13px]' ref={addToRefs}></div>
+          <div className='rounded-full bg-pink-600 w-[9px] h-[10px] mt-10' ref={addToRefs}></div>
+          <div className='rounded-full bg-yellow-600 w-[9px] h-[12px]' ref={addToRefs}></div>
+          <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
         </div>
 
+        {/* Content Sections */}
         <div className='grid grid-rows-1'>
           <div className='flex flex-col items-end justify-end pt-35'>
             <div
@@ -184,10 +167,49 @@ const Ocean = () => {
           </div>
         </div>
 
-
+        <div className='grid grid-rows-1'>
+          <div className='flex flex-col items-start justify-start pt-35'>
+            <div
+              data-aos='fade-left'
+              className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
+            >
+              <h1 className='text-[50px] font-nohemi_m my-7'>Why is it?</h1>
+              <p className='font-nohemi_l'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
+                Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
+                maxime adipisci deserunt sit corporis voluptates!
+              </p>
+            </div>
+          </div>
         </div>
 
+        <div className='grid grid-rows-1'  ref={policeRef}>
+          <div className='flex flex-col items-end justify-end pt-35' >
+            <div
+              data-aos='fade-left'
+              className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
+            >
+              <h1 className='text-[50px] font-nohemi_m my-7'>What is it?</h1>
+              <p className='font-nohemi_l'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
+                Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
+                maxime adipisci deserunt sit corporis voluptates!
+              </p>
+            </div>
+          </div>
+          <div className='items-start'>
+        <img src={Police} className='w-[400px]' alt="Police" />
       </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+      
     </div>
   );
 };

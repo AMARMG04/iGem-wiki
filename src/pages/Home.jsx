@@ -176,9 +176,13 @@ const Home = () => {
           </section>
           <div className="wdiv px-28">
             <Ocean />
+            
           </div>
         </div>
       </section>
+      {/* <div className="bg-white">
+        <video src=""></video>
+      </div> */}
     </div>
   );
 };
