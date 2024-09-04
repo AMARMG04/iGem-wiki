@@ -6,6 +6,8 @@ import World from "../assets/world.png";
 import { IoIosArrowDropdown } from "react-icons/io";
 import Plastic1 from "../assets/plastic1.png";
 import "../components/waves.css"
+import Ocean from "../components/Ocean";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,7 +45,7 @@ const Home = () => {
         pinSpacing: false,
       },
       x: "-30vw",
-      y: "60vw",
+      y: "70vw",
       ease: "power2.out",
     });
 
@@ -115,7 +117,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" items-center justify-center grid grid-cols-2">
+      <div className=" items-center justify-center h-auto grid grid-cols-2">
       {/* <img src={Plastic1} className="w-44" alt="" />  */}
       {/* The next section to trigger the image movement */}
       <div className="next-section flex items-center justify-center h-screen px-20  text-white col-span-1">
@@ -125,8 +127,8 @@ const Home = () => {
       </div> */}
         </div>
         <div className="w-[80%] ml-12 col-span-1">
-          <h2 className="text-[45px] text-white font-bold mb-4">WHAT ARE THEY?</h2>
-          <p className="text-lg text-white leading-relaxed mb-8">
+          <h2 className="text-[45px] text-white font-nohemi_sb mb-4">WHAT ARE THEY?</h2>
+          <p className="text-lg text-white leading-relaxed font-nohemi_r">
             Microplastics are small plastic particles less than 5mm in size, 
             which are pervasive in our environment. They come from a variety 
             of sources, including the breakdown of larger plastic debris, 
@@ -140,18 +142,18 @@ const Home = () => {
         </div>
         </div>
 
-<div>
-  <section className="new-sec ">
-<div className="wave wave1"></div>
-<div className="wave wave2"></div>
-<div className="wave wave3"></div>
-<div className="wave wave4"></div>
-
+        <div class="container2">
+  <section className="new-sec">
+    <div className="wave wave1"></div>
+    <div className="wave wave2"></div>
+    <div className="wave wave3"></div>
+    <div className="wave wave4"></div>
   </section>
-  <div className="bg-white h-screen wdiv">
+  <div className="wdiv  px-28">
+    <Ocean />
+  </div>
+</div>
 
-</div>
-</div>
 
     </div>
   );

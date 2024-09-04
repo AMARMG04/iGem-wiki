@@ -1,23 +1,37 @@
-.new-sec {
-    position: relative;
-    margin-top: 100px;
-    width: 100%;
-    height: 15vh;
-    overflow: hidden;
-    background-color: black;
+/* Reset default margin/padding for the body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure body and html take full height */
 }
 
+/* Container to hold both sections */
+.container2 {
+    display: flex;
+    flex-direction: column;
+     /* Full viewport height */
+}
+
+/* Styles for the .new-sec section */
+.new-sec {
+    position: relative;
+    width: 100%;
+    height: 15vh; 
+    overflow: hidden;
+}
+
+/* Styles for the waves */
 .wave {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
+    height: 100vh;
     background-size: 1000px 100px;
 }
 
 .wave1 {
-    background: url(../assets/wave.png);
+    background: url(../assets/wave2.png);
     animation: animate 30s linear infinite;
     z-index: 1000;
     opacity: 1;
@@ -25,15 +39,16 @@
 }
 
 .wave2 {
-    background: url(../assets/wave.png);
+    background: url(../assets/wave2.png);
     animation: animate2 15s linear infinite;
     z-index: 999;
     opacity: 0.5;
     animation-delay: -5s;
     bottom: 10px;
 }
-.wave3{
-    background: url(../assets/wave.png);
+
+.wave3 {
+    background: url(../assets/wave2.png);
     animation: animate 15s linear infinite;
     z-index: 998;
     opacity: 0.2;
@@ -57,4 +72,10 @@
     100% {
         background-position-x: -1000px;
     }
+}
+
+/* Styles for the .wdiv section */
+.wdiv {
+    flex:3; /* Allow this div to grow and fill remaining space */
+    background-color: #183E8F;
 }
