@@ -12,7 +12,7 @@ import NewNavbar from "./components/NewNavbar";
 
 function App() {
   return (
-    <div className="bg-black">
+    <div className="">
       
       <NewNavbar />
       <Routes>
