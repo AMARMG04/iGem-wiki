@@ -39,13 +39,13 @@ const HumanPractices = () => {
         </section>
 
        
-        <section id="expert-consultations" className="mb-12">
+        {/* <section id="expert-consultations" className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-800">Expert Consultations</h2>
           <p className="mt-4 text-gray-600">
             Provide a summary of the consultations with various experts that guided the project adjustments, especially in terms of ethics, sustainability, and societal impact.
           </p>
          
-        </section>
+        </section> */}
 
         {/* Ethical Considerations */}
         <section id="ethical-considerations" className="mb-12">
