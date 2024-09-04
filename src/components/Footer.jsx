@@ -3,7 +3,7 @@ import Marquee from "./Marquee"
 
 const Footer = () => {
   return (
-    <div className="text-white bg-hero-bg ">
+    <div className="text-white bg-hero-bg bg-cover bg-center">
       <div className="backdrop-blur-lg bg-black/40 w-full p-8">
       <div className="grid grid-cols-1 gap-40">
         <div className="flex justify-start items-center">
