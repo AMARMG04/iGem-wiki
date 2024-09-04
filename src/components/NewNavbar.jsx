@@ -31,16 +31,16 @@ const NewNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
   return (
-    <nav className="sticky top-0 z-10  backdrop-blur-lg bg-black ">
-        <div className="container px-4 mx-auto relative text-sm">
+    <nav className="sticky top-0 z-40  backdrop-blur-lg">
+        <div className="container px-9 mx-auto relative text-sm">
             <div className="flex justify-between items-center">
                 <div className="flex items-center flex-shrink-0">
-                    <img className='w-32 mr-2' src={logo} alt="" />
+                    <img className='lg:w-[95px] mr-2' src={logo} alt="" />
                 </div>
                 <ul className="hidden lg:flex  space-x-12 lg:gap-8 xl:gap-12">
                     {navItems.map((item, index) => (
                      <li key={index} className='text-white'>
-                       <a href={navItems.href} className='text-[18px]'>{item.label}</a>
+                       <a href={navItems.href} className='text-[15px]'>{item.label}</a>
                      </li>
 
                     ))}
