@@ -9,7 +9,11 @@ import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
 import HumanPractices from "./components/HumanPractices";
 import NewNavbar from "./components/NewNavbar";
+
 import CircleTrail from "./components/CircleTrail";
+
+import Footer from "./components/Footer"
+
 
 function App() {
   return (
@@ -25,6 +29,7 @@ function App() {
         <Route path="/protocols" element={<Protocol />} />
         <Route path="/hs" element={<HumanPractices />} />
       </Routes>
+      <Footer />
       {/* <Mentors /> */}
     </div>
   );

@@ -17,16 +17,47 @@
 }
 
 @font-face {
-    font-family: "Medium";
-    src: local("GeneralSansMedium"),
-    url("./src/fonts/GeneralSans-Medium.otf") format("opentype");
+    font-family: "Thin";
+    src: local("NohemiThin"),
+    url("./src/fonts/Nohemi-Thin.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Light";
+    src: local("NohemiLight"),
+    url("./src/fonts/Nohemi-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Regular";
+    src: local("NohemiRegular"),
+    url("./src/fonts/Nohemi-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "Medium";
-    src: local("QuicksandMedium"),
-    url("./src/fonts/Quicksand-Medium.otf") format("opentype");
+    src: local("NohemiMedium"),
+    url("./src/fonts/Nohemi-Medium.ttf") format("truetype");
 }
+
+@font-face {
+    font-family: "SemiBold";
+    src: local("NohemiSemiBold"),
+    url("./src/fonts/Nohemi-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Bold";
+    src: local("NohemiBold"),
+    url("./src/fonts/Nohemi-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ExtraBold";
+    src: local("NohemiExtraBold"),
+    url("./src/fonts/Nohemi-ExtraBold.ttf") format("truetype");
+}
+
 
 .font-keania{
     font-family: "Keania One", sans-serif;
