@@ -1,6 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaDraftingCompass, FaHammer, FaFlask, FaBook } from 'react-icons/fa';
 import CardSection from './CardSection';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const icons = [
   { id: 'design', icon: <FaDraftingCompass className="text-4xl" />, bgColor: 'bg-blue-100', color: 'text-blue-500' },
@@ -20,6 +25,7 @@ const Cycle = () => {
   const [selectedContent, setSelectedContent] = useState('design');
   const [rotation, setRotation] = useState(90); // Start with 90 degrees so 'design' is on the right
   const selectedIndex = icons.findIndex((icon) => icon.id === selectedContent);
+  const cycleRef = useRef(null);
 
   const handleSelect = (id, index) => {
     setSelectedContent(id);
@@ -27,8 +33,26 @@ const Cycle = () => {
   };
 
   useEffect(() => {
-    setRotation(90 - 90 * selectedIndex);
-  }, [selectedIndex]);
+    // GSAP rotation animation
+    gsap.to(cycleRef.current, { rotation: rotation, duration: 1.5, ease: 'power2.out' });
+
+    // GSAP scroll effect
+    gsap.fromTo(
+      cycleRef.current,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: cycleRef.current,
+          start: 'top 80%', // Trigger animation when the top of the element is 80% from the top of the viewport
+          end: 'top 30%', // End the animation when the top of the element is 30% from the top of the viewport
+          scrub: true, // Smooth scroll effect
+        },
+      }
+    );
+  }, [selectedIndex, rotation]);
 
   return (
     <>
@@ -45,7 +69,8 @@ const Cycle = () => {
             </div>
 
             <div
-              className="absolute inset-0 flex items-center justify-center transform transition-transform duration-[1500ms] ease-in-out"
+              ref={cycleRef}
+              className="absolute inset-0 flex items-center justify-center"
               style={{ transform: `rotate(${rotation}deg)` }}
             >
               {icons.map((item, index) => (
