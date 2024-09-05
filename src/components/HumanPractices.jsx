@@ -53,18 +53,23 @@ const styles = {
     zIndex: '1',
   },
   parallaxH2: {
-    fontFamily: `'Nohemi', sans-serif`,
     fontSize: '70px',
     letterSpacing: '10px',
     textAlign: 'center',
     color: 'white',
     fontWeight: '400',
     textTransform: 'uppercase',
-    opacity: '0.9',
-    textShadow: '3px 3px 6px rgba(0, 0, 0, 0.5)', // Added text shadow
+    opacity: '2',
+    textShadow: '4px 4px 8px rgba(0, 0, 0, 0.7)', // Increased shadow size and opacity for a darker effect
     position: 'relative',
     zIndex: '2',
+    '&:hover': {
+      backgroundColor: 'rgba(0, 0, 0, 0.5)', // Add a dark gray background color with 50% opacity
+      backdropFilter: 'blur(5px)', // Add a blur effect to the background
+      transition: 'background-color 0.3s ease-in-out', // Add a transition effect to the background color
+    },
   },
+  
   block: {
     backgroundColor: 'white',
     padding: '60px',
@@ -106,6 +111,7 @@ const cards = [
 
 const HumanPractices = () => {
   return (
+    
     <div style={styles.container}>
     
       <section style={styles.titleSection}>
