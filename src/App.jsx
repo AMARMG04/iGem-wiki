@@ -14,7 +14,7 @@ import CircleTrail from "./components/CircleTrail";
 
 import Footer from "./components/Footer"
 import Cycle from "./components/Cycle";
-import TextGSAP from "./components/Text/TextGSAP";
+
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
         <Route path="/protocols" element={<Protocol />} />
         <Route path="/hs" element={<HumanPractices />} />
         <Route path="/cycle" element={<Cycle />} />
-        <Route path="/text" element={<TextGSAP />} />
+
       </Routes>
       <Footer />
       {/* <Mentors /> */}
