@@ -20,9 +20,9 @@ const Ocean = () => {
   const fish6Ref = useRef(null);
 
   const policeRef = useRef(null);
-
-  // Create an array of refs for the particle divs
   const particlesRefs = useRef([]);
+  // Create an array of refs for the particle divs
+  
 
   useEffect(() => {
     // Fish animations
