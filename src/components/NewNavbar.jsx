@@ -37,7 +37,7 @@ const NewNavbar = () => {
     {
       label: 'Parts',
       pages: [
-        { name: "Overview", link: "/overview" },
+        { name: "Overview", link: "/parts" },
       ]
     },
     {

@@ -17,6 +17,13 @@
 }
 
 @font-face {
+    font-family: "variable";
+    src: local("InterTight"),
+    url("./src/fonts/InterTight.ttf") format("truetype");
+}
+
+
+@font-face {
     font-family: "Thin";
     src: local("NohemiThin"),
     url("./src/fonts/Nohemi-Thin.ttf") format("truetype");

@@ -28,6 +28,7 @@ export default {
         nohemi_sb: ["SemiBold", "sans-serif"],
         nohemi_b: ["Bold", "sans-serif"],
         nohemi_eb: ["ExtraBold", "sans-serif"],
+        inter: ["variable", "sans-serif"]
       },
       backgroundImage:{
         'hero-bg': "url('./src/assets/footer-bg2.jpg')"

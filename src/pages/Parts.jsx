@@ -1,24 +1,38 @@
-import React from "react";
+import React, {useState} from "react";
 import { contents, links } from "../data/table";
 import Banner from "../components/Banner"
 
 const Parts = () => {
+  const [activeLink, setActiveLink] = useState("");
+
+  const handleScroll = (id) => {
+    setActiveLink(id);
+    const target = document.getElementById(id);
+    if (target) {
+      // Scroll with offset for the sticky navbar
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 200; // Adjust offset
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Banner title="Parts Overview" />
-      <div className="p-11 font-general bg-customCream">
+      <div className="p-10 mx-auto max-w-[1350px] font-general bg-white">
         <div className="grid grid-cols-3 gap-4 ">
           {/* Table of Contents */}
           <div className="col-span-1">
-            <div className="table-contents h-[700px] shadow-[0_5px_60px_-23px_rgba(0,0,0,0.3)]  p-4 rounded-lg  sticky top-44">
-              <h2 className="text-[30px] font-bold mb-4">Table of Contents</h2>
-              <ul className="space-y-2">
+            <div className="table-contents h-[700px] p-4 rounded-lg  sticky top-44">
+              <h2 className="text-[30px] font-nohemi_m mb-4">Table of Contents</h2>
+              <ul className="flex flex-col gap-6">
                 {links.map((item, index) => (
                   <li
                     key={index}
-                    className="text-[20px] text-black font-medium"
+                    className={`text-[20px] font-nohemi_r font-medium cursor-pointer ${
+                      activeLink === item.href ? "text-blue-500 border-l-2 border-blue-500 pl-5" : " border-l-2 border-gray-500 text-black pl-5"
+                    }`}
                   >
-                    <a href={`#${item.href}`} className="hover:text-blue-500">
+                    <a onClick={() => handleScroll(item.href)} className="hover:text-blue-500">
                       {item.label}
                     </a>
                   </li>
@@ -28,14 +42,14 @@ const Parts = () => {
           </div>
 
           {/* Table */}
-          <div className="col-span-2 shadow-[0_5px_60px_-23px_rgba(0,0,0,0.3)] border p-6 rounded-lg">
+          <div className="col-span-2 shadow-[0_5px_60px_-35px_rgba(0,0,0,0.3)] border p-10 rounded-sm">
             <div className="mb-10  flex flex-col" id="table1">
               <div>
-                <h1 className="my-2 font-bold text-[35px]">Parts Collection</h1>
+                <h1 className="my-2 font-nohemi_m text-[35px]">Parts Collection</h1>
               </div>
 
               <div>
-                <h2>
+                <h2 className="font-inter font-regular">
                   Vilnius-Lithuania iGEM 2023 team's goal is to employ synthetic
                   biology tools to modify naturally produced Komagataeibacter
                   xylinus bacterial cellulose polymer composition. Firstly, we
@@ -61,7 +75,7 @@ const Parts = () => {
                   various combinations of biopolymer and bacterial cellulose
                   composites.
                 </h2>
-                <ol className="mt-3 list-disc ml-5">
+                <ol className="mt-3 list-disc ml-5 font-inter font-regular">
                   <li>
                     {" "}
                     <a href="" className="text-orange-800">
@@ -143,55 +157,55 @@ const Parts = () => {
 
             <div className=" mb-10 flex flex-col" id="table2">
               <div>
-                <h1 className="my-2 font-bold text-[35px]">Basic Parts</h1>
+                <h1 className="my-2 font-nohemi_m text-[35px]">Basic Parts</h1>
               </div>
 
               <div className="-m-1.5 overflow-x-auto">
                 <div className="p-1.5 min-w-full inline-block align-middle">
                   <div className="border rounded-lg shadow overflow-hidden">
                     <table className="min-w-full divide-y divide-gray-200">
-                      <thead>
+                      <thead className="font-nohemi_m">
                         <tr className="divide-x divide-gray-200">
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Type
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Part Number
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Description
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             New/existing
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-gray-200">
+                      <tbody className="divide-y divide-gray-200 font-inter font-regular">
                         {contents.map((item) => (
                           <tr
                             key={item.part}
                             id={item.part}
                             className="divide-x"
                           >
-                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                               {item.type}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
@@ -217,54 +231,54 @@ const Parts = () => {
 
             <div className=" mb-10 flex flex-col" id="table3">
               <div>
-                <h1 className="my-2 font-bold text-[35px]">Composite Parts</h1>
+                <h1 className="my-2 font-nohemi_m text-[35px]">Composite Parts</h1>
               </div>
               <div className="-m-1.5 overflow-x-auto">
                 <div className="p-1.5 min-w-full inline-block align-middle">
                   <div className="border rounded-lg shadow overflow-hidden">
                     <table className="min-w-full divide-y divide-gray-200">
-                      <thead>
+                      <thead className="font-nohemi_m">
                         <tr className="divide-x divide-gray-200">
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Type
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Part Number
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             Description
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black font-bold uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
                             New/existing
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="divide-y divide-gray-200">
+                      <tbody className="divide-y divide-gray-200 font-regular font-inter">
                         {contents.map((item) => (
                           <tr
                             key={item.part}
                             id={item.part}
                             className="divide-x"
                           >
-                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                               {item.type}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
