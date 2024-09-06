@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 import protocols from '../data/protocol-data.jsx';
+import Banner from './Banner.jsx';
 
 const Protocol = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -27,9 +28,11 @@ const Protocol = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
+    <>
+    <Banner title="Protocols" />
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100  rounded-md m-5">
       
-      <div className="protocol-index w-full md:w-1/4 bg-gray-200 p-4 md:h-screen md:sticky md:top-0 reveal">
+      <div className="protocol-index w-full md:w-1/4 bg-gray-200 p-4 md:h-screen md:sticky md:top-0 revea">
         <h2 className="text-xl font-semibold text-gray-800 mb-4">Protocol Index</h2>
         <ul className="space-y-2">
           {protocols.map((protocol, index) => (
@@ -65,6 +68,7 @@ const Protocol = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 

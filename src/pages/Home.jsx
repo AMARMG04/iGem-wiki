@@ -58,76 +58,77 @@ body {
     opacity:0.1;
 }
 
-.ray1 {    
-    height:170px;
-    width:30px;
-   -webkit-transform: rotate(180deg);
-    top:-175px;
+.ray1 {
+    height: 100px; /* Increased height */
+    width: 30px;
+    -webkit-transform: rotate(180deg);
+    top: -200px; /* Adjusted position */
     left: 15px;
 }
 .ray2 {
-    height:100px;
-    width:8px;
-   -webkit-transform: rotate(220deg);
-    top:-90px;
+    height: 130px; /* Increased height */
+    width: 8px;
+    -webkit-transform: rotate(220deg);
+    top: -120px; /* Adjusted position */
     left: 75px;
 }
 .ray3 {
-    height:170px;
-    width:50px;
-   -webkit-transform: rotate(250deg);
-    top:-80px;
+    height: 200px; /* Increased height */
+    width: 50px;
+    -webkit-transform: rotate(250deg);
+    top: -110px; /* Adjusted position */
     left: 100px;
 }
 .ray4 {
-    height:120px;
-    width:14px;
-   -webkit-transform: rotate(305deg);
-    top:30px;
+    height: 150px; /* Increased height */
+    width: 14px;
+    -webkit-transform: rotate(305deg);
+    top: 20px; /* Adjusted position */
     left: 100px;
 }
 .ray5 {
-    height:140px;
-    width:30px;
-   -webkit-transform: rotate(-15deg);
-    top:60px;
+    height: 170px; /* Increased height */
+    width: 30px;
+    -webkit-transform: rotate(-15deg);
+    top: 50px; /* Adjusted position */
     left: 40px;
 }
 .ray6 {
-    height:90px;
-    width:50px;
-   -webkit-transform: rotate(30deg);
-    top:60px;
+    height: 120px; /* Increased height */
+    width: 50px;
+    -webkit-transform: rotate(30deg);
+    top: 50px; /* Adjusted position */
     left: -40px;
 }
 .ray7 {
-    height:180px;
-    width:10px;
-   -webkit-transform: rotate(70deg);
-    top:-35px;
+    height: 210px; /* Increased height */
+    width: 10px;
+    -webkit-transform: rotate(70deg);
+    top: -60px; /* Adjusted position */
     left: -40px;
 }
 .ray8 {
-    height:120px;
-    width:30px;
-   -webkit-transform: rotate(100deg);
-    top:-45px;
-    left:-90px;
+    height: 150px; /* Increased height */
+    width: 30px;
+    -webkit-transform: rotate(100deg);
+    top: -70px; /* Adjusted position */
+    left: -90px;
 }
 .ray9 {
-    height:80px;
-    width:10px;
-   -webkit-transform: rotate(120deg);
-    top:-65px;
-    left:-60px;
-}
-.ray10 {
-    height:190px;
-    width:23px;
-   -webkit-transform: rotate(150deg);
-    top:-185px;
+    height: 110px; /* Increased height */
+    width: 10px;
+    -webkit-transform: rotate(120deg);
+    top: -90px; /* Adjusted position */
     left: -60px;
 }
+.ray10 {
+    height: 220px; /* Increased height */
+    width: 23px;
+    -webkit-transform: rotate(150deg);
+    top: -215px; /* Adjusted position */
+    left: -60px;
+}
+
 
 
 @-webkit-keyframes ray_anim { 
@@ -152,6 +153,7 @@ body {
   const worldRef = useRef(null);
   const plasticsRef = useRef([]);
   const lenisRef = useRef(null);
+  
 
   useEffect(() => {
     const worldElement = worldRef.current;
@@ -192,14 +194,14 @@ body {
     plasticsRef.current.forEach((plastic) => {
       gsap.to(plastic, {
         scrollTrigger: {
-          trigger: ".container2", // Ocean component's parent container
+          trigger: ".reach", // Ocean component's parent container
           start: "top bottom",
           end: "top top",
           scrub: true,
         },
         y: "50vh", // Adjust the y value to move plastics down
         ease: "power2.out",
-        opacity: 1,
+        opacity: 0,
       });
     });
 
@@ -209,7 +211,7 @@ body {
   }, []);
 
   return (
-    <div className="bg-black h-fit relative xl:mt-4">
+    <div className="bg-black h-fit  xl:mt-4">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-white font-bold text-[100px] font-keania">
@@ -294,9 +296,9 @@ body {
         <div className="items-center justify-center h-auto grid grid-cols-2">
           <div className="next-section flex items-center justify-center h-screen px-20 text-white col-span-1">
           </div>
-          <div className="w-[80%]  col-span-1">
+          <div className="w-[80%] reach col-span-1">
             <style>{glowStyle}</style>
-<div className="rounded-full w-[170px] h-[170px] absolute top-12 right-32 bg-white glow">
+<div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
 <div class="sun">
     <div class="ray_box">
         <div class="ray ray1"></div>

@@ -21,6 +21,8 @@ const Ocean = () => {
 
   const policeRef = useRef(null);
   const particlesRefs = useRef([]);
+
+  
   // Create an array of refs for the particle divs
   
 

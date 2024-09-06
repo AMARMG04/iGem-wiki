@@ -20,7 +20,7 @@ import NewHome from "./pages/NewHome";
 
 function App() {
   return (
-    <div className=" h-full bg-white">
+    <div className=" h-full bg-black">
       <CircleTrail/>
       <NewNavbar />
       <Routes>
