@@ -5,8 +5,8 @@ import Banner from "../components/Banner"
 const Parts = () => {
   return (
     <>
-      <Banner></Banner>
-      <div className="m-11 font-general">
+      <Banner title="Parts Overview" />
+      <div className="p-11 font-general bg-customCream">
         <div className="grid grid-cols-3 gap-4 ">
           {/* Table of Contents */}
           <div className="col-span-1">

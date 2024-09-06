@@ -60,7 +60,7 @@ function Calendar() {
 
   return (
     <div>
-        <div className="border-[1px] p-7 rounded-2xl shadow-md ">
+        <div className="border-[3px] border-black p-7 rounded-2xl shadow-md ">
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}

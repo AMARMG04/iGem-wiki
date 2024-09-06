@@ -14,15 +14,18 @@ import CircleTrail from "./components/CircleTrail";
 
 import Footer from "./components/Footer"
 import Cycle from "./components/Cycle";
+import NewHome from "./pages/NewHome";
 
 
 
 function App() {
   return (
-    <div className="bg-black h-full">
+    <div className=" h-full bg-black">
       <CircleTrail/>
       <NewNavbar />
       <Routes>
+      <Route path="/home" element={<NewHome />} />
+
         <Route path="/" element={<Home />} />
         <Route path="/team_members" element={<TeamMembers />} />
         <Route path="/mentors" element={<Mentors />} />

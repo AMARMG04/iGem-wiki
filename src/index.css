@@ -58,6 +58,13 @@
     url("./src/fonts/Nohemi-ExtraBold.ttf") format("truetype");
 }
 
+
+
+
+*{
+    cursor: none;
+}
+
 html{
     height:max-content;
 }

@@ -1,28 +1,21 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
-const Banner = () => {
+const Banner = (props) => {
+  console.log("Banner props:", props);  // Debug log to check props
   return (
-    <div className="relative w-full h-[calc(100vh-100px)] bg-teal-950">
-      {/* <img
-        src="/src/assets/footer-bg.jpeg"
-        alt="background for banner"
-        className="z-0 w-full h-[calc(100vh-100px)] object-cover"
-      /> */}
-
+    <div className="relative w-full h-[calc(100vh-100px)] bg-customCream">
       <TypeAnimation
         sequence={[
-          "Parts",
-          1000,
-          "Parts Overview", //  Continuing previous Text
-          1000,
-          "Parts",
-          1000,
+          props.title, // Correct usage
+          2000,
+          
+        
           "",
           1000,
         ]}
         repeat={Infinity}
-        className="text-white text-[100px] font-nohemi_m absolute inset-0 flex items-center justify-center typewriter"
+        className="text-black text-[100px] font-nohemi_m absolute inset-0 flex items-center justify-center typewriter"
       />
     </div>
   );
