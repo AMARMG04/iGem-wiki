@@ -1,5 +1,5 @@
 import React from 'react';
-
+// import "./home.scss"
 const NewHome = () => {
 
   const glowStyle = `
@@ -31,8 +31,9 @@ const NewHome = () => {
   `;
 
   return (
-    <div className='bg-black h-screen'>
+    <div className='bg-black h-screen page-bg'>
       <style>{glowStyle}</style>
+      
       <div className='flex justify-center items-center h-[calc(100vh-170px)]'>
         <h1 className='text-[120px] text-white font-nohemi_b text-center pt-5'>
           <span className='glow'>PLAST</span><span className='glow2'>ICOPS</span>
