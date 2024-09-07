@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaDraftingCompass, FaHammer, FaFlask, FaBook } from 'react-icons/fa';
-import CardSection from './CardSection';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -14,14 +13,7 @@ const icons = [
   { id: 'learn', icon: <FaBook className="text-4xl" />, bgColor: 'bg-yellow-100', color: 'text-yellow-500' },
 ];
 
-const contents = {
-  design: 'Design is the process of envisioning and planning the creation of objects, systems, or solutions.',
-  build: 'Build refers to the process of constructing, assembling, or developing based on a design.',
-  test: 'Testing involves evaluating the system or components to ensure they meet the requirements and function properly.',
-  learn: 'Learning is the acquisition of knowledge or skills through experience, study, or teaching.',
-};
-
-const Cycle = () => {
+const Cycle = ({ content, position = 'left', title }) => {
   const [selectedContent, setSelectedContent] = useState('design');
   const [rotation, setRotation] = useState(90); // Start with 90 degrees so 'design' is on the right
   const selectedIndex = icons.findIndex((icon) => icon.id === selectedContent);
@@ -55,57 +47,54 @@ const Cycle = () => {
   }, [selectedIndex, rotation]);
 
   return (
-    <>
-      <CardSection />
-      <div className="flex h-screen bg-[#f5f5dc] relative">
-        <div className="w-1/2 flex items-center justify-center relative">
-          <div className="relative w-96 h-96">
-            {/* Circle Border */}
-            <div className="absolute w-full h-full rounded-full border-2 border-gray-400"></div>
+    <div className="flex h-screen bg-[#f5f5dc] relative">
+      <div className={`w-1/2 flex items-center justify-center relative ${position === 'left' ? 'order-1' : 'order-2'}`}>
+        <div className="relative w-96 h-96">
+          {/* Circle Border */}
+          <div className="absolute w-full h-full rounded-full border-2 border-gray-400"></div>
 
-            {/* Cycle 1 Text */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-5xl font-bold text-gray-800">Cycle 1</div>
-            </div>
+          {/* Cycle 1 Text */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-5xl font-bold text-gray-800">{title}</div>
+          </div>
 
-            <div
-              ref={cycleRef}
-              className="absolute inset-0 flex items-center justify-center"
-              style={{ transform: `rotate(${rotation}deg)` }}
-            >
-              {icons.map((item, index) => (
-                <button
-                  key={item.id}
-                  className={`absolute transform transition-transform duration-500 hover:scale-110`}
-                  onClick={() => handleSelect(item.id, index)}
+          <div
+            ref={cycleRef}
+            className="absolute inset-0 flex items-center justify-center"
+            style={{ transform: `rotate(${rotation}deg)` }}
+          >
+            {icons.map((item, index) => (
+              <button
+                key={item.id}
+                className={`absolute transform transition-transform duration-500 hover:scale-110`}
+                onClick={() => handleSelect(item.id, index)}
+                style={{
+                  top: index === 0 ? '0%' : index === 2 ? '100%' : '50%',
+                  left: index === 3 ? '0%' : index === 1 ? '100%' : '50%',
+                  transform: `translate(-50%, -50%) rotate(${index * 90}deg)`,
+                }}
+              >
+                <div
+                  className={`p-4 rounded-lg shadow-lg flex items-center justify-center relative ${item.bgColor} ${item.color}`}
                   style={{
-                    top: index === 0 ? '0%' : index === 2 ? '100%' : '50%',
-                    left: index === 3 ? '0%' : index === 1 ? '100%' : '50%',
-                    transform: `translate(-50%, -50%) rotate(${index * 90}deg)`,
+                    border: index === selectedIndex ? '3px solid black' : 'none', // Square border for selected card
                   }}
                 >
-                  <div
-                    className={`p-4 rounded-lg shadow-lg flex items-center justify-center relative ${item.bgColor} ${item.color}`}
-                    style={{
-                      border: index === selectedIndex ? '3px solid black' : 'none', // Square border for selected card
-                    }}
-                  >
-                    {item.icon}
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="w-1/2 flex items-center justify-center p-10 bg-transparent">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold mb-6 capitalize">{selectedContent}</h2>
-            <p className="text-lg text-gray-700">{contents[selectedContent]}</p>
+                  {item.icon}
+                </div>
+              </button>
+            ))}
           </div>
         </div>
       </div>
-    </>
+
+      <div className={`w-1/2 flex items-center justify-center p-10 bg-transparent ${position === 'left' ? 'order-2' : 'order-1'}`}>
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6 capitalize">{selectedContent}</h2>
+          <p className="text-lg text-gray-700">{content[selectedContent]}</p>
+        </div>
+      </div>
+    </div>
   );
 };
 

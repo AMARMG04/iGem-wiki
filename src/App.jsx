@@ -16,6 +16,7 @@ import Footer from "./components/Footer"
 import Cycle from "./components/Cycle";
 import NewHome from "./pages/NewHome";
 import ProjectDescription from "./pages/ProjectDescription"
+import Engineering from "./pages/Engineering";
 
 
 
@@ -34,7 +35,7 @@ function App() {
         <Route path="/parts" element={<Parts />} />
         <Route path="/protocols" element={<Protocol />} />
         <Route path="/hs" element={<HumanPractices />} />
-        <Route path="/cycle" element={<Cycle />} />
+        <Route path="/engineering" element={<Engineering />} />
         <Route path="/project_description" element={<ProjectDescription />} />
 
       </Routes>

@@ -2,14 +2,14 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const Banner = (props) => {
-  console.log("Banner props:", props);  // Debug log to check props
+  console.log(props)
   return (
-    <div className="relative w-full h-[calc(100vh-100px)] bg-green-500">
+   
+<div className={`relative w-full h-[calc(100vh-100px)] bg-${props.color}-500`}>
       <TypeAnimation
         sequence={[
           props.title, // Correct usage
           2000,
-          
         
           "",
           1000,

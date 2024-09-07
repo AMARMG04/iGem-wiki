@@ -55,7 +55,7 @@ const ProjectDescription = () => {
 
   return (
     <div>
-      <Banner title="Project Description" />
+      <Banner title="Project Description" color="green" />
       <div className="mx-auto max-w-[1350px] p-10 flex flex-row gap-10">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">
           <h1 className="font-nohemi_m mb-4 text-3xl">Table of Contents</h1>
