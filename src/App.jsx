@@ -15,6 +15,7 @@ import CircleTrail from "./components/CircleTrail";
 import Footer from "./components/Footer"
 import Cycle from "./components/Cycle";
 import NewHome from "./pages/NewHome";
+import ProjectDescription from "./pages/ProjectDescription"
 
 
 
@@ -34,6 +35,7 @@ function App() {
         <Route path="/protocols" element={<Protocol />} />
         <Route path="/hs" element={<HumanPractices />} />
         <Route path="/cycle" element={<Cycle />} />
+        <Route path="/project_description" element={<ProjectDescription />} />
 
       </Routes>
       <Footer />

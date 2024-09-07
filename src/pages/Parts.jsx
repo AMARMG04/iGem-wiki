@@ -1,19 +1,57 @@
-import React, {useState} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { contents, links } from "../data/table";
-import Banner from "../components/Banner"
+import Banner from "../components/Banner";
 
 const Parts = () => {
   const [activeLink, setActiveLink] = useState("");
+  const sectionsRef = useRef({});
 
   const handleScroll = (id) => {
     setActiveLink(id);
     const target = document.getElementById(id);
     if (target) {
       // Scroll with offset for the sticky navbar
-      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 200; // Adjust offset
+      const offsetTop =
+        target.getBoundingClientRect().top + window.pageYOffset - 200; // Adjust offset
       window.scrollTo({ top: offsetTop, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            setActiveLink(sectionId);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5, // Adjust this to trigger when 50% of the section is in view
+      }
+    );
+
+    // Observe each section
+    Object.keys(sectionsRef.current).forEach((sectionId) => {
+      const section = sectionsRef.current[sectionId];
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      // Cleanup the observer on component unmount
+      Object.keys(sectionsRef.current).forEach((sectionId) => {
+        const section = sectionsRef.current[sectionId];
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
 
   return (
     <>
@@ -23,16 +61,23 @@ const Parts = () => {
           {/* Table of Contents */}
           <div className="col-span-1">
             <div className="table-contents h-[700px] p-4 rounded-lg  sticky top-44">
-              <h2 className="text-[30px] font-nohemi_m mb-4">Table of Contents</h2>
-              <ul className="flex flex-col gap-6">
+              <h2 className="text-[30px] font-nohemi_m mb-4">
+                Table of Contents
+              </h2>
+              <ul className="flex flex-col">
                 {links.map((item, index) => (
                   <li
                     key={index}
-                    className={`text-[20px] font-nohemi_r font-medium cursor-pointer ${
-                      activeLink === item.href ? "text-blue-500 border-l-2 border-blue-500 pl-5" : " border-l-2 border-gray-500 text-black pl-5"
+                    className={`flex items-center text-[20px] font-nohemi_r cursor-pointer h-14 ${
+                      activeLink === item.href
+                        ? "text-blue-500 border-l-2 border-blue-500 pl-5"
+                        : " border-l-2 border-gray-500 text-black pl-5"
                     }`}
                   >
-                    <a onClick={() => handleScroll(item.href)} className="hover:text-blue-500">
+                    <a
+                      onClick={() => handleScroll(item.href)}
+                      className="hover:text-blue-500"
+                    >
                       {item.label}
                     </a>
                   </li>
@@ -43,9 +88,15 @@ const Parts = () => {
 
           {/* Table */}
           <div className="col-span-2 shadow-[0_5px_60px_-35px_rgba(0,0,0,0.3)] border p-10 rounded-sm">
-            <div className="mb-10  flex flex-col" id="table1">
+            <div
+              className="mb-10 flex flex-col"
+              id="table1"
+              ref={(el) => (sectionsRef.current["table1"] = el)}
+            >
               <div>
-                <h1 className="my-2 font-nohemi_m text-[35px]">Parts Collection</h1>
+                <h1 className="my-2 font-nohemi_m text-[35px]">
+                  Parts Collection
+                </h1>
               </div>
 
               <div>
@@ -155,7 +206,11 @@ const Parts = () => {
                 </div> */}
             </div>
 
-            <div className=" mb-10 flex flex-col" id="table2">
+            <div
+              className="mb-10 flex flex-col"
+              id="table2"
+              ref={(el) => (sectionsRef.current["table2"] = el)}
+            >
               <div>
                 <h1 className="my-2 font-nohemi_m text-[35px]">Basic Parts</h1>
               </div>
@@ -229,9 +284,15 @@ const Parts = () => {
               </div>
             </div>
 
-            <div className=" mb-10 flex flex-col" id="table3">
+            <div
+              className="mb-10 flex flex-col"
+              id="table3"
+              ref={(el) => (sectionsRef.current["table3"] = el)}
+            >
               <div>
-                <h1 className="my-2 font-nohemi_m text-[35px]">Composite Parts</h1>
+                <h1 className="my-2 font-nohemi_m text-[35px]">
+                  Composite Parts
+                </h1>
               </div>
               <div className="-m-1.5 overflow-x-auto">
                 <div className="p-1.5 min-w-full inline-block align-middle">
