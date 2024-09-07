@@ -41,10 +41,10 @@ const Ocean = () => {
     gsap.to(policeRef.current, {
       x: "100vw", // Moves the police image to the right as you scroll
       scrollTrigger: {
-        trigger: policeRef.current,
+        trigger: ".last",
         start: "top 0%", // Animation starts when the top of the trigger hits the top of the viewport
-        end: "bottom 30%", // Animation ends when the bottom of the trigger hits the top of the viewport
-        scrub: 1, // Smooth scrolling effect
+        end: "bottom 20%", // Animation ends when the bottom of the trigger hits the top of the viewport
+        scrub: 10, // Smooth scrolling effect
       },
     });
 
@@ -186,7 +186,7 @@ const Ocean = () => {
           </div>
         </div>
 
-        <div className='grid grid-rows-1'  ref={policeRef}>
+        <div className='grid grid-rows-1 last' >
           <div className='flex flex-col items-end justify-end pt-35' >
             <div
               data-aos='fade-left'
@@ -208,8 +208,8 @@ const Ocean = () => {
 
 
 
-      <div className='items-start police'>
-        <img src={Police} className='w-[400px]' alt="Police" />
+      <div className='items-start police' ref={policeRef}>
+        <img src={Police} className='w-[400px] pimg' alt="Police" />
       </div>
 
       

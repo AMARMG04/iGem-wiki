@@ -230,32 +230,17 @@ body {
           
           trigger: ".wdiv", // Ocean component's parent container
           start: "top bottom",
-          end: "top top",
+          end: ".pimg",
           scrub: 30,
         },
         // Adjust the y value to move plastics down
+        
         y:"200vh",
         x:`${index * 3}vw`,
         ease: "power2.out",
        
       });
 
-      gsap.to(micro, {
-        
-        scrollTrigger: {
-          
-          trigger: ".police", // Ocean component's parent container
-          start: "top bottom",
-          end: "top top",
-          scrub: 30,
-      
-        },
-        // Adjust the y value to move plastics down
-      
-       
-        ease: "power2.out",
-       
-      });
     });
 
     return () => {
@@ -267,7 +252,8 @@ body {
     <div className="bg-black h-fit  xl:mt-4">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-white font-bold text-[100px] font-keania">
+          <h1 className="text-center text-white font-bold text-[100px] font-keania" data-aos="fade-up"
+     data-aos-duration="2000">
             PLASTICOPS
           </h1>
           {/* <NewHome /> */}
@@ -386,7 +372,9 @@ body {
         {/* Info Boxes and Scroll Down Section */}
         <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
-        }}>
+        }} data-aos="fade-right"
+        data-aos-offset="100"
+        data-aos-easing="ease-in-sine"data-aos-duration="2000"  >
           <h2 className="text-xl font-quick">PLASTIC MANUFACTURED</h2>
           <p className="text-3xl text-center my-2 font-keania">400 Million Tons</p>
           <p className="text-right text-3xl">/ year</p>
@@ -394,21 +382,25 @@ body {
 
         <div className="absolute left-36 xl:left-40 top-[350px] xl:top-[390px] p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 3px 0 #680783, 0px 0px 2px 0 #680783, 0px 0px 3px 0 #680783, 0px 0px 19px 0 #680783, 0px 0px 30px 0 #680783, 0px 0px 27.989999771118164px 0 #680783",
-        }}>
+        }} data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="2000">
           <h2 className="text-xl font-quick">PLASTIC RECYCLED: <span className="font-keania text-[30px] text-green-400">9%</span></h2>
           <h2 className="text-xl my-4 font-quick">PLASTIC BURNT: <span className="font-keania text-[30px] text-red-400">12%</span></h2>
         </div>
 
         <div className="absolute right-24 top-[140px] p-4 w-[300px] py-6 h-auto rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
-        }}>
+        }} data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine" data-aos-duration="2000">
           <h2 className="text-xl text-center font-quick">DEPRICIATED MARINE ECOSYSTEM VALUE</h2>
           <p className="text-3xl text-center my-2 font-keania text-orange-200">$400 Million</p>
           <p className="text-3xl text-center my-2 font-keania">To</p>
           <p className="text-3xl text-center my-2 font-keania text-orange-200">$2500 Million</p>
         </div>
 
-        <div className="absolute right-24 top-[400px] pt-4 xl:pt-10 w-[300px] py-6 h-auto rounded-xl text-white bg-transparent">
+        <div className="absolute right-24 top-[400px] pt-4 xl:pt-10 w-[300px] py-6 h-auto rounded-xl text-white bg-transparent" data-aos="fade-up" data-aos-duration="2000">
           <h2 className="text-2xl pb-4 text-center font-quick">SCROLL DOWN</h2>
           <div className="text-center items-center justify-center flex">
             <IoIosArrowDropdown size={50} className="animate-bounce" />
