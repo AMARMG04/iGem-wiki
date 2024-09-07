@@ -210,7 +210,7 @@ const ProjectDescription = () => {
           </div>
 
           <div>
-            <img src="/src/assets/description/image3.jpg" alt="" />
+            <img src="/src/assets/description/image3.jpeg" alt="" />
           </div>
 
           {/* Applications */}
@@ -232,6 +232,14 @@ const ProjectDescription = () => {
                 ))}
               </ul>
             </p>
+          </div>
+      
+          <div>
+            <img src="/src/assets/description/image5.jpeg" alt="" />
+          </div>
+
+          <div>
+            <img src="/src/assets/description/image4.jpeg" alt="" />
           </div>
 
           {/* References */}
