@@ -65,30 +65,31 @@ const Ocean = () => {
     });
 
     // Apply the same animation to each particle
-    particlesRefs.current.forEach((particle, index) => {
-      if (particle) {
-        gsap.to(particle, {
-          scrollTrigger: {
-            trigger: particle,
-            start: "top 50%", // Adjust start position based on view
-            end: "bottom 20%", // Adjust end position
-            scrub: 80,
-            // To debug and see scroll points
-          },
 
-          y: "190vh", // Moves particle down as you scroll
-          ease: "power2.out",
-        });
-      }
-    });
+    // particlesRefs.current.forEach((particle, index) => {
+    //   if (particle) {
+    //     gsap.to(particle, {
+    //       scrollTrigger: {
+    //         trigger: particle,
+    //         start: "top 50%", 
+    //         end: "bottom 20%", 
+    //         scrub: 80,
+    //       },
+
+    //       y: "190vh", 
+    //       ease: "power2.out",
+    //     });
+    //   }
+    // });
   }, []);
 
   // Helper to add refs dynamically
-  const addToRefs = (el) => {
-    if (el && !particlesRefs.current.includes(el)) {
-      particlesRefs.current.push(el);
-    }
-  };
+
+  // const addToRefs = (el) => {
+  //   if (el && !particlesRefs.current.includes(el)) {
+  //     particlesRefs.current.push(el);
+  //   }
+  // };
 
   return (
     <div className='grid grid-cols-1 ocean relative'>
@@ -140,7 +141,7 @@ const Ocean = () => {
 
       {/* Particle Elements */}
       <div className='particles'>
-        <div className='flex justify-between '>
+        {/* <div className='flex justify-between '>
           <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
           <div className='rounded-full bg-blue-600 w-[9px] h-[10px] mt-8' ref={addToRefs}></div>
           <div className='rounded-full bg-green-600 w-[9px] h-[13px] mt-20' ref={addToRefs}></div>
@@ -150,7 +151,7 @@ const Ocean = () => {
           <div className='rounded-full bg-pink-600 w-[9px] h-[10px] mt-10' ref={addToRefs}></div>
           <div className='rounded-full bg-yellow-600 w-[9px] h-[12px]' ref={addToRefs}></div>
           <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ref={addToRefs}></div>
-        </div>
+        </div> */}
 
         {/* Content Sections */}
         <div className='grid grid-rows-1'>
@@ -199,17 +200,17 @@ const Ocean = () => {
               </p>
             </div>
           </div>
-          <div className='items-start'>
-        <img src={Police} className='w-[400px]' alt="Police" />
-      </div>
+         
         </div>
 
-
+        
       </div>
 
 
 
-
+      <div className='items-start police'>
+        <img src={Police} className='w-[400px]' alt="Police" />
+      </div>
 
       
     </div>

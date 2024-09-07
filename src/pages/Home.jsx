@@ -14,14 +14,14 @@ import Ocean from "../components/Ocean";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
+
+
   const glowStyle = `
-
-
-
 
 body {
   background:#2EB5E5 ;
 }
+
 
 .sun { 
   position: absolute;
@@ -152,8 +152,10 @@ body {
 `;
   const worldRef = useRef(null);
   const plasticsRef = useRef([]);
+  const microsRef = useRef([]);
+
   const lenisRef = useRef(null);
-  
+
 
   useEffect(() => {
     const worldElement = worldRef.current;
@@ -205,6 +207,57 @@ body {
       });
     });
 
+    microsRef.current.forEach((micro) => {
+      gsap.to(micro, {
+         opacity: 1 ,
+        scrollTrigger: {
+          
+          trigger: ".reach", // Ocean component's parent container
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+        },
+        // Adjust the y value to move plastics down
+        ease: "power2.out",
+       
+      });
+    });
+
+    microsRef.current.forEach((micro, index) => {
+      gsap.to(micro, {
+        
+        scrollTrigger: {
+          
+          trigger: ".wdiv", // Ocean component's parent container
+          start: "top bottom",
+          end: "top top",
+          scrub: 30,
+        },
+        // Adjust the y value to move plastics down
+        y:"200vh",
+        x:`${index * 3}vw`,
+        ease: "power2.out",
+       
+      });
+
+      gsap.to(micro, {
+        
+        scrollTrigger: {
+          
+          trigger: ".police", // Ocean component's parent container
+          start: "top bottom",
+          end: "top top",
+          scrub: 30,
+      
+        },
+        // Adjust the y value to move plastics down
+      
+       
+        ease: "power2.out",
+       
+      });
+    });
+
     return () => {
       lenis.destroy();
     };
@@ -215,46 +268,118 @@ body {
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-white font-bold text-[100px] font-keania">
-            MICROPLASTICS
+            PLASTICOPS
           </h1>
+          {/* <NewHome /> */}
+         
           <div className="absolute lg:top-[85px] xl:top-[100px]" ref={worldRef}>
             <img src={World} alt="World" className="xl:w-[495px] h-auto" />
-            <img
-              src={Plastic4}
-              alt=""
-              className="absolute right-0 bottom-[0px] w-36 animate-float"
-              ref={(el) => (plasticsRef.current[0] = el)}
-            />
-            <img
-              src={Plastic2}
-              alt=""
-              className="absolute left-0 bottom-[0px] w-44 animate-float"
-              ref={(el) => (plasticsRef.current[1] = el)}
-            />
-            <img
-              src={Plastic3}
-              alt=""
-              className="absolute right-[-40px] bottom-[300px] w-32 animate-float"
-              ref={(el) => (plasticsRef.current[2] = el)}
-            />
-            <img
-              src={Plastic2}
-              alt=""
-              className="absolute left-0 top-[0px] w-44 animate-float"
-              ref={(el) => (plasticsRef.current[3] = el)}
-            />
-            <img
-              src={Plastic1}
-              alt=""
-              className="absolute left-[-90px] top-[150px] w-52 animate-float"
-              ref={(el) => (plasticsRef.current[4] = el)}
-            />
-            <img
-              src={Plastic1}
-              alt=""
-              className="absolute right-[50px] top-[-30px] w-52 animate-float"
-              ref={(el) => (plasticsRef.current[5] = el)}
-            />
+
+            <div className=" animate-float">
+              <img
+                src={Plastic3}
+                alt=""
+                className="absolute left-0 bottom-[45px] w-32 animate-float"
+                ref={(el) => (plasticsRef.current[1] = el)}
+              />
+              <div className='micros z-0 opacity-0 rounded-full absolute left-10 bottom-[40px]  bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[1] = el)} ></div>
+              <div className='micros z-0 opacity-0 rounded-full absolute left-20 bottom-[60px]  bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[2] = el)}></div>
+              <div className='micros z-0 opacity-0 rounded-full absolute left-50 bottom-[80px]  bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[3] = el)}></div>
+              <div className='micros z-0 opacity-0 rounded-full absolute left-[40px] bottom-[120px]  bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[4] = el)} ></div>
+
+
+
+            </div>
+
+
+           <div className=" animate-float">
+              <img
+                src={Plastic3}
+                alt=""
+                className="absolute right-[-40px] bottom-[300px] w-32 animate-float"
+                ref={(el) => (plasticsRef.current[2] = el)}
+              />
+              <div className='micros opacity-0 rounded-full absolute right-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[5] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[6] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[7] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[8] = el)} ></div>
+
+
+
+            </div>
+            <div className=" animate-float">
+              <img
+                src={Plastic1}
+                alt=""
+                className="absolute left-[-85px] bottom-[300px] w-[210px] animate-float"
+                ref={(el) => (plasticsRef.current[3] = el)}
+              />
+              <div className='micros opacity-0 rounded-full absolute left-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[9] = el)}  ></div>
+              <div className='micros opacity-0 rounded-full absolute left-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[10] = el)}  ></div>
+              <div className='micros opacity-0 rounded-full absolute left-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[11] = el)}  ></div>
+              <div className='micros opacity-0 rounded-full absolute left-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[12] = el)}  ></div>
+
+
+
+            </div>
+
+            <div className=" animate-float">
+              <img
+                src={Plastic2}
+                alt=""
+                className="absolute right-[-40px] bottom-[80px] w-[180px] animate-float"
+                ref={(el) => (plasticsRef.current[4] = el)}
+              />
+              <div className='micros opacity-0 rounded-full absolute right-[-10px] bottom-[140px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[13] = el)}  ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[40px] bottom-[60px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[14] = el)}  ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[-20px] bottom-[80px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[15] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[40px] bottom-[120px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[16] = el)}  ></div>
+
+            </div>
+
+            <div className=" animate-float">
+              <img
+                src={Plastic1}
+                alt=""
+                className="absolute right-[120px] bottom-[-70px] w-[200px] animate-float"
+                ref={(el) => (plasticsRef.current[5] = el)}
+              />
+              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[40px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[17] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[240px] bottom-[20px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[18] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[-20px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[19] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[230px] bottom-[-40px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[20] = el)}  ></div>
+            </div>
+
+
+            <div className=" animate-float">
+              <img
+                src={Plastic2}
+                alt=""
+                className="absolute right-[90px] bottom-[400px] w-[160px] animate-float"
+                ref={(el) => (plasticsRef.current[6] = el)}
+              />
+              <div className='micros opacity-0 rounded-full absolute right-[140px] bottom-[400px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[21] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[140px] bottom-[450px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[22] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[200px] bottom-[430px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[23] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[180px] bottom-[490px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[24] = el)} ></div>
+            </div>
+ 
+
+        
+{/* 
+            
+            
+
+            <div className="absolute right-[-30px] top-[380px] animate-float ">
+              <img
+                src={Plastic1}
+                alt=""
+                className="w-52 animate-float"
+                ref={(el) => (plasticsRef.current[5] = el)}
+              />
+              <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ></div>
+
+            </div> */}
           </div>
         </div>
 
@@ -298,22 +423,22 @@ body {
           </div>
           <div className="w-[80%] reach col-span-1">
             <style>{glowStyle}</style>
-<div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
-<div class="sun">
-    <div class="ray_box">
-        <div class="ray ray1"></div>
-        <div class="ray ray2"></div>
-        <div class="ray ray3"></div>
-        <div class="ray ray4"></div>
-        <div class="ray ray5"></div>
-        <div class="ray ray6"></div>
-        <div class="ray ray7"></div>
-        <div class="ray ray8"></div>
-        <div class="ray ray9"></div>
-        <div class="ray ray10"></div>
-    </div>
-</div>
-</div>
+            <div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
+              <div class="sun">
+                <div class="ray_box">
+                  <div class="ray ray1"></div>
+                  <div class="ray ray2"></div>
+                  <div class="ray ray3"></div>
+                  <div class="ray ray4"></div>
+                  <div class="ray ray5"></div>
+                  <div class="ray ray6"></div>
+                  <div class="ray ray7"></div>
+                  <div class="ray ray8"></div>
+                  <div class="ray ray9"></div>
+                  <div class="ray ray10"></div>
+                </div>
+              </div>
+            </div>
 
 
             <h2 className="text-[45px] ml-12 text-white font-nohemi_sb mb-4">WHAT ARE THEY?</h2>
@@ -330,9 +455,9 @@ body {
             <div className="wave wave3"></div>
             <div className="wave wave4"></div>
           </section>
-          <div className="wdiv px-28">
+          <div className="wdiv  px-28">
             <Ocean />
-            
+
           </div>
         </div>
       </section>

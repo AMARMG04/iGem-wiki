@@ -3,7 +3,7 @@ import React from 'react';
 const NewHome = () => {
 
   const glowStyle = `
-    .glow {
+    .glow1 {
       animation: glowRed 1s ease-in-out infinite alternate;
     }
 
@@ -31,14 +31,14 @@ const NewHome = () => {
   `;
 
   return (
-    <div className='bg-black h-screen page-bg'>
+    <div>
       <style>{glowStyle}</style>
       
-      <div className='flex justify-center items-center h-[calc(100vh-170px)]'>
-        <h1 className='text-[120px] text-white font-nohemi_b text-center pt-5'>
-          <span className='glow'>PLAST</span><span className='glow2'>ICOPS</span>
+      {/* <div className='flex justify-center items-center h-[calc(100vh-170px)]'> */}
+        <h1 className='text-center text-white font-bold text-[100px] font-keania'>
+          <span className='glow1'>PLAST</span><span className='glow2'>ICOPS</span>
         </h1>
-      </div>
+      {/* </div> */}
     </div>
   );
 }
