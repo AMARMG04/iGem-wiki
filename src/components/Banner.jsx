@@ -2,7 +2,7 @@ import React from "react";
 import { TypeAnimation } from "react-type-animation";
 
 const Banner = (props) => {
-  console.log(props)
+
   return (
    
 <div className={`relative w-full h-[calc(100vh-100px)] bg-${props.color}-500`}>

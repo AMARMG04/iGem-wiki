@@ -17,7 +17,7 @@ import Cycle from "./components/Cycle";
 import NewHome from "./pages/NewHome";
 import ProjectDescription from "./pages/ProjectDescription"
 import Engineering from "./pages/Engineering";
-
+import Sustainability from "./pages/Sustainability"
 
 
 function App() {
@@ -37,6 +37,7 @@ function App() {
         <Route path="/hs" element={<HumanPractices />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/project_description" element={<ProjectDescription />} />
+        <Route path='/sustainability' element={<Sustainability/>} />
 
       </Routes>
       <Footer />
