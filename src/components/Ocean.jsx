@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import gsap from 'gsap';
+import MagnifyImage from "../components/MagnifyImage"
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import fishImage from '../assets/fish.png'; // Import your fish image here
 import fishImage2 from '../assets/fish2.png';
@@ -39,7 +40,7 @@ const Ocean = () => {
 
 
     gsap.to(policeRef.current, {
-      x: "100vw", // Moves the police image to the right as you scroll
+      x: "90vw", // Moves the police image to the right as you scroll
       scrollTrigger: {
         trigger: ".last",
         start: "top 0%", // Animation starts when the top of the trigger hits the top of the viewport
@@ -171,7 +172,7 @@ const Ocean = () => {
         </div>
 
         <div className='grid grid-rows-1'>
-          <div className='flex flex-col items-start justify-start pt-35'>
+          <div className='flex flex-row items-start justify-start pt-35'>
             <div
               data-aos='fade-left'
               className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
@@ -183,6 +184,9 @@ const Ocean = () => {
                 maxime adipisci deserunt sit corporis voluptates!
               </p>
             </div>
+            <div className=" mt-12 ">
+      <MagnifyImage src={fishImage2} />
+    </div>
           </div>
         </div>
 

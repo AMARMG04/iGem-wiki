@@ -54,7 +54,7 @@ const ProjectDescription = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-customCream">
       <Banner title="Project Description" color="green" />
       <div className="mx-auto max-w-[1350px] p-10 flex flex-row gap-10">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">

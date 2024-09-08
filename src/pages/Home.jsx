@@ -8,8 +8,10 @@ import Plastic1 from "../assets/plastic1.png";
 import Plastic2 from "../assets/plastic2.png";
 import Plastic3 from "../assets/plastic3.png";
 import Plastic4 from "../assets/plastic4.png";
+import Micros from "../assets/micros.png";
 import "../components/waves.css";
 import Ocean from "../components/Ocean";
+import Food from "../components/Food";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -252,16 +254,17 @@ body {
     <div className="bg-black h-fit  xl:mt-4">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-white font-bold text-[100px] font-keania" data-aos="fade-up"
+          <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"
      data-aos-duration="2000">
             PLASTICOPS
           </h1>
           {/* <NewHome /> */}
          
-          <div className="absolute lg:top-[85px] xl:top-[100px]" ref={worldRef}>
-            <img src={World} alt="World" className="xl:w-[495px] h-auto" />
-
+          <div className="absolute lg:top-[0px] xl:top-[100px]">
+            <img src={World} alt="World" className="lg:w-[390px] xl:w-[495px] h-auto" />
+            <div ref={worldRef}>
             <div className=" animate-float">
+
               <img
                 src={Plastic3}
                 alt=""
@@ -341,13 +344,13 @@ body {
               <img
                 src={Plastic2}
                 alt=""
-                className="absolute right-[90px] bottom-[400px] w-[160px] animate-float"
+                className="absolute right-[160px] bottom-[400px] w-[160px] animate-float"
                 ref={(el) => (plasticsRef.current[6] = el)}
               />
-              <div className='micros opacity-0 rounded-full absolute right-[140px] bottom-[400px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[21] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[140px] bottom-[450px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[22] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[200px] bottom-[430px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[23] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[180px] bottom-[490px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[24] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[400px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[21] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[180px] bottom-[450px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[22] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[240px] bottom-[430px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[23] = el)} ></div>
+              <div className='micros opacity-0 rounded-full absolute right-[220px] bottom-[490px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[24] = el)} ></div>
             </div>
  
 
@@ -367,6 +370,7 @@ body {
 
             </div> */}
           </div>
+          </div>  
         </div>
 
         {/* Info Boxes and Scroll Down Section */}
@@ -380,7 +384,7 @@ body {
           <p className="text-right text-3xl">/ year</p>
         </div>
 
-        <div className="absolute left-36 xl:left-40 top-[350px] xl:top-[390px] p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+        <div className=" absolute left-36 xl:left-40 top-[350px] xl:top-[390px] p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 3px 0 #680783, 0px 0px 2px 0 #680783, 0px 0px 3px 0 #680783, 0px 0px 19px 0 #680783, 0px 0px 30px 0 #680783, 0px 0px 27.989999771118164px 0 #680783",
         }} data-aos="fade-right"
         data-aos-offset="300"
@@ -389,7 +393,7 @@ body {
           <h2 className="text-xl my-4 font-quick">PLASTIC BURNT: <span className="font-keania text-[30px] text-red-400">12%</span></h2>
         </div>
 
-        <div className="absolute right-24 top-[140px] p-4 w-[300px] py-6 h-auto rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+        <div className=" absolute right-24 top-[140px] p-4 w-[300px] py-6 h-auto rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
         }} data-aos="fade-left"
         data-aos-offset="300"
@@ -409,34 +413,43 @@ body {
       </div>
 
       {/* New Section and Ocean Component */}
-      <section className="new-section relative">
+      <section className=" new-section relative">
+
         <div className="items-center justify-center h-auto grid grid-cols-2">
-          <div className="next-section flex items-center justify-center h-screen px-20 text-white col-span-1">
+          <div>
+        <img src={Micros} alt="" className="absolute top-[280px] left-[210px] lg:w-[270px] xl:w-[320px]" />
+
+          <div className="next-section flex items-center justify-center h-screen px-20 text-white">
+          
+          </div>
           </div>
           <div className="w-[80%] reach col-span-1">
             <style>{glowStyle}</style>
             <div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
-              <div class="sun">
-                <div class="ray_box">
-                  <div class="ray ray1"></div>
-                  <div class="ray ray2"></div>
-                  <div class="ray ray3"></div>
-                  <div class="ray ray4"></div>
-                  <div class="ray ray5"></div>
-                  <div class="ray ray6"></div>
-                  <div class="ray ray7"></div>
-                  <div class="ray ray8"></div>
-                  <div class="ray ray9"></div>
-                  <div class="ray ray10"></div>
+              <div className="sun">
+                <div className="ray_box">
+                  <div className="ray ray1"></div>
+                  <div className="ray ray2"></div>
+                  <div className="ray ray3"></div>
+                  <div className="ray ray4"></div>
+                  <div className="ray ray5"></div>
+                  <div className="ray ray6"></div>
+                  <div className="ray ray7"></div>
+                  <div className="ray ray8"></div>
+                  <div className="ray ray9"></div>
+                  <div className="ray ray10"></div>
                 </div>
               </div>
             </div>
 
 
             <h2 className="text-[45px] ml-12 text-white font-nohemi_sb mb-4">WHAT ARE THEY?</h2>
+            {/* <img src={Micros} alt="" className="z-100 w-96" /> */}
+
             <p className="text-lg text-white leading-relaxed font-nohemi_r">
               Microplastics are small plastic particles less than 5mm in size, which are pervasive in our environment. They come from a variety of sources, including the breakdown of larger plastic debris, microbeads in personal care products, and synthetic fibers from textiles. These tiny particles pose significant risks to marine ecosystems, as they are ingested by marine organisms and can cause physical harm, chemical contamination, and even enter the human food chain.
             </p>
+            
           </div>
         </div>
 
@@ -456,6 +469,7 @@ body {
       {/* <div className="bg-white">
         <video src=""></video>
       </div> */}
+    <Food />
     </div>
   );
 };
