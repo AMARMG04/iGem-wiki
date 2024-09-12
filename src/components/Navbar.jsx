@@ -79,12 +79,12 @@ const NewNavbar = () => {
                   {item.label}
                 </button>
                 {openDropdownIndex === index && (
-                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg py-2 z-20">
+                  <ul className="absolute left-0 mt-2 w-48 bg-[#0A7EAF]/80 backdrop-blur-3xl text-white rounded-lg shadow-lg py-2 z-20">
                     {item.pages.map((page, pageIndex) => (
                       <li key={pageIndex}>
                         <a
                           href={page.link}
-                          className="block px-4 py-2 hover:bg-gray-100"
+                          className="block px-4 py-2 hover:bg-gray-100 hover:text-[#0A7EAF]"
                         >
                           {page.name}
                         </a>

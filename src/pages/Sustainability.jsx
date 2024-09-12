@@ -1,17 +1,19 @@
 import React from 'react';
 import CardSection from '../components/CardSection';
-import Banner from '../components/Banner';
+import NewBanner from '../components/NewBanner';
 import goal6Banner from '../assets/Goal6/6_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 6
 import goal6 from '../assets/Goal6/E_PRINT_06.JPG';
 import goal14Banner from '../assets/Goal14/14_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 14
 import goal14 from '../assets/Goal14/E_PRINT_14.JPG';
 import goal15Banner from '../assets/Goal15/15_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 15
 import goal15 from '../assets/Goal15/E_PRINT_15.JPG';
+import Navbar from "../components/Navbar"
 
 const Sustainability = () => {
   return (
-    <div className="bg-gray-100">
-      <Banner title="Sustainability" color="blue" />
+    <div className="bg-customCream">
+      <Navbar></Navbar>
+      <NewBanner title="Engineering" color="customCream" />
       <CardSection />
       
       <div className="text-center my-12">

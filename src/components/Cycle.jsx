@@ -47,7 +47,7 @@ const Cycle = ({ content, position = 'left', title }) => {
   }, [selectedIndex, rotation]);
 
   return (
-    <div className="flex h-screen bg-[#f5f5dc] relative">
+    <div className="flex h-screen bg-white relative">
       <div className={`w-1/2 flex items-center justify-center relative ${position === 'left' ? 'order-1' : 'order-2'}`}>
         <div className="relative w-96 h-96">
           {/* Circle Border */}
