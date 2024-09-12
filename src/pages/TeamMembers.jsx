@@ -6,8 +6,8 @@ import Banner from "../components/Banner";
 const TeamMembers = () => {
   console.log(team_members)
   return (
-    <div className="bg-customCream">
-      <Banner title="Team Members" />
+    <div className="bg-white">
+      <Banner title="Team Members" color='customCream' />
    <Carousel team_members={team_members}/>
    </div>
   );

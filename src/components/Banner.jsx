@@ -5,7 +5,7 @@ const Banner = (props) => {
 
   return (
    
-<div className={`relative w-full h-[calc(100vh-100px)] bg-${props.color}-500`}>
+<div className={`relative w-full h-[calc(100vh-100px)] bg-${props.color}`}>
       <TypeAnimation
         sequence={[
           props.title, // Correct usage

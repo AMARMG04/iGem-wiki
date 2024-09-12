@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import LinkedIn from "../assets/image.png";
+import VantaEffect from './VantaEffect';
 
 const Carousel = ({ team_members }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,7 +23,8 @@ const Carousel = ({ team_members }) => {
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative s-page-1 w-full h-full">
+        <VantaEffect />
       <div
         ref={carouselRef}
         onScroll={handleScroll}

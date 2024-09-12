@@ -251,7 +251,7 @@ body {
   }, []);
 
   return (
-    <div className="bg-black h-fit  xl:mt-4">
+    <div className="bg-black h-fit xl:mt-4 overflow-hidden">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"

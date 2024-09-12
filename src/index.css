@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: "variable";
-    src: local("InterTight"),
-    url("./src/fonts/InterTight.ttf") format("truetype");
+    src: local("Domine"),
+    url("./src/fonts/Domine.ttf") format("truetype");
 }
 
 
@@ -72,9 +72,6 @@
     cursor: none;
 }
 
-html{
-    height:max-content;
-}
 .font-keania{
     font-family: "Keania One", sans-serif;
   font-weight: 400;

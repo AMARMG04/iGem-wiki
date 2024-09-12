@@ -63,7 +63,7 @@ const NewNavbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-40 backdrop-blur-lg " data-aos="fade-down" data-aos-duration="2000">
+    <nav className="sticky top-0 z-[1000] backdrop-blur-lg " data-aos="fade-down" data-aos-duration="2000">
       <div className="container px-9 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">

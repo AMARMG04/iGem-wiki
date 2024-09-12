@@ -33,7 +33,7 @@ body, html {
 .wave1 {
     background: url(../assets/wave2.png);
     animation: animate 30s linear infinite;
-    z-index: 1000;
+    z-index: 100;
     opacity: 1;
     animation-delay: 0s;
 }
@@ -41,7 +41,7 @@ body, html {
 .wave2 {
     background: url(../assets/wave2.png);
     animation: animate2 15s linear infinite;
-    z-index: 999;
+    z-index: 99;
     opacity: 0.5;
     animation-delay: -5s;
     bottom: 10px;
@@ -50,7 +50,7 @@ body, html {
 .wave3 {
     background: url(../assets/wave2.png);
     animation: animate 15s linear infinite;
-    z-index: 998;
+    z-index: 98;
     opacity: 0.2;
     animation-delay: -2s;
     bottom: 15px;

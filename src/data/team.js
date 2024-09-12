@@ -35,13 +35,6 @@ export const team_members = [
 
   },
   {
-    name: "Lokesh S B",
-    role: "Dry Lab Lead",
-    image: "/src/assets/signe.png",
-    description:"Look out! It’s…. Name- Lokesh.S.B, Nickname- Lk, Workout partner - His dog sandy 🐶. LOKESH is an adventurous undergraduate biotechnology student with a heart for nature and wildlife. Passionate about using biotechnology for wildlife conservation , particularly in environmental biotech, he is on a mission to make a difference. When not immersed in academics, you'll find Lokesh in action as a tactical animal rescuer at BlueCross, finding joy in adventure and fulfillment in saving lives. But that's just the beginning! He thrives on rock climbing🧗‍♂️ and hiking, sharpening problem-solving skills, focus, and concentration. Always eager to connect, He loves striking up conversations and expanding his network.  Add more technical deets.", 
-
-  },
-  {
     name: "Maline M",
     role: "Dry Lab Lead",
     image: "/src/assets/Images/Maline.png",
@@ -104,12 +97,6 @@ export const team_members = [
     description:"Say hello to Kadhiravan - the young and curious biotech whiz, building a biology-powered world of tomorrow! With a passion for his field, he's all about fresh perspectives and creative solutions, making a positive impact on the modern world. Plant-collecting is his happy place, bringing immense joy. Armed with a solid foundation in biology, he fearlessly dives into research, always optimistic for success. Confident and proud, he's ready to rock and contribute to society's betterment! ", 
 
   },
-  {
-    name: "Thirumurugan A.K.S",
-    role: "Dry Lab Lead",
-    image: "/src/assets/signe.png",
-    description:"Meet A.K.S. Thirumurugan, a multi-talented developer with a passion for learning and innovation. As a full-stack web, app, and game developer, he's skilled in Blender and IoT, and serves as a campus ambassador for GUVI, Coding Ninjas, Let's Upgrade, and GeeksforGeeks. Thirumurugan is driven by a thirst for knowledge, delving into new domains with depth and creativity. He’s not just a coder; he's a community builder who enjoys sharing insights and engaging with other tech enthusiasts. With his diverse skill set and relentless curiosity, he's poised to make a meaningful impact in the tech world.", 
 
-  },
   
 ];
