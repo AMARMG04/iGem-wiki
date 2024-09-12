@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         customCream: "#FFFAE9",
+        brown: "#5C2F01",
       },
       keyframes: {
         marquee: {

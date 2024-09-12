@@ -13,6 +13,7 @@ import "../components/waves.css";
 import Ocean from "../components/Ocean";
 import Food from "../components/Food";
 import NewNavbar from "../components/NewNavbar";
+import Land from "../components/Land";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -252,8 +253,9 @@ body {
   }, []);
 
   return (
-    <div className="bg-black h-fit  overflow-hidden">
+    <div className="bg-black">
       <NewNavbar />
+    <div className="bg-black h-fit  overflow-hidden">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"
@@ -468,11 +470,11 @@ body {
           </div>
         </div>
       </section>
-      {/* <div className="bg-white">
-        <video src=""></video>
-      </div> */}
+        <div >
     <Food />
     </div>
+      </div>
+      </div>
   );
 };
 

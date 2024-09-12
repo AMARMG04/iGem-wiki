@@ -1,10 +1,12 @@
 import React from 'react'
 import Foods from "../assets/food.png"
 import Body from "../assets/body.png"
+import Land from './Land'
+import Land2 from './Land2'
 const Food = () => {
     return (
-        <div>
-            <div className="bg-customCream h-auto">
+        <div >
+            <div className="bg-customCream h-auto pb-[40px]">
                 <h1 className="font-nohemi_m text-[70px] text-center pt-[120px]">How Does It Affect Food</h1>
 
                 <div className="pt-[90px] grid grid-cols-2">
@@ -46,6 +48,7 @@ const Food = () => {
 
 
             </div>
+            <Land2 />
         </div>
     )
 }
