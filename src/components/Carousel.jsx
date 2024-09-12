@@ -54,7 +54,7 @@ const Carousel = ({ team_members }) => {
 
   return (
     <div className="">
-      <div ref={vantaRef} className="relative w-full h-full">
+      <div ref={vantaRef} className="relative w-full h-screen">
         
       <div
         ref={carouselRef}
@@ -67,8 +67,8 @@ const Carousel = ({ team_members }) => {
             key={index}
           >
             <div className="w-full mt-5 pt-11 relative z-10">
-              <div className="bg-black/60 backdrop-blur-xl absolute p-4 md:w-[550px] md:h-[280px] lg:w-[800px] lg:h-[400px] lg:mx-10 rounded-3xl">
-                <h2 className="text-[54px] mb-3 font-semibold text-white capitalize">
+              <div className="bg-black/60 backdrop-blur-xl absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[800px] lg:h-fit lg:mx-10 rounded-3xl">
+                <h2 className="text-[54px] mb-3 font-nohemi_sb text-white capitalize">
                   {member.name}
                 </h2>
                 <div className="flex">
@@ -93,7 +93,7 @@ const Carousel = ({ team_members }) => {
                 <img
                   src={member.image}
                   alt={`${member.name} image`} 
-                  className="lg:w-auto lg:h-[600px]"
+                  className="lg:w-auto lg:h-[800px]"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ const Carousel = ({ team_members }) => {
       </div>
 
       {/* Navigation Dots */}
-      <div className="z-10 absolute bottom-5 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+        <div className="z-10 absolute bottom-5 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
         {team_members.map((_, index) => (
           <button
             key={index}
@@ -111,6 +111,7 @@ const Carousel = ({ team_members }) => {
           />
         ))}
       </div>
+      
       </div>;
     </div>
   );
