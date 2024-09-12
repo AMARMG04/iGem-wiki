@@ -45,8 +45,8 @@ const Banner = (props) => {
         .custom-shape-divider-bottom-1726114992 svg {
           position: relative;
           display: block;
-          width: calc(156% + 1.3px);
-          height: 87px; /* Adjust height if needed */
+          width: calc(146% + 1.3px);
+          height: 89px; /* Adjust height if needed */
           transform: rotateY(180deg);
         }
 

@@ -211,10 +211,10 @@ const Ocean = () => {
       </div>
 
 
-{/* 
+
       <div className='items-start police' ref={policeRef}>
         <img src={Police} className='w-[400px] pimg' alt="Police" />
-      </div> */}
+      </div>
 
       
     </div>
