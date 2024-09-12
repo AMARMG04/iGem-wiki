@@ -12,6 +12,7 @@ import Micros from "../assets/micros.png";
 import "../components/waves.css";
 import Ocean from "../components/Ocean";
 import Food from "../components/Food";
+import NewNavbar from "../components/NewNavbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -251,7 +252,8 @@ body {
   }, []);
 
   return (
-    <div className="bg-black h-fit xl:mt-4 overflow-hidden">
+    <div className="bg-black h-fit  overflow-hidden">
+      <NewNavbar />
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
           <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"

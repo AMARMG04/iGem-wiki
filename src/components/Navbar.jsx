@@ -1,44 +1,106 @@
-import React from "react";
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.png"
-// import { navItems } from "./../constants"
-const Navbar = () => {
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import logo from "../assets/logo.png";
+
+const NewNavbar = () => {
+  const navItems = [
+    {
+      label: 'Team',
+      pages: [
+        { name: "Team Members", link: "/team_members" },
+        { name: "Mentors", link: "/mentors" },
+        { name: "Attributions", link: "/attributions" },
+      ]
+    },
+    {
+      label: 'Project',
+      pages: [
+        { name: "Project Description", link: "/project_description" },
+        { name: "Engineering", link: "/engineering" },
+        { name: "Implementation", link: "/implementation" },
+        { name: "Sustainability", link: "/sustainability" },
+        { name: "Notebook", link: "/notebook" },
+        { name: "Safety", link: "/safety" },
+        { name: "Results", link: "/results" },
+        { name: "Contribution", link: "/contribution" },
+        { name: "Experiments", link: "/experiments" },
+        { name: "POC", link: "/poc" },
+      ]
+    },
+    {
+      label: 'Dry Lab',
+      pages: [
+        { name: "Modeling", link: "/modeling" },
+        { name: "Genetic Circuit", link: "/genetic_circuit" },
+      ]
+    },
+    {
+      label: 'Parts',
+      pages: [
+        { name: "Overview", link: "/parts" },
+      ]
+    },
+    {
+      label: 'Human Practices',
+      pages: [
+        { name: "iHP", link: "/ihp" },
+        { name: "Collab", link: "/collab" },
+        { name: "Education", link: "/education" },
+        { name: "Sponsorship / Acknowledgement", link: "/sponsorship" },
+      ]
+    }
+  ];
+
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+  const [openDropdownIndex, setOpenDropdownIndex] = useState(null);
+
   const toggleNavbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Team", href: "/team_members" },
-    { label: "Project", href: "/" },
-    { label: "Safety", href: "/" },
-    { label: "Human Practices", href: "/" },
-    { label: "Awards", href: "/" },
-  ];
-  console.log(navItems[1].href);
+
+  const toggleDropdown = (index) => {
+    setOpenDropdownIndex(openDropdownIndex === index ? null : index);
+  };
+
   return (
-    <nav className="sticky top-0 z-50 py-1 backdrop-blur-lg border-gray-700/80">
-      <div className="container px-4 mx-auto relative text-sm">
+    <nav className="sticky top-0 z-[1000] backdrop-blur-lg " data-aos="fade-down" data-aos-duration="2000">
+      <div className="container px-9 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
-            <img className='w-24' src={logo} alt="" />
-            {/* <h1 className="text-[30px]">REC-Chennai</h1> */}
+            <img className="lg:w-[95px] mr-2" src={logo} alt="" />
           </div>
-          <ul className="hidden lg:flex font-bold text-lg gap-16">
+          <ul className="hidden lg:flex space-x-12 lg:gap-8 xl:gap-12">
             {navItems.map((item, index) => (
-              <li key={index}>
-                <Link to={item.href}>{item.label}</Link>
+              <li key={index} className="text-black relative">
+                <button
+                  onClick={() => toggleDropdown(index)}
+                  className="text-[15px] font-nohemi_r focus:outline-none"
+                >
+                  {item.label}
+                </button>
+                {openDropdownIndex === index && (
+                  <ul className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg py-2 z-20">
+                    {item.pages.map((page, pageIndex) => (
+                      <li key={pageIndex}>
+                        <a
+                          href={page.link}
+                          className="block px-4 py-2 hover:bg-gray-100"
+                        >
+                          {page.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <a
               href="#"
-              className="bg-gradient-to-r from-blue-500 to-blue-400  py-2 px-3 rounded-md text-black"
+              className="text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-3 rounded-md"
             >
-              Play a game
+              Play A Game
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
@@ -51,19 +113,33 @@ const Navbar = () => {
           <div className="fixed right-0 z-20 bg-blue-gray-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
               {navItems.map((item, index) => (
-                <li key={index} className="py-4">
-                  <a href={navItems.href} className="text-1xl">
+                <li key={index} className="py-4 relative">
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="text-1xl text-white"
+                  >
                     {item.label}
-                  </a>
+                  </button>
+                  {openDropdownIndex === index && (
+                    <ul className="mt-2 space-y-2">
+                      {item.pages.map((page, pageIndex) => (
+                        <li key={pageIndex}>
+                          <a href={page.link} className="block text-center">
+                            {page.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
             <div className="flex space-x-6">
               <a
                 href="#"
-                className="bg-gradient-to-r  from-orange-500 to-orange-400 py-2 px-3 border rounded-md w-80 mt-2 text-center"
+                className="bg-gradient-to-r from-orange-500 to-orange-700 py-2 px-3 border rounded-md w-80 mt-2 text-center"
               >
-                Play a game
+                Let's Talk
               </a>
             </div>
           </div>
@@ -73,4 +149,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NewNavbar;

@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Banner from "../components/Banner";
+import Navbar from "../components/Navbar"
 import { description } from "../data/description";
+import NewBanner from "../components/NewBanner";
 
 const ProjectDescription = () => {
   const [activeLink, setActiveLink] = useState(""); // To track active section
@@ -54,9 +56,13 @@ const ProjectDescription = () => {
   }, []);
 
   return (
-    <div className="bg-white">
-      <Banner title="Project Description" color="green" />
-      <div className=" p-10 flex flex-row gap-10">
+    <div className="bg-customCream ">
+      <Navbar />
+      {/* <Banner title="Project Description" color="green" /> */}
+      <div className="">
+      <NewBanner title="Project Description" color="customCream" />
+      </div>
+      <div className=" p-10 flex flex-row gap-10 bg-white">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">
           <h1 className="font-nohemi_m mb-4 text-3xl">Table of Contents</h1>
           <ul className="flex flex-col">
@@ -100,7 +106,7 @@ const ProjectDescription = () => {
             ))}
           </ul>
         </div>
-        <div className="p-4 flex flex-col gap-10">
+        <div className="p-4 flex flex-col gap-10 ">
           {/* Plastic Pollution */}
           <div
             ref={(el) => (sectionsRef.current[`section-0`] = el)}

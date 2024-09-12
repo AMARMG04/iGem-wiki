@@ -8,7 +8,7 @@ import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
 import HumanPractices from "./components/HumanPractices";
-import NewNavbar from "./components/NewNavbar";
+// import NewNavbar from "./components/NewNavbar";
 
 import CircleTrail from "./components/CircleTrail";
 
@@ -22,9 +22,9 @@ import Sustainability from "./pages/Sustainability"
 
 function App() {
   return (
-    <div className=" h-full bg-black">
+    <div className=" h-full ">
       <CircleTrail/>
-      <NewNavbar />
+      {/* <NewNavbar /> */}
       <Routes>
       <Route path="/home" element={<NewHome />} />
 
