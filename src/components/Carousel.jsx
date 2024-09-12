@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import LinkedIn from "../assets/image.png";
-import VantaEffect from './VantaEffect';
+import NET from "vanta/dist/vanta.net.min.js";
+import * as THREE from "three";
 
 const Carousel = ({ team_members }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,9 +23,39 @@ const Carousel = ({ team_members }) => {
     }
   };
 
+  const [vantaEffect, setVantaEffect] = useState(0);
+  const vantaRef = useRef(null);
+
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(
+        NET({
+          el: vantaRef.current,
+          THREE: THREE,
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          color: 0x0,
+          backgroundColor: 0xffffff,
+          points: 11.00,
+          maxDistance: 25.00,
+          spacing: 16.00
+        })
+      );
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy();
+    };
+  }, [vantaEffect]);
+
   return (
-    <div className="relative s-page-1 w-full h-full">
-        <VantaEffect />
+    <div className="">
+      <div ref={vantaRef} className="relative w-full h-full">
+        
       <div
         ref={carouselRef}
         onScroll={handleScroll}
@@ -36,7 +67,7 @@ const Carousel = ({ team_members }) => {
             key={index}
           >
             <div className="w-full mt-5 pt-11 relative z-10">
-              <div className="bg-gray-900 absolute p-4 md:w-[550px] md:h-[280px] lg:w-[800px] lg:h-[400px] lg:mx-10 rounded-3xl">
+              <div className="bg-black/60 backdrop-blur-xl absolute p-4 md:w-[550px] md:h-[280px] lg:w-[800px] lg:h-[400px] lg:mx-10 rounded-3xl">
                 <h2 className="text-[54px] mb-3 font-semibold text-white capitalize">
                   {member.name}
                 </h2>
@@ -62,7 +93,7 @@ const Carousel = ({ team_members }) => {
                 <img
                   src={member.image}
                   alt={`${member.name} image`} 
-                  className="lg:w-[600px] lg:h-[650px]"
+                  className="lg:w-auto lg:h-[600px]"
                 />
               </div>
             </div>
@@ -80,6 +111,7 @@ const Carousel = ({ team_members }) => {
           />
         ))}
       </div>
+      </div>;
     </div>
   );
 };
