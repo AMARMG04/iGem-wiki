@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { contents, links } from "../data/table";
-import Banner from "../components/Banner";
+import NewBanner from "../components/NewBanner";
+import Navbar from "../components/Navbar";
 
 const Parts = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -54,13 +55,14 @@ const Parts = () => {
   }, []);
 
   return (
-    <>
-      <Banner title="Parts Overview" />
-      <div className="p-10 mx-auto max-w-[1350px] font-general bg-white">
-        <div className="grid grid-cols-3 gap-4 ">
+    <div className="bg-customCream">
+       <Navbar></Navbar>
+       <NewBanner title="Mentors" color="customCream" />
+      <div className="p-10 font-general bg-white">
+        <div className="flex flex-row gap-4 ">
           {/* Table of Contents */}
-          <div className="col-span-1">
-            <div className="table-contents h-[700px] p-4 rounded-lg  sticky top-44">
+          <div className="min-w-[300px]">
+            <div className="table-contents h-[700px] p-4 rounded-lg sticky top-44">
               <h2 className="text-[30px] font-nohemi_m mb-4">
                 Table of Contents
               </h2>
@@ -87,7 +89,7 @@ const Parts = () => {
           </div>
 
           {/* Table */}
-          <div className="col-span-2 shadow-[0_5px_60px_-35px_rgba(0,0,0,0.3)] border p-10 rounded-sm">
+          <div className="w-full p-10 rounded-sm">
             <div
               className="mb-10 flex flex-col"
               id="table1"
@@ -100,7 +102,7 @@ const Parts = () => {
               </div>
 
               <div>
-                <h2 className="font-inter font-regular">
+                <h2 className="font-inter font-regular text-justify">
                   Vilnius-Lithuania iGEM 2023 team's goal is to employ synthetic
                   biology tools to modify naturally produced Komagataeibacter
                   xylinus bacterial cellulose polymer composition. Firstly, we
@@ -365,7 +367,7 @@ const Parts = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
