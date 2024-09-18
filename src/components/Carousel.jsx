@@ -67,7 +67,7 @@ const Carousel = ({ team_members }) => {
             key={index}
           >
             <div className="w-full mt-5 pt-11 relative z-10">
-              <div className="bg-black/60 backdrop-blur-xl absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[800px] lg:h-fit lg:mx-10 rounded-3xl">
+              <div className="bg-black/60 my-20 backdrop-blur-xl absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[800px] lg:h-fit lg:mx-10 rounded-3xl">
                 <h2 className="text-[54px] mb-3 font-nohemi_sb text-white capitalize">
                   {member.name}
                 </h2>

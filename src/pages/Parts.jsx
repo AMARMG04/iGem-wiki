@@ -57,7 +57,7 @@ const Parts = () => {
   return (
     <div className="bg-customCream">
        <Navbar></Navbar>
-       <NewBanner title="Mentors" color="customCream" />
+       <NewBanner title="Parts Overview" color="customCream" />
       <div className="p-10 font-general bg-white">
         <div className="flex flex-row gap-4 ">
           {/* Table of Contents */}
