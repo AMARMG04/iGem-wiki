@@ -7,7 +7,7 @@ import NoteBook from "./pages/NoteBook";
 import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
-import HumanPractices from "./components/HumanPractices";
+import HumanPractices from "./pages/ihp";
 // import NewNavbar from "./components/NewNavbar";
 
 import CircleTrail from "./components/CircleTrail";
@@ -34,7 +34,7 @@ function App() {
         <Route path="/notebook" element={<NoteBook />} />
         <Route path="/parts" element={<Parts />} />
         <Route path="/protocols" element={<Protocol />} />
-        <Route path="/hs" element={<HumanPractices />} />
+        <Route path="/ihp" element={<HumanPractices />} />
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/project_description" element={<ProjectDescription />} />
         <Route path='/sustainability' element={<Sustainability/>} />
