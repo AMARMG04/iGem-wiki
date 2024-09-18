@@ -61,7 +61,7 @@ const HumanPractices = () => {
       <div className="bg-white">
         {/* Title Section */}
         <section className="text-center py-20" data-scroll>
-       <NewBanner title="Human Practices" color="customCream" />
+       <NewBanner title="Integrated Human Practices" color="customCream" />
         </section>
 
         {/* Parallax Section - Project Journey */}
@@ -160,7 +160,7 @@ const HumanPractices = () => {
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-10">
           {cards.map((card, index) => (
             <div key={index} className="relative group" data-scroll>
-              <img
+              <img  
                 src={card.imageSrc}
                 alt={`Image ${index + 1}`}
                 className="w-full h-auto object-cover rounded-lg shadow-lg"
