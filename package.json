@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "fullpage.js": "^4.0.28",
     "gsap": "^3.12.5",
+    "locomotive-scroll": "^4.1.4",
     "lodash.throttle": "^4.1.1",
     "lottie-web": "^5.12.2",
     "lucide-react": "^0.437.0",
