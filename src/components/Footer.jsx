@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <h1 className="text-center font-nohemi_m text-2xl my-4">Sponsers</h1>
+      <h1 className="text-center font-nohemi_m text-2xl my-4">Sponsors</h1>
       <div className=" bg-white">
         <Marquee></Marquee>
 

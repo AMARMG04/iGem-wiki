@@ -13,7 +13,7 @@ const Sustainability = () => {
   return (
     <div className="bg-customCream">
       <Navbar></Navbar>
-      <NewBanner title="Engineering" color="customCream" />
+      <NewBanner title="Sustainability" color="customCream" />
       <CardSection />
       
       <div className="text-center my-12">
