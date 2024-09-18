@@ -10,7 +10,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Food = () => {
-  const microRef = useRef([]);
+  // Create separate refs for each micro-plastic
+  const microRef1 = useRef(null);
+  const microRef2 = useRef(null);
+  const microRef3 = useRef(null);
+  const microRef4 = useRef(null);
+  const microRef5 = useRef(null);
+  const microRef6 = useRef(null);
+  const microRef7 = useRef(null);
+  const microRef8 = useRef(null);
   const lenisRef = useRef(null);
 
   useEffect(() => {
@@ -29,25 +37,112 @@ const Food = () => {
     };
     requestAnimationFrame(scrollFn);
 
-    // Ensure the ScrollTrigger works properly
+    // Ensure ScrollTrigger works properly
     ScrollTrigger.refresh();
 
-    // Animation for microplastic divs
-    microRef.current.forEach((micro) => {
-      if (micro) {
-        gsap.to(micro, {
-          scrollTrigger: {
-            trigger: ".plasticsdiv",  // Start the animation when plasticsdiv enters the viewport
-            start: "top center",      // Start when the top of plasticsdiv is at the center
-            endTrigger: ".body-image",// End when body-image section is reached
-            end: "top center",        // End when the top of body-image reaches the center
-            scrub: true,              // Smoothly link the animation to the scroll
-          },
-          y: 700,
-          x: 750,  // Move down by 500px, adjust as necessary
-          ease: "power1.out",  // Smooth easing
-        });
-      }
+    // Individual animations for each micro-plastic
+    gsap.to(microRef1.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 850,
+      x: 650,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef2.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 700,
+      x: 650,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef3.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 700,
+      x: 950,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef4.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 800,
+      x: 750,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef5.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 700,
+      x: 850,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef6.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 700,
+      x: 750,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef7.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 810,
+      x: 880,
+      ease: "power1.out",
+    });
+
+    gsap.to(microRef8.current, {
+      scrollTrigger: {
+        trigger: ".plasticsdiv",
+        start: "top center",
+        endTrigger: ".body-image",
+        end: "top center",
+        scrub: true,
+      },
+      y: 770,
+      x: 590,
+      ease: "power1.out",
     });
 
     // Cleanup Lenis when component unmounts
@@ -67,14 +162,14 @@ const Food = () => {
               <MagnifyImage src={Water} />
             </div>
             {/* Microplastic divs */}
-            <div className='z-50 micro-plastics rounded-full absolute right-10 top-[100px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[1] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute right-10 bottom-[90px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[2] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute left-7 top-[190px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[3] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute right-[170px] top-[60px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[4] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute left-[60px] bottom-[90px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[5] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute right-[170px] bottom-[40px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[6] = el)}></div>
-            <div className='z-50 micro-plastics rounded-full absolute left-11 top-[80px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[7] = el)}></div>
-            <div className='z-50micro-plastics rounded-full absolute right-[30px] top-[190px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microRef.current[8] = el)}></div>
+            <div className='z-50 micro-plastics rounded-full absolute right-10 top-[100px] bg-red-600 w-[9px] h-[15px]' ref={microRef1}></div>
+            <div className='z-50 micro-plastics rounded-full absolute right-10 bottom-[90px] bg-blue-600 w-[9px] h-[15px]' ref={microRef2}></div>
+            <div className='z-50 micro-plastics rounded-full absolute left-7 top-[190px] bg-red-600 w-[9px] h-[15px]' ref={microRef3}></div>
+            <div className='z-50 micro-plastics rounded-full absolute right-[170px] top-[60px] bg-yellow-600 w-[9px] h-[15px]' ref={microRef4}></div>
+            <div className='z-50 micro-plastics rounded-full absolute left-[60px] bottom-[90px] bg-blue-600 w-[9px] h-[15px]' ref={microRef5}></div>
+            <div className='z-50 micro-plastics rounded-full absolute right-[170px] bottom-[40px] bg-green-600 w-[9px] h-[15px]' ref={microRef6}></div>
+            <div className='z-50 micro-plastics rounded-full absolute left-11 top-[80px] bg-green-600 w-[9px] h-[15px]' ref={microRef7}></div>
+            <div className='z-50 micro-plastics rounded-full absolute right-[30px] top-[190px] bg-yellow-600 w-[9px] h-[15px]' ref={microRef8}></div>
           </div>
           <div className="col-span-1 justify-start" data-aos="fade-left">
             <p className='font-nohemi_l text-justify text-[25px] pt-9 mr-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
