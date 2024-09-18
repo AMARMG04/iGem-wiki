@@ -105,9 +105,9 @@ const MagnifyImage = ({ src }) => {
     >
       {/* Hidden Canvas to Render Combined Image and Micro Elements */}
       <canvas ref={canvasRef} width={330} height={330} style={{ display: 'none' }} />
-<div>
-    <h1 className='font-inter text-white text-3xl'>Hover over me!</h1>
-</div>
+  {/* <div>
+      <h1 className='font-inter text-white text-3xl'>Hover over me!</h1>
+  </div> */}
       {/* Display the Base Image */}
       <div
         className="relative w-full h-full"
