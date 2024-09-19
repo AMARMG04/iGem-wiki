@@ -5,8 +5,7 @@ import Nav from './NewNavbar';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import scrollingImage from '../assets/polic.png'; 
-import additionalImage1 from '../assets/bottle.webp'; 
-import additionalImage2 from '../assets/bottle.webp'; 
+import additionalImage1 from '../assets/bottle.webp';
 import NewBanner from './NewBanner';
 import Footer from './Footer';
 
@@ -14,12 +13,12 @@ import Footer from './Footer';
 const ParallaxSection = ({ imageUrl, title }) => {
   return (
     <div
-      className="relative w-full py-52 bg-cover bg-fixed bg-center"
+      className="relative w-full py-52 bg-cover bg-fixed bg-center font-nohemi_m"
       style={{ backgroundImage: `url(${imageUrl})` }}
       data-scroll
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
-      <h2 className="relative z-10 text-white text-6xl font-bold uppercase text-center tracking-widest drop-shadow-lg"
+      <div className="absolute inset-0 bg-black opacity-50 font-nohemi_m"></div>
+      <h2 className="relative z-10 text-white text-6xl font-nohemi_m text-center tracking-widest drop-shadow-lg"
           data-scroll
           data-scroll-speed="2">
         {title}
@@ -56,7 +55,7 @@ const HumanPractices = () => {
   }, []);
 
   return (
-    <div data-scroll-container>
+    <div data-scroll-container className="font-nohemi_m">
       <Nav />
       <div className="bg-white">
         {/* Title Section */}
@@ -68,6 +67,7 @@ const HumanPractices = () => {
         <ParallaxSection
           imageUrl="https://images.unsplash.com/photo-1415018255745-0ec3f7aee47b?dpr=1&auto=format&fit=crop&w=1500&h=938&q=80&cs=tinysrgb&crop="
           title="Project Journey"
+          
         />
 
         {/* Moving Image in Different Locations */}
