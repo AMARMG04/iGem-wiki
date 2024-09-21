@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import NewNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import NewBanner from "../components/Banner";
 
 const Education = () => {
   const [activeLink, setActiveLink] = useState("");
+  const [hoveredCard, setHoveredCard] = useState(null); // State for hovered card
   const sectionsRef = useRef({});
   const [selectedImages, setSelectedImages] = useState({}); // State for selected images
 
@@ -17,7 +19,6 @@ const Education = () => {
   };
 
   useEffect(() => {
-    // Initialize selectedImages with the first small image of each school
     const initialSelectedImages = {};
     schools.forEach((school) => {
       initialSelectedImages[school.id] = school.smallImages[0]; // Set the first small image as default
@@ -77,15 +78,16 @@ const Education = () => {
   return (
     <div className="bg-customCream">
       <NewNavbar />
+      <NewBanner title="Educations" color="blue" />
       <div className="p-10 flex flex-row gap-10 bg-white">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">
-          <h1 className="font-nohemi_m mb-4 text-3xl">Table of Contents</h1>
+          <h1 className="font-nohemi_m mb-4 text-3xl">Education</h1>
           <ul className="flex flex-col">
             {schools.map((school, index) => (
               <li
                 key={school.id}
                 className={`flex items-center font-nohemi_r cursor-pointer py-4 ${
-                  activeLink === `section-${index}`
+                  activeLink === `section-${index}` || hoveredCard === index
                     ? "text-blue-500 border-l-2 border-blue-500 pl-5"
                     : "border-l-2 border-gray-500 text-black pl-5"
                 }`}
@@ -109,6 +111,8 @@ const Education = () => {
               className={`border border-gray-300 rounded-lg shadow-md p-4 w-full flex flex-col transition-transform duration-200 ease-in-out ${
                 activeLink === `section-${index}` ? "outline outline-2 outline-blue-500" : ""
               }`}
+              onMouseEnter={() => setHoveredCard(index)} // Set hovered card index on mouse enter
+              onMouseLeave={() => setHoveredCard(null)} // Reset hovered card index on mouse leave
             >
               <div className="flex-1">
                 <h1 className="text-xl border-b-2 text-blue-600 border-blue-600 pb-2">

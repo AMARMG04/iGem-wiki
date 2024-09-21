@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Timeline from './TimeLine';
 import Cards from './Cards';
-import Nav from './NewNavbar';
+import Nav from './Navbar';
 import LocomotiveScroll from 'locomotive-scroll';
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import scrollingImage from '../assets/polic.png'; 
