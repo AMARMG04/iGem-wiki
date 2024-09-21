@@ -71,7 +71,7 @@ const NewNavbar = () => {
           </div>
           <ul className="hidden lg:flex space-x-12 lg:gap-8 xl:gap-12">
             {navItems.map((item, index) => (
-              <li key={index} className="text-black relative">
+              <li key={index} className="text-white relative">
                 <button
                   onClick={() => toggleDropdown(index)}
                   className="text-[15px] font-nohemi_r focus:outline-none"
@@ -139,7 +139,7 @@ const NewNavbar = () => {
                 href="#"
                 className="bg-gradient-to-r from-orange-500 to-orange-700 py-2 px-3 border rounded-md w-80 mt-2 text-center"
               >
-                Let's Talk
+                Play A Game
               </a>
             </div>
           </div>

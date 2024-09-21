@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from "../assets/logo.png";
 
-const NewNavbar = () => {
+const Navbar = () => {
   const navItems = [
     {
       label: 'Team',
@@ -83,7 +83,7 @@ const NewNavbar = () => {
                 {openDropdownIndex === index && (
                   <ul className="absolute left-0 mt-2 w-48 bg-[#0A7EAF]/80 backdrop-blur-lg text-white rounded-lg shadow-lg py-2 z-20">
                     {item.pages.map((page, pageIndex) => (
-                      <li key={pageIndex}>
+                      <li key={pageIndex} className="text-white relative">
                         <a href={page.link} className="block px-4 py-2 hover:bg-gray-100 hover:text-[#0A7EAF]">
                           {page.name}
                         </a>
@@ -143,9 +143,9 @@ const NewNavbar = () => {
             <div className="mt-8">
               <a
                 href="#"
-                className="bg-gradient-to-r from-orange-500 to-orange-700 py-2 px-4 border rounded-md text-white text-center block"
+                className="text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-4 rounded-md"
               >
-                Let's Talk
+                Play A Game
               </a>
             </div>
           </div>
@@ -155,4 +155,4 @@ const NewNavbar = () => {
   );
 };
 
-export default NewNavbar;
+export default Navbar;
