@@ -113,7 +113,7 @@ const ProjectDescription = () => {
             id="section-0"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[0].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[0].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               {description[0].content}
             </p>
@@ -129,7 +129,7 @@ const ProjectDescription = () => {
             id="section-1"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[1].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[1].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               {description[1].content}
             </p>
@@ -145,7 +145,7 @@ const ProjectDescription = () => {
             id="section-2"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[2].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[2].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[2].content.map((con, index) => (
@@ -161,7 +161,7 @@ const ProjectDescription = () => {
             id="section-3"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[3].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[3].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               <ul className="flex flex-col gap-4">
                 {description[3].content.map((con, index) => (
@@ -177,7 +177,7 @@ const ProjectDescription = () => {
             id="section-4"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[4].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[4].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               {description[4].subcontent}
             </p>
@@ -196,7 +196,7 @@ const ProjectDescription = () => {
             id="section-5"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[5].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[5].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[5].content.map((con, index) => (
@@ -225,7 +225,7 @@ const ProjectDescription = () => {
             id="section-6"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[6].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[6].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[6].content.map((con, index) => (
@@ -254,11 +254,11 @@ const ProjectDescription = () => {
             id="section-7"
             className="flex flex-col gap-4"
           >
-            <h1 className="font-nohemi_m text-3xl">{description[7].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[7].title}</h1>
             <p className="font-inter font-regular text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[7].links.map((ref, index) => (
-                  <a href={ref.link}>
+                  <a href={ref.link} target="_blank">
                     <li className="hover:cursor-pointer" key={index}>
                       {ref.name}
                     </li>
