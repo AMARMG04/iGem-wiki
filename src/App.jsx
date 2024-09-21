@@ -19,6 +19,7 @@ import ProjectDescription from "./pages/ProjectDescription"
 import Engineering from "./pages/Engineering";
 import Sustainability from "./pages/Sustainability"
 import Education from "./pages/Education"
+import Modeling from "./pages/Modeling"
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <Route path="/project_description" element={<ProjectDescription />} />
         <Route path='/sustainability' element={<Sustainability/>} />
         <Route path='/education' element={<Education />} />
+        <Route path='/modeling' element={<Modeling />} />
       </Routes>
       <Footer />
       {/* <Mentors /> */}
