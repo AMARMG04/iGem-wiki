@@ -115,6 +115,44 @@ const Modeling = () => {
             </p>
           </div>
 
+          <div class="flex flex-col gap-4 items-center">
+            <div>
+              <img
+                src="/src/assets/modeling/image_5.png"
+                alt="Coarse-Grained Peptide Structure"
+                className="w-[600px] h-auto rounded-xl"
+              />
+              <p className="font-nohemi_r text-center my-4">MD Simulated Polystyrene</p>
+            </div>
+
+            <div>
+              <img
+                src="/src/assets/modeling/image_2.png"
+                alt="Atomistic Peptide Structure"
+                className="w-[600px] h-auto rounded-xl"
+              />
+              <p className="font-nohemi_r text-center my-4">Atomistic Structure of the Peptide KLWWMIRRW.pdb</p>
+            </div>
+
+            <div>
+              <img
+                src="/src/assets/modeling/image_3.png"
+                alt="Coarse-Grained Peptide Structure"
+                className="w-[600px] h-auto rounded-xl"
+              />
+              <p className="font-nohemi_r text-center my-4">Coarse Grained Structure of the KLWWMIRRW_cg.pdb</p>
+            </div>
+
+            <div>
+              <img
+                src="/src/assets/modeling/image_4.png"
+                alt="Atomistic Peptide Structure"
+                className="w-[600px] h-auto rounded-xl"
+              />
+              <p className="font-nohemi_r text-center my-4">Coarse Grained Structure of the KLWWMIRRW_cg.gro</p>
+            </div>
+          </div>
+
           {/* Why Focus on Isolation and Segregation of Microplastics? */}
           <div
             ref={(el) => (sectionsRef.current[`section-2`] = el)}
