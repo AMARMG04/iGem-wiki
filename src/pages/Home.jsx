@@ -7,13 +7,14 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import Plastic1 from "../assets/plastic1.png";
 import Plastic2 from "../assets/plastic2.png";
 import Plastic3 from "../assets/plastic3.png";
-import Plastic4 from "../assets/plastic4.png";
+// import Plastic4 from "../assets/plastic4.png";
 import Micros from "../assets/micros.png";
 import "../components/waves.css";
 import Ocean from "../components/Ocean";
 import Food from "../components/Food";
-import Navbar from "../components/Navbar";
-import Land from "../components/Land";
+// import Navbar from "../components/Navbar";
+// import Land from "../components/Land";
+import NewNavbar from "../components/NewNavbar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -254,7 +255,7 @@ body {
 
   return (
     <div className="bg-black">
-      <Navbar />
+      <NewNavbar />
     <div className="bg-black h-fit  overflow-hidden">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
@@ -474,6 +475,7 @@ body {
     <Food />
     </div>
       </div>
+     
       </div>
   );
 };
