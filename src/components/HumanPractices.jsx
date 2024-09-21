@@ -180,7 +180,7 @@ const HumanPractices = () => {
 
         {/* Parallax Section - Conclusion */}
         <ParallaxSection
-          imageUrl="https://images.squarespace-cdn.com/content/v1/53dd6676e4b0fedfbc26ea91/1533586373311-1IKA3N05BW349TAZ774M/19464238902_6fd9abb872_k.jpg?dpr=1&auto=format&fit=crop&w=1500&h=1001&q=80&cs=tinysrgb&crop="
+          imageUrl="https://cdn.pixabay.com/photo/2024/02/15/08/20/construction-8574908_1280.png"
           title="Conclusion"
         />
 

@@ -18,7 +18,7 @@ import NewHome from "./pages/NewHome";
 import ProjectDescription from "./pages/ProjectDescription"
 import Engineering from "./pages/Engineering";
 import Sustainability from "./pages/Sustainability"
-
+import Education from "./pages/Education"
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
         <Route path="/engineering" element={<Engineering />} />
         <Route path="/project_description" element={<ProjectDescription />} />
         <Route path='/sustainability' element={<Sustainability/>} />
-
+        <Route path='/education' element={<Education />} />
       </Routes>
       <Footer />
       {/* <Mentors /> */}
