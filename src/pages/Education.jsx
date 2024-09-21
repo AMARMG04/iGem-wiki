@@ -78,10 +78,10 @@ const Education = () => {
   return (
     <div className="bg-customCream">
       <NewNavbar />
-      <NewBanner title="Educations" color="blue" />
+      <NewBanner title="Education" color="blue" />
       <div className="p-10 flex flex-row gap-10 bg-white">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">
-          <h1 className="font-nohemi_m mb-4 text-3xl">Education</h1>
+          <h1 className="font-nohemi_m mb-4 text-3xl">Schools</h1>
           <ul className="flex flex-col">
             {schools.map((school, index) => (
               <li
@@ -111,17 +111,17 @@ const Education = () => {
               className={`border border-gray-300 rounded-lg shadow-md p-4 w-full flex flex-col transition-transform duration-200 ease-in-out ${
                 activeLink === `section-${index}` ? "outline outline-2 outline-blue-500" : ""
               }`}
-              onMouseEnter={() => setHoveredCard(index)} // Set hovered card index on mouse enter
-              onMouseLeave={() => setHoveredCard(null)} // Reset hovered card index on mouse leave
+              onMouseEnter={() => setHoveredCard(index)} 
+              onMouseLeave={() => setHoveredCard(null)} 
             >
               <div className="flex-1">
                 <h1 className="text-xl border-b-2 text-blue-600 border-blue-600 pb-2">
                   {school.name}
                 </h1>
                 <img
-                  src={selectedImages[school.id]} // Use selected image for the specific school
+                  src={selectedImages[school.id]} 
                   alt={school.name}
-                  className="w-full h-48 object-cover rounded-md mb-4" // Fixed height for main image
+                  className="w-full h-48 object-cover rounded-md mb-4"
                 />
                 <p className="text-justify text-lg">{school.content}</p>
                 <p className="text-justify text-lg">
