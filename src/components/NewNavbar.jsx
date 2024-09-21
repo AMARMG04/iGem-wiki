@@ -71,11 +71,7 @@ const NewNavbar = () => {
           {/* Desktop Menu */}
           <ul className="hidden lg:flex space-x-6 lg:space-x-8">
             {navItems.map((item, index) => (
-<<<<<<< HEAD
-              <li key={index} className="relative group">
-=======
               <li key={index} className="text-white relative">
->>>>>>> 4b026a62cd52ee62103c208ba2f4784eedea617f
                 <button
                   onClick={() => toggleDropdown(index)}
                   className="text-[15px] font-nohemi_r focus:outline-none"
