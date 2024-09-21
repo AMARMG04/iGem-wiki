@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 
 const Banner = (props) => {
   return (
-    <div className={`relative w-full h-[calc(100vh-100px)] bg-${props.color}`}>
+    <div className={`relative w-full h-[calc(100vh-150px)] bg-${props.color}`}>
       <div className="absolute top-36 left-1/2 w-[200px] h-[200px] bg-purple-900 rounded-full mix-blend-hard-light filter blur-2xl opacity-40  animate-blob lg:w-[400px] lg:h-[400px]"></div>
         <div className="absolute top-32 right-1/2 w-[200px] h-[200px] bg-orange-700 opacity-40-300 rounded-full mix-blend-hard-light filter blur-2xl opacity-40  animate-blob animation-delay-6000 lg:w-[400px] lg:h-[400px]"></div>
         <div className="absolute top-52 left-[600px] w-[200px] h-[200px] bg-indigo-800 rounded-full mix-blend-hard-light filter blur-2xl opacity-40  animate-blob animation-delay-4000 lg:w-[400px] lg:h-[400px]"></div>

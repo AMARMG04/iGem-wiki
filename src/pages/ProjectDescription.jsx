@@ -120,7 +120,7 @@ const ProjectDescription = () => {
           </div>
 
           <div>
-            <img src="/src/assets/description/image1.jpg" alt="" />
+            <img src="/src/assets/description/image1.jpg" alt="" className="rounded-xl"/>
           </div>
 
           {/* What are Microplastics? */}
@@ -136,7 +136,7 @@ const ProjectDescription = () => {
           </div>
 
           <div>
-            <img src="/src/assets/description/image2.jpeg" alt="" />
+            <img src="/src/assets/description/image2.jpeg" alt="" className="rounded-xl"/>
           </div>
 
           {/* Why Focus on Isolation and Segregation of Microplastics? */}
@@ -216,7 +216,7 @@ const ProjectDescription = () => {
           </div>
 
           <div>
-            <img src="/src/assets/description/image3.jpeg" alt="" />
+            <img src="/src/assets/description/image3.jpeg" alt="" className="rounded-xl"/>
           </div>
 
           {/* Applications */}
@@ -241,11 +241,11 @@ const ProjectDescription = () => {
           </div>
       
           <div>
-            <img src="/src/assets/description/image5.jpeg" alt="" />
+            <img src="/src/assets/description/image5.jpeg" alt="" className="rounded-xl"/>
           </div>
 
           <div>
-            <img src="/src/assets/description/image4.jpeg" alt="" />
+            <img src="/src/assets/description/image4.jpeg" alt="" className="rounded-xl"/>
           </div>
 
           {/* References */}
