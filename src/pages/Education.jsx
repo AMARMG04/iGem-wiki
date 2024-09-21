@@ -1,106 +1,147 @@
-"use client";
-
-import { useRef, useEffect } from "react";
-import { Book, Pencil } from 'lucide-react';
+import React, { useState, useEffect, useRef } from "react";
 import NewNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const schools = [
-  {
-    id: 1,
-    name: "Greenwood Elementary",
-    description: "A nurturing environment for young minds to grow and learn.",
-    content: "Greenwood Elementary is known for its innovative STEM program and beautiful green campus. Our dedicated teachers focus on hands-on learning experiences, fostering curiosity and creativity in every student."
-  },
-  {
-    id: 2,
-    name: "Riverside High School",
-    description: "Preparing students for success in college and beyond.",
-    content: "Riverside High School offers a rigorous academic curriculum alongside a wide range of extracurricular activities."
-  },
-  {
-    id: 3,
-    name: "Sunnydale Middle School",
-    description: "Bridging the gap between elementary and high school education.",
-    content: "At Sunnydale Middle School, we focus on developing critical thinking skills and fostering creativity."
-  },
-  {
-    id: 4,
-    name: "Tech Institute",
-    description: "Shaping the tech leaders of tomorrow.",
-    content: "Tech Institute is at the forefront of technology education, offering courses in coding and robotics."
-  }
-];
+const Education = () => {
+  const [activeLink, setActiveLink] = useState("");
+  const sectionsRef = useRef({});
+  const [selectedImages, setSelectedImages] = useState({}); // State for selected images
 
-const DoodleIcon = ({ Icon, className }) => (
-  <div className={`absolute ${className}`}>
-    <Icon className="text-blue-500 opacity-50" size={24} />
-  </div>
-);
-
-export default function Education() {
-  const schoolRefs = useRef([]);
-
-  const scrollToSchool = (index) => {
-    schoolRefs.current[index]?.scrollIntoView({ behavior: 'smooth' });
+  const handleScroll = (id) => {
+    setActiveLink(id);
+    const target = document.getElementById(id);
+    if (target) {
+      const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 200; // Adjust offset as needed
+      window.scrollTo({ top: offsetTop, behavior: "smooth" });
+    }
   };
 
   useEffect(() => {
-    schoolRefs.current = schoolRefs.current.slice(0, schools.length);
+    // Initialize selectedImages with the first small image of each school
+    const initialSelectedImages = {};
+    schools.forEach((school) => {
+      initialSelectedImages[school.id] = school.smallImages[0]; // Set the first small image as default
+    });
+    setSelectedImages(initialSelectedImages);
   }, []);
 
-  return (
-    <>
-    <NewNavbar/>
-    <div className="grid min-h-screen grid-cols-[280px_1fr] font-nohemi_m">
-    
-      <aside className="bg-gradient-to-b from-blue-600 to-blue-800 text-white relative overflow-hidden">
-        <DoodleIcon Icon={Book} className="top-4 left-4 rotate-12" />
-        <DoodleIcon Icon={Pencil} className="bottom-4 right-4 -rotate-12" />
-        <div className="p-6 relative z-10">
-          <nav>
-            <ul className="space-y-2 ">
-              {schools.map((school, index) => (
-                <li key={school.id}>
-                  <button
-                    onClick={() => scrollToSchool(index)}
-                    className="w-full text-left p-3 rounded transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 flex items-center"
-                  >
-                    <span className="w-8 h-8 flex items-center justify-center bg-blue-500 rounded-full mr-3 font-bold">
-                      {index + 1}
-                    </span>
-                    <span className="text-sm font-medium">{school.name}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
-      </aside>
+  const schools = [
+    {
+      id: 1,
+      name: "Greenwood Elementary",
+      description: "A nurturing environment for young minds to grow and learn.",
+      content: "Greenwood Elementary focuses on providing a comprehensive education, fostering creativity and critical thinking in students. The dedicated staff and vibrant community create an enriching atmosphere where children can thrive.",
+      imgSrc: "https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      smallImages: [
+        "https://images.pexels.com/photos/123123/pexels-photo-123123.jpeg",
+        "https://images.pexels.com/photos/456456/pexels-photo-456456.jpeg",
+        "https://images.pexels.com/photos/789789/pexels-photo-789789.jpeg",
+        "https://images.pexels.com/photos/101010/pexels-photo-101010.jpeg",
+      ],
+    },
+    {
+      id: 2,
+      name: "Riverside High School",
+      description: "Preparing students for success in college and beyond.",
+      content: "Riverside High School offers a variety of programs aimed at equipping students with the skills and knowledge needed for future success. With a strong emphasis on academics and extracurricular activities, students are encouraged to excel in all areas.",
+      imgSrc: "https://images.pexels.com/photos/764682/pexels-photo-764682.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      smallImages: [
+        "https://images.pexels.com/photos/111111/pexels-photo-111111.jpeg",
+        "https://images.pexels.com/photos/222222/pexels-photo-222222.jpeg",
+        "https://images.pexels.com/photos/333333/pexels-photo-333333.jpeg",
+        "https://images.pexels.com/photos/444444/pexels-photo-444444.jpeg",
+      ],
+    },
+    {
+      id: 3,
+      name: "Lakeside College",
+      description: "A place of higher learning with diverse programs.",
+      content: "Lakeside College provides a range of undergraduate and graduate programs designed to foster personal and academic growth. The campus is a vibrant community where students are empowered to pursue their passions and achieve their goals.",
+      imgSrc: "https://images.pexels.com/photos/764683/pexels-photo-764683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      smallImages: [
+        "https://images.pexels.com/photos/555555/pexels-photo-555555.jpeg",
+        "https://images.pexels.com/photos/666666/pexels-photo-666666.jpeg",
+        "https://images.pexels.com/photos/777777/pexels-photo-777777.jpeg",
+        "https://images.pexels.com/photos/888888/pexels-photo-888888.jpeg",
+      ],
+    },
+  ];
 
-      {/* Main Content */}
-      <main className="overflow-auto bg-gray-100 relative">
-        <div className="h-screen overflow-y-auto">
-          <div className="max-w-3xl mx-auto space-y-8 p-6">
+  const handleSmallImageClick = (schoolId, imgSrc) => {
+    setSelectedImages((prev) => ({
+      ...prev,
+      [schoolId]: imgSrc, // Set the selected image for the specific school
+    }));
+  };
+
+  return (
+    <div className="bg-customCream">
+      <NewNavbar />
+      <div className="p-10 flex flex-row gap-10 bg-white">
+        <div className="p-4 min-w-[300px] h-fit sticky top-28">
+          <h1 className="font-nohemi_m mb-4 text-3xl">Table of Contents</h1>
+          <ul className="flex flex-col">
             {schools.map((school, index) => (
-              <div key={school.id} ref={el => schoolRefs.current[index] = el} className="bg-white shadow-lg rounded-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4">
-                  <h2 className="text-2xl">{school.name}</h2>
-                  <p className="text-blue-100">{school.description}</p>
-                </div>
-                <div className="p-6 space-y-4">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.pexels.com/photos/764681/pexels-photo-764681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Animated GIF" className="w-full" /> 
-                  </div>
-                  <p className="text-gray-600 leading-relaxed">{school.content}</p>
-                </div>
-              </div>
+              <li
+                key={school.id}
+                className={`flex items-center font-nohemi_r cursor-pointer py-4 ${
+                  activeLink === `section-${index}`
+                    ? "text-blue-500 border-l-2 border-blue-500 pl-5"
+                    : "border-l-2 border-gray-500 text-black pl-5"
+                }`}
+              >
+                <a
+                  onClick={() => handleScroll(`section-${index}`)}
+                  className="hover:text-blue-500 text-[20px]"
+                >
+                  {school.name}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
-      </main>
+        <div className="p-4 flex flex-col gap-12 font-nohemi_m w-2/3">
+          {schools.map((school, index) => (
+            <div
+              ref={(el) => (sectionsRef.current[`section-${index}`] = el)}
+              id={`section-${index}`}
+              key={school.id}
+              className={`border border-gray-300 rounded-lg shadow-md p-4 w-full flex flex-col transition-transform duration-200 ease-in-out ${
+                activeLink === `section-${index}` ? "outline outline-2 outline-blue-500" : ""
+              }`}
+            >
+              <div className="flex-1">
+                <h1 className="text-xl border-b-2 text-blue-600 border-blue-600 pb-2">
+                  {school.name}
+                </h1>
+                <img
+                  src={selectedImages[school.id]} // Use selected image for the specific school
+                  alt={school.name}
+                  className="w-full h-48 object-cover rounded-md mb-4" // Fixed height for main image
+                />
+                <p className="text-justify text-lg">{school.content}</p>
+                <p className="text-justify text-lg">
+                  <strong>{school.description}</strong>
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                {school.smallImages.map((imgSrc, imgIndex) => (
+                  <img
+                    key={imgIndex}
+                    src={imgSrc}
+                    alt={`Small ${imgIndex + 1}`}
+                    className="w-full h-32 object-cover rounded-md cursor-pointer"
+                    onClick={() => handleSmallImageClick(school.id, imgSrc)} // Set the selected image for the specific school
+                  />
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <Footer />
     </div>
-    <Footer/>
-    </>
   );
-}
+};
+
+export default Education;
