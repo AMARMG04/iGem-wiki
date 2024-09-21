@@ -98,7 +98,7 @@ const NewNavbar = () => {
           {/* CTA Button for Desktop */}
           <div className="hidden lg:flex justify-center items-center">
             <a
-              href="#"
+              href="https://igem-plasticop.netlify.app"
               className="text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-4 rounded-md"
             >
               Play A Game
