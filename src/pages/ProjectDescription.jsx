@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Banner from "../components/Banner";
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar";
 import { description } from "../data/description";
 import NewBanner from "../components/NewBanner";
+import References from "../components/References";
 
 function renderWithBold(text) {
   const parts = text.split(/(\*\*[^**]+\*\*)/); // Split by **...**
@@ -71,7 +72,7 @@ const ProjectDescription = () => {
       <Navbar />
       {/* <Banner title="Project Description" color="green" /> */}
       <div className="">
-      <NewBanner title="Project Description" color="customCream" />
+        <NewBanner title="Project Description" color="customCream" />
       </div>
       <div className=" p-10 flex flex-row gap-10 bg-white">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">
@@ -124,14 +125,20 @@ const ProjectDescription = () => {
             id="section-0"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[0].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[0].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
-            {renderWithBold(description[0].content)}
+              {renderWithBold(description[0].content)}
             </p>
           </div>
 
           <div>
-            <img src="/src/assets/description/image1.jpg" alt="" className="rounded-xl"/>
+            <img
+              src="/src/assets/description/image1.jpg"
+              alt=""
+              className="rounded-xl"
+            />
           </div>
 
           {/* What are Microplastics? */}
@@ -140,14 +147,20 @@ const ProjectDescription = () => {
             id="section-1"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[1].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[1].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               {description[1].content}
             </p>
           </div>
 
           <div>
-            <img src="/src/assets/description/image2.jpeg" alt="" className="rounded-xl"/>
+            <img
+              src="/src/assets/description/image2.jpeg"
+              alt=""
+              className="rounded-xl"
+            />
           </div>
 
           {/* Why Focus on Isolation and Segregation of Microplastics? */}
@@ -156,7 +169,9 @@ const ProjectDescription = () => {
             id="section-2"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[2].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[2].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[2].content.map((con, index) => (
@@ -172,7 +187,9 @@ const ProjectDescription = () => {
             id="section-3"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[3].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[3].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4">
                 {description[3].content.map((con, index) => (
@@ -188,7 +205,9 @@ const ProjectDescription = () => {
             id="section-4"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[4].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[4].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               {description[4].subcontent}
             </p>
@@ -207,7 +226,9 @@ const ProjectDescription = () => {
             id="section-5"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[5].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[5].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[5].content.map((con, index) => (
@@ -227,7 +248,11 @@ const ProjectDescription = () => {
           </div>
 
           <div>
-            <img src="/src/assets/description/image3.jpeg" alt="" className="rounded-xl"/>
+            <img
+              src="/src/assets/description/image3.jpeg"
+              alt=""
+              className="rounded-xl"
+            />
           </div>
 
           {/* Applications */}
@@ -236,7 +261,9 @@ const ProjectDescription = () => {
             id="section-6"
             className="flex flex-col gap-6"
           >
-            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[6].title}</h1>
+            <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+              {description[6].title}
+            </h1>
             <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[6].content.map((con, index) => (
@@ -250,17 +277,25 @@ const ProjectDescription = () => {
               </ul>
             </p>
           </div>
-      
+
           <div>
-            <img src="/src/assets/description/image5.jpeg" alt="" className="rounded-xl"/>
+            <img
+              src="/src/assets/description/image5.jpeg"
+              alt=""
+              className="rounded-xl"
+            />
           </div>
 
           <div>
-            <img src="/src/assets/description/image4.jpeg" alt="" className="rounded-xl"/>
+            <img
+              src="/src/assets/description/image4.jpeg"
+              alt=""
+              className="rounded-xl"
+            />
           </div>
 
           {/* References */}
-          <div
+          {/* <div
             ref={(el) => (sectionsRef.current[`section-7`] = el)}
             id="section-7"
             className="flex flex-col gap-6"
@@ -277,6 +312,13 @@ const ProjectDescription = () => {
                 ))}
               </ul>
             </p>
+          </div> */}
+          <div
+            ref={(el) => (sectionsRef.current[`section-7`] = el)}
+            id="section-7"
+            className="flex flex-col gap-6"
+          >
+            <References references={description[7].links} />
           </div>
         </div>
       </div>

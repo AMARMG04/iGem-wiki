@@ -67,59 +67,129 @@ export const description = [
         title: "References",
         links:[
             {
-                name: "Ziani, K., Ioniță-Mîndrican, C. B., Mititelu, M., Neacșu, S. M., Negrei, C., Moroșan, E., Drăgănescu, D., & Preda, O. T. (2023). Microplastics: A Real Global Threat for Environment and Food Safety: A State of the Art Review. Nutrients, 15(3), 617.",
+                title: "Microplastics: A Real Global Threat for Environment and Food Safety: A State of the Art Review",
+                authors: "Ziani, K., Ioniță-Mîndrican, C. B., Mititelu, M., Neacșu, S. M., Negrei, C., Moroșan, E., Drăgănescu, D., & Preda, O. T.",
+                journal: "Nutrients",
+                volume: "15(3)",
+                page: "617",
+                year:"(2023)",
                 link: "https://www.mdpi.com/2072-6643/15/3/617"
             },
             {
-                name: "Issac, M. N., & Kandasubramanian, B. (2021). Effect of microplastics in water and aquatic systems. Environmental Science and Pollution Research International, 28(16), 19544–19562.",
+                title: "Effect of microplastics in water and aquatic systems",
+                authors: "Issac, M. N., & Kandasubramanian, B.",
+                journal: "Environmental Science and Pollution Research International",
+                volume: "28(16)",
+                page: "19544–19562",
+                year:"(2021)",
                 link: "https://link.springer.com/article/10.1007/s11356-021-13184-2"
             },
             {
-                name: "Leng, Z., Padhan, R. K., & Sreeram, A. (2018). Production of a sustainable paving material through chemical recycling of waste PET into crumb rubber modified asphalt. Journal of Cleaner Production, 180, 682–688.",
+                title: "Production of a sustainable paving material through chemical recycling of waste PET into crumb rubber modified asphalt",
+                authors: "Leng, Z., Padhan, R. K., & Sreeram, A.",
+                journal: "Journal of Cleaner Production",
+                volume: "180",
+                page: "682–688",
+                year:"(2018)",
                 link: "https://www.sciencedirect.com/science/article/abs/pii/S0959652618301938?via%3Dihub"
             },
             {
-                name: "Espinosa, C., Esteban, M. N., & Cuesta, A. (2016). Microplastics in Aquatic Environments and Their Toxicological Implications for Fish. In InTech eBooks.",
+                title: "Microplastics in Aquatic Environments and Their Toxicological Implications for Fish",
+                authors: "Espinosa, C., Esteban, M. N., & Cuesta, A.",
+                journal: "InTech eBooks",
+                volume: "NA",
+                page: "NA",
+                year: "(2016)",
                 link: "https://www.intechopen.com/chapters/52031"
             },
             {
-                name: "Cverenkárová, K., Valachovičová, M., Mackul’ak, T., Žemlička, L., & Bírošová, L. (2021). Microplastics in the Food Chain.Life, 11(12), 1349.",
+                title: "Microplastics in the Food Chain",
+                authors: "Cverenkárová, K., Valachovičová, M., Mackul’ak, T., Žemlička, L., & Bírošová, L.",
+                journal: "Life",
+                volume: "11(12)",
+                page: "1349",
+                year: "(2021)",
                 link: "https://www.mdpi.com/2075-1729/11/12/1349"
             },
             {
-                name: "Kadac-Czapska, K., Knez, E., & Grembecka, M. (2022). Food and human safety: the impact of microplastics. Critical Reviews in Food Science and Nutrition, 1–20.",
+                title: "Food and human safety: the impact of microplastics",
+                authors: "Kadac-Czapska, K., Knez, E., & Grembecka, M.",
+                journal: "Critical Reviews in Food Science and Nutrition",
+                volume: "NA",
+                page: "1–20",
+                year: "(2022)",
                 link: "https://www.tandfonline.com/doi/full/10.1080/10408398.2022.2132212"
             },
             {
-                name: "Jenner, L. C., Rotchell, J. M., Bennett, R. T., Cowen, M., Tentzeris, V., & Sadofsky, L. R. (2022). Detection of microplastics in human lung tissue using μFTIR spectroscopy. Science of the Total Environment, 831, 154907.",
+                title: "Detection of microplastics in human lung tissue using μFTIR spectroscopy",
+                authors: "Jenner, L. C., Rotchell, J. M., Bennett, R. T., Cowen, M., Tentzeris, V., & Sadofsky, L. R.",
+                journal: "Science of the Total Environment",
+                volume: "831",
+                page: "154907",
+                year: "(2022)",
                 link: "https://www.sciencedirect.com/science/article/pii/S0048969722020009?via%3Dihub"
             },
             {
-                name: "Geueke, B., Groh, K., & Muncke, J. (2018). Food packaging in the circular economy: Overview of chemical safety aspects for commonly used materials. Journal of Cleaner Production, 193, 491–505.",
+                title: "Food packaging in the circular economy: Overview of chemical safety aspects for commonly used materials",
+                authors: "Geueke, B., Groh, K., & Muncke, J.",
+                journal: "Journal of Cleaner Production",
+                volume: "193",
+                page: "491–505",
+                year: "(2018)",
                 link: "https://www.sciencedirect.com/science/article/pii/S0959652618313325?via%3Dihub"
             },
             {
-                name: "Kosuth, M., Mason, S. A., & Wattenberg, E. V. (2018). Anthropogenic contamination of tap water, beer, and sea salt. PloS One, 13(4), e0194970.",
+                title: "Anthropogenic contamination of tap water, beer, and sea salt",
+                authors: "Kosuth, M., Mason, S. A., & Wattenberg, E. V.",
+                journal: "PloS One",
+                volume: "13(4)",
+                page: "e0194970",
+                year: "(2018)",
                 link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0194970"
             },
             {
-                name: "Jino Affrald R. (2024). Microplastic menace: a path forward with innovative solutions to reduce pollution. Asian Journal of Atmospheric Environment, 18(1).",
+                title: "Microplastic menace: a path forward with innovative solutions to reduce pollution",
+                authors: "Jino Affrald R.",
+                journal: "Asian Journal of Atmospheric Environment",
+                volume: "18(1)",
+                page: "NA",
+                year: "(2024)",
                 link: "https://link.springer.com/article/10.1007/s44273-024-00026-z"
             },
             {
-                name: "Herbort, A. F., & Schuhen, K. (2016). A concept for the removal of microplastics from the marine environment with innovative host-guest relationships. Environmental Science and Pollution Research International, 24(12), 11061–11065.",
+                title: "A concept for the removal of microplastics from the marine environment with innovative host-guest relationships",
+                authors: "Herbort, A. F., & Schuhen, K.",
+                journal: "Environmental Science and Pollution Research International",
+                volume: "24(12)",
+                page: "11061–11065",
+                year: "(2016)",
                 link: "https://link.springer.com/article/10.1007/s11356-016-7216-x"
             },
             {
-                name: "Möller, J. N., Heisel, I., Satzger, A., Vizsolyi, E. C., Oster, S. J., Agarwal, S., Laforsch, C., & Löder, M. G. (2021). Tackling the Challenge of Extracting Microplastics from Soils: A Protocol to Purify Soil Samples for Spectroscopic Analysis. Environmental Toxicology and Chemistry, 41(4), 844–857.",
+                title: "Tackling the Challenge of Extracting Microplastics from Soils: A Protocol to Purify Soil Samples for Spectroscopic Analysis",
+                authors: "Möller, J. N., Heisel, I., Satzger, A., Vizsolyi, E. C., Oster, S. J., Agarwal, S., Laforsch, C., & Löder, M. G.",
+                journal: "Environmental Toxicology and Chemistry",
+                volume: "41(4)",
+                page: "844–857",
+                year: "(2021)",
                 link: "https://setac.onlinelibrary.wiley.com/doi/10.1002/etc.5024"
             },
             {
-                name: "Sait, S. T., Sørensen, L., Kubowicz, S., Vike-Jonas, K., Gonzalez, S. V., Asimakopoulos, A. G., & Booth, A. M. (2021). Microplastic fibres from synthetic textiles: Environmental degradation and additive chemical content. Environmental Pollution, 268, 115745.",
+                title: "Microplastic fibres from synthetic textiles: Environmental degradation and additive chemical content",
+                authors: "Sait, S. T., Sørensen, L., Kubowicz, S., Vike-Jonas, K., Gonzalez, S. V., Asimakopoulos, A. G., & Booth, A. M.",
+                journal: "Environmental Pollution",
+                volume: "268",
+                page: "115745",
+                year: "(2021)",
                 link: "https://www.sciencedirect.com/science/article/pii/S0269749120364344?via%3Dihub"
             },
             {
-                name: "Woo, H., Kang, S. H., Kwon, Y., Choi, Y., Kim, J., Ha, D. H., Tanaka, M., Okochi, M., Kim, J. S., Kim, H. K., & Choi, J. (2022). Sensitive and specific capture of polystyrene and polypropylene microplastics using engineered peptide biosensors. RSC Advances, 12(13), 7680–7688.",
+                title: "Sensitive and specific capture of polystyrene and polypropylene microplastics using engineered peptide biosensors",
+                authors: "Woo, H., Kang, S. H., Kwon, Y., Choi, Y., Kim, J., Ha, D. H., Tanaka, M., Okochi, M., Kim, J. S., Kim, H. K., & Choi, J.",
+                journal: "RSC Advances",
+                volume: "12(13)",
+                page: "7680–7688",
+                year: "(2022)",
                 link: "https://pubs.rsc.org/en/content/articlelanding/2022/ra/d1ra08701k"
             }
         ]
