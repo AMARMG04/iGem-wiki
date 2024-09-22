@@ -67,27 +67,27 @@ const Carousel = ({ team_members }) => {
             key={index}
           >
             <div className="w-full mt-5 pt-11 relative z-10">
-              <div className="bg-black/60 my-20 backdrop-blur-xl absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[800px] lg:h-fit lg:mx-10 rounded-3xl">
-                <h2 className="text-[54px] mb-3 font-nohemi_sb text-white capitalize">
+              <div className="bg-white/60 my-20 backdrop-blur-sm absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[850px] lg:h-fit lg:mx-10 rounded-3xl">
+                <h2 className="text-[76px] mb-3 font-nohemi_sb text-black capitalize">
                   {member.name}
                 </h2>
                 <div className="flex">
-                  <h3 className="text-white font-medium mb-4">
+                  <h3 className="text-black font-nohemi_m text-2xl mb-4">
                     {member.role} |
                   </h3>
                   <a
                     href="https://www.linkedin.com/"
-                    className="flex items-center justify-center text-white pb-4"
+                    className="flex items-center justify-center text-2xl font-nohemi_m text-black pb-4"
                   >
                     <img
                       src={LinkedIn}
-                      className="w-4 mx-2"
+                      className="w-6 mx-2"
                       alt="LinkedIn icon"
                     />
                     LinkedIn
                   </a>
                 </div>
-                <p className="text-white">{member.description}</p>
+                <p className="text-black font-inter text-xl">{member.description}</p>
               </div>
               <div className="relative flex justify-end z-0">
                 <img

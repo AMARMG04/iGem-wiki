@@ -141,9 +141,15 @@ const Land2 = () => {
 
 
 
-            <div className="h-[400px] bg-brown flex items-center justify-center py-[450px] z-50">
+            <div className="h-[1000px] bg-customCream   z-50">
+            <h1 className='pt-10 text-center font-nohemi_m text-[70px]'>
+                    Watch Our Video
+                </h1>
+                                <div className='flex items-center justify-center mb-11 h-[700px]'>
             <iframe width="1060" height="575" src="https://www.youtube.com/embed/RZysj-443-8?si=g_43hioYGF84Yv-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+</div>
+
         </div>
     );
 };

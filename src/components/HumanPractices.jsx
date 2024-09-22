@@ -59,7 +59,9 @@ const HumanPractices = () => {
       <Nav />
       <div className="bg-white">
         {/* Title Section */}
-        <section className="text-center py-20" data-scroll>
+        
+        <section className="text-center" data-scroll>
+          
        <NewBanner title="Integrated Human Practices" color="customCream" />
         </section>
 
