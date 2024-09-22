@@ -16,28 +16,28 @@ const NewNavbar = () => {
       label: 'Project',
       pages: [
         { name: "Project Description", link: "/project_description" },
+        { name: "Modelling", link: "/modeling" },
         { name: "Engineering", link: "/engineering" },
+        { name: "Experiments", link: "/experiments" },
+        { name: "POC", link: "/poc" },
+        { name: "Results", link: "/results" },
         { name: "Implementation", link: "/implementation" },
         { name: "Sustainability", link: "/sustainability" },
         { name: "Notebook", link: "/notebook" },
+      ]
+    },
+    {
+      label: 'Contribution',
+      pages: [
+        { name: "Parts", link: "/parts" },
+        { name: "Database", link: "/database" },
+      ]
+    },
+    {
+      label: 'Safety & Training',
+      pages: [
         { name: "Safety", link: "/safety" },
-        { name: "Results", link: "/results" },
-        { name: "Contribution", link: "/contribution" },
-        { name: "Experiments", link: "/experiments" },
-        { name: "POC", link: "/poc" },
-      ]
-    },
-    {
-      label: 'Dry Lab',
-      pages: [
-        { name: "Modeling", link: "/modeling" },
-        { name: "Genetic Circuit", link: "/genetic_circuit" },
-      ]
-    },
-    {
-      label: 'Parts',
-      pages: [
-        { name: "Overview", link: "/parts" },
+        { name: "Training", link: "/training" },
       ]
     },
     {
