@@ -1,150 +1,159 @@
-
 import { FaFlask, FaDna } from 'react-icons/fa';
 
 const protocols = [
   {
-    id: 'protocol1',
-    title: 'Protocol for Nile Red Fluorescence Method',
-    icon: <FaFlask className="text-xl" />, // Icon for this protocol
+    id: 'pre-culture',
+    title: 'Pre-culture',
+    icon: <FaFlask className="text-xl" />,
     content: (
       <div className="text-gray-700 mt-4">
-        <p>
-          <strong>Based on:</strong> Zuriani, R., Vigneswari, S., Azizan, M.N.M. et al. A high throughput Nile red fluorescence method for rapid quantification of intracellular bacterial polyhydroxyalkanoates. Biotechnol Bioproc E 18, 472–478 (2013).{' '}
-          <a href="https://doi.org/10.1007/s12257-012-0607-z" className="text-blue-500 underline" target="_blank" rel="noopener noreferrer">
-            https://doi.org/10.1007/s12257-012-0607-z
-          </a>
-        </p>
+        <p>Prepare 200mL (2 x 100 mL) LB broth and inoculate a loop of E.coli K-12 into one of them. Incubate in a shaker for 15 hours at 37°C at 250 rpm. The other one acts as a blank.</p>
+        <p>Let it grow overnight. Check OD after 15 hours and ensure the OD is 0.6.</p>
+        <strong>Competent Cell Preparation:</strong>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Transfer the 0.6 OD culture into 4 microfuge tubes (1.5 ml of culture).</li>
+          <li>Centrifuge at 4000 rpm at 4°C for 10 mins.</li>
+          <li>Resuspend the pellet in 300 μL chilled CaCl2.</li>
+          <li>Incubate for 15 min at 4°C.</li>
+          <li>Centrifuge at 4000 rpm at 4°C for 10 mins.</li>
+          <li>Resuspend the pellet in 700 μL chilled CaCl2.</li>
+          <li>Incubate for 15 min at 4°C.</li>
+          <li>Resuspend the pellet in 100 μL CaCl2.</li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    id: 'competent-cell-preparation',
+    title: 'Competent Cell Preparation',
+    icon: <FaFlask className="text-xl" />,
+    content: (
+      <div className="text-gray-700 mt-4">
+        <strong>Procedure:</strong>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Transfer the 0.6 OD culture into 4 microfuge tubes (1.5 ml of culture).</li>
+          <li>Centrifuge at 4000 rpm at 4°C for 10 mins.</li>
+          <li>Resuspend the pellet in 300 μL chilled CaCl2.</li>
+          <li>Incubate for 15 min at 4°C.</li>
+          <li>Repeat centrifugation and resuspend in 700 μL chilled CaCl2.</li>
+          <li>Incubate for 15 min at 4°C.</li>
+          <li>Resuspend the pellet in 100 μL CaCl2.</li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    id: 'transformation',
+    title: 'Transformation',
+    icon: <FaFlask className="text-xl" />,
+    content: (
+      <div className="text-gray-700 mt-4">
+        <strong>Procedure:</strong>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Resuspend 10 μL sterile water in ampicillin-resistant plasmid.</li>
+          <li>Add 2μL of plasmid in 1 microfuge tube. Others act as controls.</li>
+          <li>Incubate the vials at 4°C for 30 mins.</li>
+          <li>Heat shock the vials at 42°C for 90 seconds.</li>
+          <li>Place vials at 4°C for 30 mins.</li>
+          <li>Add 500 μL of prepared LB broth (kept at 4°C) into each vial.</li>
+          <li>Incubate in a shaker at 37°C, 200 rpm, for 4 hours.</li>
+        </ol>
         <div className="mt-4">
-          <strong>Consumables:</strong>
-          <ul className="list-disc list-inside">
-            <li>MilliQ</li>
-            <li>Nile Red Stock (80 µg/ml Nile Red in DMSO)</li>
-            <li>DMSO</li>
-            <li>Aluminum foil</li>
-          </ul>
-        </div>
-        <div className="mt-4">
-          <strong>Equipment:</strong>
-          <ul className="list-disc list-inside">
-            <li>Pipette</li>
-            <li>Centrifuge</li>
-            <li>Vortexer</li>
-            <li>96-well plate reader</li>
-          </ul>
-        </div>
-        <div className="mt-4">
-          <strong>Protocol:</strong>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Centrifuge 1 mL cell suspension (Cell concentration 0.5-1.0mg/mL) (12000g, 5min) (Ideally use 0.8mg/mL cell concentrations).</li>
-            <li>Discard supernatant and resuspend in 1 mL MilliQ.</li>
-            <li>Add 40 µL Nile Red stock to solution (80µg/mL in DMSO; 3.1µg/mL suspension).</li>
-            <li>Incubate at room temperature for 30min.</li>
-            <li>Centrifuge (12000 g, 5min).</li>
-            <li>Discard supernatant and resuspend pellet in 1 mL MilliQ.</li>
-            <li>Vortex vigorously until fully resuspended.</li>
-            <li>Aliquot into 96-well plate (200µL).</li>
-            <li>
-              Measure fluorescence.
-              <ol className="list-alpha list-inside pl-4">
-                <li>Excitation= 535nm</li>
-                <li>Emission= 605nm</li>
-              </ol>
-            </li>
-            <li>Determine PHA concentration from nile red fluorescence intensity using a PHA calibration curve.</li>
-          </ol>
-        </div>
-        <div className="mt-4">
-          <strong>Antibiotic Preparation:</strong>
+          <strong>Spread Plate Results:</strong>
           <table className="min-w-full bg-white border border-gray-300 mt-2">
             <thead>
               <tr className="bg-gray-200">
-                <th className="px-4 py-2 border">Antibiotic</th>
-                <th className="px-4 py-2 border">Solvent</th>
-                <th className="px-4 py-2 border">Solvent Volume</th>
-                <th className="px-4 py-2 border">Concentration (1000x final concentration)</th>
+                <th className="px-4 py-2 border">S.No</th>
+                <th className="px-4 py-2 border">Competent Cell</th>
+                <th className="px-4 py-2 border">Plasmid</th>
+                <th className="px-4 py-2 border">Ampicillin</th>
+                <th className="px-4 py-2 border">Expected Result</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td className="px-4 py-2 border">Ampicillin</td>
-                <td className="px-4 py-2 border">Sterile milliQ water</td>
-                <td className="px-4 py-2 border">20 mL</td>
-                <td className="px-4 py-2 border">100 g/L</td>
+                <td className="px-4 py-2 border">1</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">Growth of colonies (Transformed cells)</td>
               </tr>
               <tr className="bg-gray-100">
-                <td className="px-4 py-2 border">Kanamycin</td>
-                <td className="px-4 py-2 border">Sterile milliQ water</td>
-                <td className="px-4 py-2 border">20 mL</td>
-                <td className="px-4 py-2 border">50 g/L</td>
+                <td className="px-4 py-2 border">2</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">No</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">No colonies (No transformation)</td>
               </tr>
               <tr>
-                <td className="px-4 py-2 border">Tetracycline</td>
-                <td className="px-4 py-2 border">70% ethanol</td>
-                <td className="px-4 py-2 border">20 mL</td>
-                <td className="px-4 py-2 border">10 g/L</td>
+                <td className="px-4 py-2 border">3</td>
+                <td className="px-4 py-2 border">Yes</td>
+                <td className="px-4 py-2 border">No</td>
+                <td className="px-4 py-2 border">No</td>
+                <td className="px-4 py-2 border">Growth of colonies (Viable competent cells)</td>
               </tr>
             </tbody>
           </table>
-          <div className="mt-4">
-          <strong>Consumables:</strong>
-          <ul className="list-disc list-inside">
-            <li>Tris-EDTA (TE) Buffer</li>
-            <li>SDS</li>
-            <li>Proteinase K</li>
-            <li>Phenol:Chloroform:Isoamyl Alcohol</li>
-          </ul>
-        </div>
         </div>
       </div>
     ),
   },
   {
-    id: 'protocol2',
-    title: 'Protocol for DNA Extraction',
-    icon: <FaDna className="text-xl" />, // Icon for this protocol
+    id: 'sonication',
+    title: 'Sonication',
+    icon: <FaFlask className="text-xl" />,
     content: (
       <div className="text-gray-700 mt-4">
-        <p>
-          <strong>Overview:</strong> This protocol describes the steps required to extract DNA from bacterial cultures using a simple lysis method.
-        </p>
-        <div className="mt-4">
-          <strong>Consumables:</strong>
-          <ul className="list-disc list-inside">
-            <li>Tris-EDTA (TE) Buffer</li>
-            <li>SDS</li>
-            <li>Proteinase K</li>
-            <li>Phenol:Chloroform:Isoamyl Alcohol</li>
-          </ul>
-        </div>
-        <div className="mt-4">
-          <strong>Equipment:</strong>
-          <ul className="list-disc list-inside">
-            <li>Pipette</li>
-            <li>Centrifuge</li>
-            <li>Vortexer</li>
-            <li>Water bath</li>
-          </ul>
-        </div>
-        <div className="mt-4">
-          <strong>Protocol:</strong>
-          <ol className="list-decimal list-inside space-y-1">
-            <li>Pellet cells by centrifugation at 10,000g for 5 min.</li>
-            <li>Resuspend the pellet in 500 µL of TE buffer.</li>
-            <li>Add 50 µL of 10% SDS and 10 µL of Proteinase K (10 mg/mL).</li>
-            <li>Incubate at 37°C for 1 hour.</li>
-            <li>Add 500 µL of Phenol:Chloroform:Isoamyl Alcohol (25:24:1).</li>
-            <li>Vortex vigorously and centrifuge at 10,000g for 10 min.</li>
-            <li>Transfer the aqueous layer to a new tube.</li>
-            <li>Add 2 volumes of cold ethanol to precipitate the DNA.</li>
-            <li>Incubate at -20°C for 30 min, then centrifuge at 10,000g for 10 min.</li>
-            <li>Wash the DNA pellet with 70% ethanol and air dry.</li>
-            <li>Resuspend the DNA pellet in 50 µL of TE buffer.</li>
-          </ol>
-        </div>
+        <strong>Materials Required:</strong>
+        <ul className="list-disc list-inside">
+          <li>Tris-HCl</li>
+          <li>NaCl</li>
+          <li>PMSF (Inhibitors)</li>
+          <li>1% SDS</li>
+        </ul>
+        <strong>Procedure:</strong>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Place the sonicator probe at 20 kHz frequency.</li>
+          <li>Sonicate cells in a 100 mL falcon tube in an ice bath (1 s on, 3 s off).</li>
+          <li>Centrifuge at 10,000 rpm for 20 min at 4°C.</li>
+          <li>Transfer supernatant and estimate protein.</li>
+        </ol>
       </div>
     ),
   },
-  // Add more protocols as needed
+  {
+    id: 'tricinesds',
+    title: 'Tricine SDS-PAGE',
+    icon: <FaFlask className="text-xl" />,
+    content: (
+      <div className="text-gray-700 mt-4">
+        <strong>Reagents:</strong>
+        <ul className="list-disc list-inside">
+          <li>Glycerol</li>
+          <li>TEMED</li>
+          <li>Mercaptoethanol</li>
+          <li>Ammonium persulfate</li>
+        </ul>
+        <strong>Procedure:</strong>
+        <ol className="list-decimal list-inside space-y-1">
+          <li>Prepare AB-3 or AB-6 stock solutions for gels.</li>
+          <li>Overlay gels with water and let them polymerize.</li>
+          <li>Cast a 4% sample gel, followed by 10% and 16% gels.</li>
+          <li>Proceed with electrophoresis as per standard protocol.</li>
+        </ol>
+      </div>
+    ),
+  },
+  {
+    id: 'bradford',
+    title: 'Bradford Test',
+    icon: <FaFlask className="text-xl" />,
+    content: (
+      <div className="text-gray-700 mt-4">
+        <p>The Bradford assay is used to measure protein concentration. Coomassie Brilliant Blue dye binds to proteins and causes a shift in absorbance, which can be measured spectrophotometrically.</p>
+      </div>
+    ),
+  },
 ];
 
 export default protocols;
