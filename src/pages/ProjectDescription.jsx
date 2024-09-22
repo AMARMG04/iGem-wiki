@@ -4,6 +4,17 @@ import Navbar from "../components/Navbar"
 import { description } from "../data/description";
 import NewBanner from "../components/NewBanner";
 
+function renderWithBold(text) {
+  const parts = text.split(/(\*\*[^**]+\*\*)/); // Split by **...**
+  return parts.map((part, index) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={index}>{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  );
+}
+
 const ProjectDescription = () => {
   const [activeLink, setActiveLink] = useState(""); // To track active section
   const sectionsRef = useRef({}); // To store references to each section
@@ -106,16 +117,16 @@ const ProjectDescription = () => {
             ))}
           </ul>
         </div>
-        <div className="p-4 flex flex-col gap-10 ">
+        <div className="p-4 flex flex-col gap-20 ">
           {/* Plastic Pollution */}
           <div
             ref={(el) => (sectionsRef.current[`section-0`] = el)}
             id="section-0"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[0].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
-              {description[0].content}
+            <p className="font-inter font-medium text-justify text-lg">
+            {renderWithBold(description[0].content)}
             </p>
           </div>
 
@@ -127,10 +138,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-1`] = el)}
             id="section-1"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[1].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {description[1].content}
             </p>
           </div>
@@ -143,10 +154,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-2`] = el)}
             id="section-2"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[2].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[2].content.map((con, index) => (
                   <li key={index}>{con}</li>
@@ -159,10 +170,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-3`] = el)}
             id="section-3"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[3].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4">
                 {description[3].content.map((con, index) => (
                   <li key={index}>{con}</li>
@@ -175,13 +186,13 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-4`] = el)}
             id="section-4"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[4].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {description[4].subcontent}
             </p>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[4].content.map((con, index) => (
                   <li key={index}>{con}</li>
@@ -194,10 +205,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-5`] = el)}
             id="section-5"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[5].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[5].content.map((con, index) => (
                   <li key={index}>
@@ -223,10 +234,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-6`] = el)}
             id="section-6"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[6].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[6].content.map((con, index) => (
                   <li key={index}>
@@ -252,10 +263,10 @@ const ProjectDescription = () => {
           <div
             ref={(el) => (sectionsRef.current[`section-7`] = el)}
             id="section-7"
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[7].title}</h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[7].links.map((ref, index) => (
                   <a href={ref.link} target="_blank">

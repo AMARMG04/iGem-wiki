@@ -5,6 +5,17 @@ import { modeling } from "../data/modeling";
 import NewBanner from "../components/NewBanner";
 import MDSimulation from "../components/MDSimulation";
 
+function renderWithBold(text) {
+  const parts = text.split(/(\*\*[^**]+\*\*)/); // Split by **...**
+  return parts.map((part, index) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={index}>{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  );
+}
+
 const Modeling = () => {
   const [activeLink, setActiveLink] = useState(""); // To track active section
   const sectionsRef = useRef({}); // To store references to each section
@@ -96,7 +107,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[0].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[0].content}
             </p>
           </div>
@@ -110,7 +121,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[1].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[1].content}
             </p>
           </div>
@@ -162,7 +173,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[2].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[2].content}
             </p>
           </div>
@@ -184,7 +195,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[3].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[3].content}
             </p>
           </div>
@@ -254,7 +265,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[4].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[4].content}
             </p>
             <MDSimulation></MDSimulation>
@@ -269,7 +280,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {modeling[5].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               {modeling[5].content}
             </p>
           </div>
@@ -306,7 +317,7 @@ const Modeling = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[7].title}
             </h1>
-            <p className="font-inter font-regular text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[7].links.map((ref, index) => (
                   <a href={ref.link} target="_blank">

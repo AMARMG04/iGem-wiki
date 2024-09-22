@@ -18,8 +18,8 @@
 
 @font-face {
     font-family: "variable";
-    src: local("Domine"),
-    url("./src/fonts/Domine.ttf") format("truetype");
+    src: local("PlusJakartaSans"),
+    url("./src/fonts/PlusJakartaSans.ttf") format("truetype");
 }
 
 
