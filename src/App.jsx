@@ -2,14 +2,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import "./index.css";
 import Protocol from "./components/Protocol"
-// import Navbar from "./components/Navbar";
 import NoteBook from "./pages/NoteBook";
 import Parts from "./pages/Parts";
 import Mentors from './pages/Mentors'
 import TeamMembers from "./pages/TeamMembers";
 import HumanPractices from "./pages/ihp";
-// import NewNavbar from "./components/NewNavbar";
-
 import CircleTrail from "./components/CircleTrail";
 
 import Footer from "./components/Footer"
@@ -20,6 +17,7 @@ import Engineering from "./pages/Engineering";
 import Sustainability from "./pages/Sustainability"
 import Education from "./pages/Education"
 import Modeling from "./pages/Modeling"
+import Safety from "./pages/Safety";
 
 function App() {
   return (
@@ -41,6 +39,7 @@ function App() {
         <Route path='/sustainability' element={<Sustainability/>} />
         <Route path='/education' element={<Education />} />
         <Route path='/modeling' element={<Modeling />} />
+        <Route path='/safety' element={<Safety />} />
       </Routes>
       <Footer />
       {/* <Mentors /> */}
