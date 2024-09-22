@@ -230,7 +230,7 @@ const ProjectDescription = () => {
               {description[5].title}
             </h1>
             <p className="font-inter font-medium text-justify text-lg">
-              <ul className="flex flex-col gap-4 list-decimal pl-4">
+              <ul className="flex flex-col gap-6 list-decimal pl-4">
                 {description[5].content.map((con, index) => (
                   <li key={index}>
                     <div className="flex flex-col gap-4">
@@ -265,7 +265,7 @@ const ProjectDescription = () => {
               {description[6].title}
             </h1>
             <p className="font-inter font-medium text-justify text-lg">
-              <ul className="flex flex-col gap-4 list-decimal pl-4">
+              <ul className="flex flex-col gap-6 list-decimal pl-4">
                 {description[6].content.map((con, index) => (
                   <li key={index}>
                     <div className="flex flex-col gap-4">
