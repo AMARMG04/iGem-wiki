@@ -29,7 +29,7 @@ export default function References({references}) {
             <a href={ref.link} target="_blank">
               <div
                 key={index}
-                className="border-b pb-4 p-4 space-y-4 hover:bg-indigo-700 hover:text-white"
+                className="border-b py-8 p-4 space-y-4 hover:bg-indigo-700 hover:text-white"
               >
                 <h3 className="font-nohemi_m text-2xl">{ref.title} {ref.year}</h3>
                 <p className="text-md font-inter font-medium">

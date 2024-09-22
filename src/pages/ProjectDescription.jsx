@@ -83,13 +83,13 @@ const ProjectDescription = () => {
                 key={index}
                 className={`flex items-center font-nohemi_r cursor-pointer py-4 ${
                   activeLink === `section-${index}`
-                    ? "text-blue-500 border-l-2 border-blue-500 pl-5"
+                    ? "text-indigo-700 border-l-2 border-indigo-700 pl-5"
                     : "border-l-2 border-gray-500 text-black pl-5"
                 }`}
               >
                 <a
                   onClick={() => handleScroll(`section-${index}`)}
-                  className="hover:text-blue-500 text-[20px]"
+                  className="hover:text-indigo-700 text-[20px]"
                 >
                   {item.title}
                 </a>

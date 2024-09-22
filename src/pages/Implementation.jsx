@@ -3,6 +3,18 @@ import Banner from "../components/Banner";
 import Navbar from "../components/Navbar"
 import { description } from "../data/description";
 import NewBanner from "../components/NewBanner";
+import References from "../components/References";
+
+function renderWithBold(text) {
+  const parts = text.split(/(\*\*[^**]+\*\*)/); // Split by **...**
+  return parts.map((part, index) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={index}>{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  );
+}
 
 const Implementation = () => {
   const [activeLink, setActiveLink] = useState(""); // To track active section
@@ -60,7 +72,7 @@ const Implementation = () => {
     <Navbar />
     {/* <Banner title="Project Description" color="green" /> */}
     <div className="">
-    <NewBanner title="Implementation" color="customCream" />
+      <NewBanner title="Implementation" color="customCream" />
     </div>
     <div className=" p-10 flex flex-row gap-10 bg-white">
       <div className="p-4 min-w-[300px] h-fit sticky top-28">
@@ -71,13 +83,13 @@ const Implementation = () => {
               key={index}
               className={`flex items-center font-nohemi_r cursor-pointer py-4 ${
                 activeLink === `section-${index}`
-                  ? "text-blue-500 border-l-2 border-blue-500 pl-5"
+                  ? "text-indigo-500 border-l-2 border-indigo-500 pl-5"
                   : "border-l-2 border-gray-500 text-black pl-5"
               }`}
             >
               <a
                 onClick={() => handleScroll(`section-${index}`)}
-                className="hover:text-blue-500 text-[20px]"
+                className="hover:text-indigo-500 text-[20px]"
               >
                 {item.title}
               </a>
@@ -106,47 +118,61 @@ const Implementation = () => {
           ))}
         </ul>
       </div>
-      <div className="p-4 flex flex-col gap-10 ">
+      <div className="p-4 flex flex-col gap-20 ">
         {/* Plastic Pollution */}
         <div
           ref={(el) => (sectionsRef.current[`section-0`] = el)}
           id="section-0"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[0].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
-            {description[0].content}
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[0].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
+            {renderWithBold(description[0].content)}
           </p>
         </div>
 
         <div>
-          <img src="/src/assets/description/image1.jpg" alt="" className="rounded-xl"/>
+          <img
+            src="/src/assets/description/image1.jpg"
+            alt=""
+            className="rounded-xl"
+          />
         </div>
 
         {/* What are Microplastics? */}
         <div
           ref={(el) => (sectionsRef.current[`section-1`] = el)}
           id="section-1"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[1].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[1].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
             {description[1].content}
           </p>
         </div>
 
         <div>
-          <img src="/src/assets/description/image2.jpeg" alt="" className="rounded-xl"/>
+          <img
+            src="/src/assets/description/image2.jpeg"
+            alt=""
+            className="rounded-xl"
+          />
         </div>
 
         {/* Why Focus on Isolation and Segregation of Microplastics? */}
         <div
           ref={(el) => (sectionsRef.current[`section-2`] = el)}
           id="section-2"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[2].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[2].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
             <ul className="flex flex-col gap-4 list-disc pl-4">
               {description[2].content.map((con, index) => (
                 <li key={index}>{con}</li>
@@ -159,10 +185,12 @@ const Implementation = () => {
         <div
           ref={(el) => (sectionsRef.current[`section-3`] = el)}
           id="section-3"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[3].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[3].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
             <ul className="flex flex-col gap-4">
               {description[3].content.map((con, index) => (
                 <li key={index}>{con}</li>
@@ -175,13 +203,15 @@ const Implementation = () => {
         <div
           ref={(el) => (sectionsRef.current[`section-4`] = el)}
           id="section-4"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[4].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[4].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
             {description[4].subcontent}
           </p>
-          <p className="font-inter font-regular text-justify text-lg">
+          <p className="font-inter font-medium text-justify text-lg">
             <ul className="flex flex-col gap-4 list-disc pl-4">
               {description[4].content.map((con, index) => (
                 <li key={index}>{con}</li>
@@ -194,11 +224,13 @@ const Implementation = () => {
         <div
           ref={(el) => (sectionsRef.current[`section-5`] = el)}
           id="section-5"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[5].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
-            <ul className="flex flex-col gap-4 list-decimal pl-4">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[5].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
+            <ul className="flex flex-col gap-6 list-decimal pl-4">
               {description[5].content.map((con, index) => (
                 <li key={index}>
                   <div className="flex flex-col gap-4">
@@ -216,18 +248,24 @@ const Implementation = () => {
         </div>
 
         <div>
-          <img src="/src/assets/description/image3.jpeg" alt="" className="rounded-xl"/>
+          <img
+            src="/src/assets/description/image3.jpeg"
+            alt=""
+            className="rounded-xl"
+          />
         </div>
 
         {/* Applications */}
         <div
           ref={(el) => (sectionsRef.current[`section-6`] = el)}
           id="section-6"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
-          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[6].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
-            <ul className="flex flex-col gap-4 list-decimal pl-4">
+          <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
+            {description[6].title}
+          </h1>
+          <p className="font-inter font-medium text-justify text-lg">
+            <ul className="flex flex-col gap-6 list-decimal pl-4">
               {description[6].content.map((con, index) => (
                 <li key={index}>
                   <div className="flex flex-col gap-4">
@@ -239,23 +277,31 @@ const Implementation = () => {
             </ul>
           </p>
         </div>
-    
+
         <div>
-          <img src="/src/assets/description/image5.jpeg" alt="" className="rounded-xl"/>
+          <img
+            src="/src/assets/description/image5.jpeg"
+            alt=""
+            className="rounded-xl"
+          />
         </div>
 
         <div>
-          <img src="/src/assets/description/image4.jpeg" alt="" className="rounded-xl"/>
+          <img
+            src="/src/assets/description/image4.jpeg"
+            alt=""
+            className="rounded-xl"
+          />
         </div>
 
         {/* References */}
-        <div
+        {/* <div
           ref={(el) => (sectionsRef.current[`section-7`] = el)}
           id="section-7"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6"
         >
           <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[7].title}</h1>
-          <p className="font-inter font-regular text-justify text-lg">
+          <p className="font-inter font-medium text-justify text-lg">
             <ul className="flex flex-col gap-4 list-decimal pl-4">
               {description[7].links.map((ref, index) => (
                 <a href={ref.link} target="_blank">
@@ -266,6 +312,13 @@ const Implementation = () => {
               ))}
             </ul>
           </p>
+        </div> */}
+        <div
+          ref={(el) => (sectionsRef.current[`section-7`] = el)}
+          id="section-7"
+          className="flex flex-col gap-6"
+        >
+          <References references={description[7].links} />
         </div>
       </div>
     </div>
