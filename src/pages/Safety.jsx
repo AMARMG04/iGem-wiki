@@ -60,7 +60,7 @@ const Safety = () => {
       <Navbar />
       {/* <Banner title="Project Description" color="green" /> */}
       <div className="">
-      <NewBanner title="Project Description" color="customCream" />
+      <NewBanner title="Safety" color="customCream" />
       </div>
       <div className=" p-10 flex flex-row gap-10 bg-white">
         <div className="p-4 min-w-[300px] h-fit sticky top-28">

@@ -18,6 +18,7 @@ import Sustainability from "./pages/Sustainability"
 import Education from "./pages/Education"
 import Modeling from "./pages/Modeling"
 import Safety from "./pages/Safety";
+import Implementation from "./pages/Implementation";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path='/education' element={<Education />} />
         <Route path='/modeling' element={<Modeling />} />
         <Route path='/safety' element={<Safety />} />
+        <Route path='/implementation' element={<Implementation />} />
       </Routes>
       <Footer />
       {/* <Mentors /> */}
