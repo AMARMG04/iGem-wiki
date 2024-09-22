@@ -153,11 +153,11 @@ const Food = () => {
 
   return (
     <div>
-      <div className="bg-customCream h-auto pb-[90px]">
-        <h1 className="font-nohemi_m text-[70px] text-center pt-[120px]">How Does It Affect Food</h1>
+      <div className="bg-blue-950 h-auto pb-[90px] pt-[120px]">
+        <h1 className="font-nohemi_m text-[70px] text-center text-white " data-aos="fade-up" data-aos-duration="2000">How Does It Affect Food</h1>
 
         <div className="pt-[90px] grid grid-cols-2">
-          <div className="relative col-span-1 w-1/2 flex mx-auto items-center justify-center plasticsdiv z-50" data-aos="fade-right">
+          <div className="relative col-span-1 w-1/2 flex mx-auto items-center justify-center plasticsdiv z-50" data-aos="fade-right" data-aos-duration="2000">
             <div className=" mt-1 ">
               <MagnifyImage src={Water} />
             </div>
@@ -171,18 +171,18 @@ const Food = () => {
             <div className='z-50 micro-plastics rounded-full absolute left-11 top-[80px] bg-green-600 w-[9px] h-[15px]' ref={microRef7}></div>
             <div className='z-50 micro-plastics rounded-full absolute right-[30px] top-[190px] bg-yellow-600 w-[9px] h-[15px]' ref={microRef8}></div>
           </div>
-          <div className="col-span-1 justify-start" data-aos="fade-left">
-            <p className='font-nohemi_l text-justify text-[25px] pt-9 mr-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
+          <div className="col-span-1 justify-start" data-aos="fade-left" data-aos-duration="2000">
+            <p className='font-nohemi_l text-justify text-[25px] text-white pt-9 mr-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
           </div>
         </div>
 
         {/* Body Image Section */}
         <div className='mt-[180px]'>
-          <div className="grid grid-cols-2 body-image" data-aos="fade-right">
+          <div className="grid grid-cols-2 body-image" data-aos="fade-right" data-aos-duration="2000">
             <div className="col-span-1 justify-start">
-              <p className='font-nohemi_l text-justify text-[25px] pt-9 ml-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
+              <p className='font-nohemi_l text-justify text-[25px] text-white pt-9 ml-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
             </div>
-            <div className="col-span-1 flex mx-auto items-center justify-center" data-aos="fade-left">
+            <div className="col-span-1 flex mx-auto items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
               <img src={Body} alt="Body" className='w-[600px] mb-20 z-0' />
             </div>
           </div>

@@ -7,13 +7,10 @@ import { IoIosArrowDropdown } from "react-icons/io";
 import Plastic1 from "../assets/plastic1.png";
 import Plastic2 from "../assets/plastic2.png";
 import Plastic3 from "../assets/plastic3.png";
-// import Plastic4 from "../assets/plastic4.png";
 import Micros from "../assets/micros.png";
 import "../components/waves.css";
 import Ocean from "../components/Ocean";
 import Food from "../components/Food";
-// import Navbar from "../components/Navbar";
-// import Land from "../components/Land";
 import NewNavbar from "../components/NewNavbar";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -448,10 +445,10 @@ body {
             </div>
 
 
-            <h2 className="text-[45px] ml-12 text-white font-nohemi_sb mb-4">WHAT ARE THEY?</h2>
+            <h2 className="text-[45px] ml-12 text-white font-nohemi_sb mb-4" data-aos="fade-left" data-aos-duration="2000">WHAT ARE THEY?</h2>
             {/* <img src={Micros} alt="" className="z-100 w-96" /> */}
 
-            <p className="text-lg text-white leading-relaxed font-nohemi_r">
+            <p className="text-lg text-white leading-relaxed font-nohemi_r" data-aos="fade-left" data-aos-duration="2000">
               Microplastics are small plastic particles less than 5mm in size, which are pervasive in our environment. They come from a variety of sources, including the breakdown of larger plastic debris, microbeads in personal care products, and synthetic fibers from textiles. These tiny particles pose significant risks to marine ecosystems, as they are ingested by marine organisms and can cause physical harm, chemical contamination, and even enter the human food chain.
             </p>
             
