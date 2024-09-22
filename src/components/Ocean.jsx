@@ -155,6 +155,9 @@ const Ocean = () => {
         </div> */}
 
         {/* Content Sections */}
+        <h1 className='pt-[70px] pb-[20px] text-center text-white font-nohemi_m text-[70px]'>
+                    How It Affects The Ocean
+                </h1>
         <div className='grid grid-rows-1'>
           <div className='flex flex-col items-end justify-end pt-35'>
             <div

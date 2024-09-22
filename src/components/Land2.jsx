@@ -146,12 +146,10 @@ const Land2 = () => {
                     Watch Our Video
                 </h1>
                                 <div className='flex items-center justify-center mb-11 h-[700px]'>
-            <iframe width="1060" height="575" src="https://www.youtube.com/embed/RZysj-443-8?si=g_43hioYGF84Yv-S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+            <iframe title="REC-CHENNAI: PLASTICOPS (2024) - Project Promotion [English]" width="1060" height="575" src="https://video.igem.org/videos/embed/6bc8b833-a6c5-4b16-b6ee-167e7502b7d6" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups allow-forms"></iframe></div>
 </div>
 
         </div>
     );
 };
-
 export default Land2;

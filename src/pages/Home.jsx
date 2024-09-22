@@ -215,7 +215,7 @@ body::-webkit-scrollbar-track {
           end: "top top",
           scrub: true,
         },
-        y: "50vh", // Adjust the y value to move plastics down
+        y: "65vh", // Adjust the y value to move plastics down
         ease: "power2.out",
         opacity: 0,
       });
