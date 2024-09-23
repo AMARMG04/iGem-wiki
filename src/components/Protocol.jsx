@@ -522,6 +522,7 @@ const Protocol = () => {
 
   return (
     <div className="bg-customCream">
+
       <Navbar />
       <NewBanner title="Protocols" color="customCream" />
       <div className="p-10 flex flex-row gap-10 bg-white">

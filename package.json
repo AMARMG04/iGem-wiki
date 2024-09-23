@@ -22,6 +22,7 @@
     "aos": "^2.3.4",
     "fullpage.js": "^4.0.28",
     "gsap": "^3.12.5",
+    "jquery": "^3.7.1",
     "locomotive-scroll": "^4.1.4",
     "lodash.throttle": "^4.1.1",
     "lottie-web": "^5.12.2",
@@ -34,6 +35,7 @@
     "react-type-animation": "^3.2.0",
     "scrollreveal": "^4.0.9",
     "styled-components": "^6.1.13",
+    "swiper": "^11.1.14",
     "three": "^0.168.0",
     "vanta": "^0.5.24"
   },
