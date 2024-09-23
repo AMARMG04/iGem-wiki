@@ -67,7 +67,7 @@ const Carousel = ({ team_members }) => {
             key={index}
           >
             <div className="w-full mt-5 pt-11 relative z-10">
-              <div className="bg-white/60 my-20 backdrop-blur-sm absolute p-10 text-justify md:w-[550px] md:h-fit lg:w-[850px] lg:h-fit lg:mx-10 rounded-3xl">
+              <div className="bg-white/60 my-20 backdrop-blur-sm absolute p-10 md:w-[550px] md:h-fit lg:w-[850px] lg:h-fit lg:mx-10 rounded-3xl">
                 <h2 className="text-[76px] mb-3 font-nohemi_sb text-black capitalize">
                   {member.name}
                 </h2>
@@ -87,7 +87,7 @@ const Carousel = ({ team_members }) => {
                     LinkedIn
                   </a>
                 </div>
-                <p className="text-black font-inter text-xl">{member.description}</p>
+                <p className="text-black font-inter text-xl text-justify">{member.description}</p>
               </div>
               <div className="relative flex justify-end z-0">
                 <img

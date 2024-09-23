@@ -84,7 +84,7 @@ export const team_members = [
 
   },
   {
-    name: "Saikrupa Vijay Shankar",
+    name: "Saikrupa V S",
     role: "Wet Lab",
     image: "/src/assets/Saikrupa.png",
     description:"Introducing Saikrupa, a creative mind, hard worker, and cheerful personality. Her love and passion for biotechnology in learning and research are set to shape the future of the field. Her journey is fueled not just by a passion for science but by an insatiable curiosity and enthusiasm for learning that knows no bounds. She sees every challenge as a learning opportunity, eagerly collaborating with peers to forge innovative solutions that aim to revolutionize healthcare and environmental sustainability. With a heart full of dreams and a lab coat ready for action, Saikrupa is on a mission to make a significant impact, one molecular breakthrough at a time.", 
