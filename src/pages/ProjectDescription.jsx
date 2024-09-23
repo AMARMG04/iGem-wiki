@@ -135,7 +135,7 @@ const ProjectDescription = () => {
 
           <div>
             <img
-              src="/src/assets/description/image1.jpg"
+              src="/src/assets/image1.jpg"
               alt=""
               className="rounded-xl"
             />
@@ -157,7 +157,7 @@ const ProjectDescription = () => {
 
           <div>
             <img
-              src="/src/assets/description/image2.jpeg"
+              src="/src/assets/image2.jpeg"
               alt=""
               className="rounded-xl"
             />
@@ -249,7 +249,7 @@ const ProjectDescription = () => {
 
           <div>
             <img
-              src="/src/assets/description/image3.jpeg"
+              src="/src/assets/image3.jpeg"
               alt=""
               className="rounded-xl"
             />
@@ -280,7 +280,7 @@ const ProjectDescription = () => {
 
           <div>
             <img
-              src="/src/assets/description/image5.jpeg"
+              src="/src/assets/image5.jpeg"
               alt=""
               className="rounded-xl"
             />
@@ -288,7 +288,7 @@ const ProjectDescription = () => {
 
           <div>
             <img
-              src="/src/assets/description/image4.jpeg"
+              src="/src/assets/image4.jpeg"
               alt=""
               className="rounded-xl"
             />

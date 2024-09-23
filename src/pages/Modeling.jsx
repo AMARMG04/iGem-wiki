@@ -129,7 +129,7 @@ const Modeling = () => {
           <div class="flex flex-col gap-4 items-center">
             <div>
               <img
-                src="/src/assets/modeling/image_5.png"
+                src="/src/assets/image_5.png"
                 alt="Coarse-Grained Peptide Structure"
                 className="w-[600px] h-auto rounded-xl"
               />
@@ -138,7 +138,7 @@ const Modeling = () => {
 
             <div>
               <img
-                src="/src/assets/modeling/image_2.png"
+                src="/src/assets/image_2.png"
                 alt="Atomistic Peptide Structure"
                 className="w-[600px] h-auto rounded-xl"
               />
@@ -147,7 +147,7 @@ const Modeling = () => {
 
             <div>
               <img
-                src="/src/assets/modeling/image_3.png"
+                src="/src/assets/image_3.png"
                 alt="Coarse-Grained Peptide Structure"
                 className="w-[600px] h-auto rounded-xl"
               />
@@ -156,7 +156,7 @@ const Modeling = () => {
 
             <div>
               <img
-                src="/src/assets/modeling/image_4.png"
+                src="/src/assets/image_4.png"
                 alt="Atomistic Peptide Structure"
                 className="w-[600px] h-auto rounded-xl"
               />
@@ -180,7 +180,7 @@ const Modeling = () => {
 
           <div className="w-full flex justify-center">
             <img
-              src="/src/assets/modeling/image_1.jpg"
+              src="/src/assets/image_1.jpg"
               alt=""
               className="object-scale-down h-[1000px]"
             />
@@ -287,23 +287,23 @@ const Modeling = () => {
 
           <div class="grid grid-cols-2 gap-8">
             <img
-              src="/src/assets/modeling/graph_1.png"
+              src="/src/assets/graph_1.png"
               alt="Atomistic Peptide Structure"
             />
             <img
-              src="/src/assets/modeling/graph_2.png"
+              src="/src/assets/graph_2.png"
               alt="Coarse-Grained Peptide Structure"
             />
             <img
-              src="/src/assets/modeling/graph_3.png"
+              src="/src/assets/graph_3.png"
               alt="Atomistic Peptide Structure"
             />
             <img
-              src="/src/assets/modeling/graph_5.png"
+              src="/src/assets/graph_5.png"
               alt="Coarse-Grained Peptide Structure"
             />
             <img
-              src="/src/assets/modeling/graph_4.jpeg"
+              src="/src/assets/graph_4.jpeg"
               alt="Atomistic Peptide Structure"
             />
           </div>

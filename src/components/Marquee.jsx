@@ -3,19 +3,19 @@ import React from "react";
 const Marquee = () => {
   const images = [
     {
-      link: "/src/assets/marques/rec-logo.png",
+      link: "/src/assets/rec-logo.png",
     },
     {
-      link: "/src/assets/marques/benchling.png",
+      link: "/src/assets/benchling.png",
     },
     {
-      link: "/src/assets/marques/genscript-logo.png",
+      link: "/src/assets/genscript-logo.png",
     },
     {
-      link: "/src/assets/marques/twist-logo.png",
+      link: "/src/assets/twist-logo.png",
     },
     {
-      link: "/src/assets/marques/IDT-logo.png",
+      link: "/src/assets/IDT-logo.png",
     },
   ];
   return (
