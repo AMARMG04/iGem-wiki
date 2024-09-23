@@ -3,8 +3,8 @@ import Marquee from "./Marquee"
 
 const Footer = () => {
   return (
-    <div className="text-white bg-hero-bg bg-cover bg-center">
-      <div className="backdrop-blur-lg bg-black/40 w-full p-8">
+    <div className="text-white bg-[#1A1A1A]">
+      <div className=" w-full p-8">
       <div className="grid grid-cols-1 gap-40">
         <div className="flex justify-start items-center">
           <img src="/src/assets/logo.png" alt="logo" className="w-[400px]" />
@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <h1 className="text-center font-nohemi_m text-2xl my-4">Sponsors</h1>
-      <div className=" bg-white">
+      <div className="bg-white">
         <Marquee></Marquee>
 
       </div>
