@@ -114,7 +114,7 @@ function TimelineItem({ item, index }) {
         animate={isVisible ? { scale: 1 } : { scale: 0 }}
         transition={{ duration: 0.5, delay: index * 0.2 }}
       >
-        <div className="flex items-center justify-center w-32 h-32 bg-green-600 rounded-full shadow-xl">
+        <div className="flex items-center justify-center w-32 h-32 bg-blue-600 rounded-full shadow-xl">
           <IconComponent className="w-16 h-16 text-white" />
         </div>
       </motion.div>
@@ -125,7 +125,7 @@ function TimelineItem({ item, index }) {
         transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
       >
         <h3 className="mb-3 font-bold text-gray-800 text-2xl">{item.year}</h3>
-        <h4 className="mb-3 font-bold text-green-600 text-xl">{item.name}</h4>
+        <h4 className="mb-3 font-bold text-blue-600 text-xl">{item.name}</h4>
         <div className="flex flex-col items-center mb-4">
           {/* <Image
             src={item.image}
