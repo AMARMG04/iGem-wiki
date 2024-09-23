@@ -2,11 +2,11 @@ import React from 'react';
 import CardSection from '../components/CardSection';
 import NewBanner from '../components/NewBanner';
 import goal6Banner from '../assets/Goal6/6_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 6
-import goal6 from '../assets/Goal6/E_PRINT_06.JPG';
+import goal6 from '../assets/Goal6/E_PRINT_06.jpg';
 import goal14Banner from '../assets/Goal14/14_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 14
-import goal14 from '../assets/Goal14/E_PRINT_14.JPG';
+import goal14 from '../assets/Goal14/E_PRINT_14.jpg';
 import goal15Banner from '../assets/Goal15/15_SDG_MakeEveryDayCount_Gifs_GDU.gif'; // New banner for Goal 15
-import goal15 from '../assets/Goal15/E_PRINT_15.JPG';
+import goal15 from '../assets/Goal15/E_PRINT_15.jpg';
 import Navbar from "../components/Navbar"
 
 const Sustainability = () => {
