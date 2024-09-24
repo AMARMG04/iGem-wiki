@@ -56,14 +56,14 @@ const Parts = () => {
 
   return (
     <div className="bg-customCream">
-       <Navbar></Navbar>
-       <NewBanner title="Parts Overview" color="customCream" />
+      <Navbar></Navbar>
+      <NewBanner title="Parts Collection" color="customCream" />
       <div className="p-10 font-general bg-white">
         <div className="flex flex-row gap-4 ">
           {/* Table of Contents */}
           <div className="min-w-[300px]">
             <div className="table-contents h-[700px] p-4 rounded-lg sticky top-44">
-              <h2 className="text-[30px] font-nohemi_m mb-4">
+              <h2 className="text-3xl font-nohemi_m my-4">
                 Table of Contents
               </h2>
               <ul className="flex flex-col">
@@ -89,7 +89,7 @@ const Parts = () => {
           </div>
 
           {/* Table */}
-          <div className="w-full p-10 rounded-sm">
+          <div className="w-full p-4">
             <div
               className="mb-10 flex flex-col"
               id="table1"
@@ -102,77 +102,34 @@ const Parts = () => {
               </div>
 
               <div>
-                <h2 className="font-inter font-regular text-justify">
-                  Vilnius-Lithuania iGEM 2023 team's goal is to employ synthetic
-                  biology tools to modify naturally produced Komagataeibacter
-                  xylinus bacterial cellulose polymer composition. Firstly, we
-                  chose to produce a cellulose-chitin polymer that would later
-                  be deacetylated, creating bacterial cellulose-chitosan (parts:
-                  BBa_K4719013, BBa_K4719014, BBa_K4719019, BBa_K4719020). This
-                  polymer is an easily modifiable platform (part: BBa_K4719024)
-                  compared to bacterial cellulose, with biomedicine and
-                  molecular biology applications. As a second approach, we
-                  designed indigo-dyed cellulose that could be used as a green
-                  chemistry way to apply cellulose in the textile industry
-                  (part: BBa_K4719018). Lastly, we have achieved a bioplastic
-                  composite of bacterial cellulose and polyhydroxybutyrate (PHB)
-                  synthesized by K. xylinus (part: BBa_K4719017). We designed
-                  parts to combine separate production steps to optimize the
-                  polymers' manufacturing process. (Parts: BBa_K4719027,
-                  BBa_K4719028). This collection is meant to be used for
-                  obtaining a polymer of the user’s choice, whether that would
-                  be bacterial cellulose-chitosan, bacterial cellulose-PHB, or
-                  in situ dyed cellulose. What is more, by designing these
-                  constructs, we demonstrated a collection of of synthetic
-                  biology tools for K. xylinus, which could be applied to create
-                  various combinations of biopolymer and bacterial cellulose
-                  composites.
+                <h2 className="font-inter font-medium text-justify text-lg leading-loose">
+                  iGEM Team REC-CHENNAI aims to combat the highly pollutive
+                  microplastic threat by employing innovative approaches in the
+                  field of synthetic biology. The novel basic part that we
+                  design carries peptide sequences that are targeted towards
+                  highly specific binding with hydrophobic polymers such as
+                  polyethylene, polypropylene, and polystyrene, which form the
+                  majority of the microplastics present. These chosen peptides
+                  are hydrophobic in nature and therefore carry an affinity for
+                  these microplastics due to their hydrophobic nature as well.
+                  We further equip this fusion protein with a 6X His tag for
+                  efficient purification with the Ni-NTA affinity column. <br /><br />
+                  Molecular dynamics simulations, in conjunction with
+                  experiments through in vitro has established that the moieties
+                  work as designed, allowing easy purification of peptides and
+                  effective binding to microplastics. It presents an easily
+                  scalable, effective solution to environmental conservation in
+                  areas such as wastewater treatment, marine niche, and food
+                  industry. This approach also contributes to the conservation
+                  of flora and fauna by reducing the adverse impacts of
+                  microplastic pollution toward the ecosystem and food chains.
+                  <br /><br />
+                  In the part collection, there are genetic constructs that
+                  create microplastic-binding peptides, placing special emphasis
+                  on sustainable and scalable solutions for environmental
+                  conservation across multiple domains.
                 </h2>
-                <ol className="mt-3 list-disc ml-5 font-inter font-regular">
-                  <li>
-                    {" "}
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                  <li>
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                  <li>
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                  <li>
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                  <li>
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                  <li>
-                    <a href="" className="text-orange-800">
-                      BBa_K4719013
-                    </a>{" "}
-                    - Incorporation of N-acetylglucosamine into bacterial
-                    cellulose.
-                  </li>
-                </ol>
+               
               </div>
 
               {/* <div className='-m-1.5 overflow-x-auto'>
@@ -191,11 +148,11 @@ const Parts = () => {
               <tbody className='divide-y divide-gray-200'>
               {contents.map((item) => (
                 <tr key={item.part} id={item.part} className='divide-x'>
-                <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">{item.type}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{item.part}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{item.name}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{item.description}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{item.new}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-md font-medium text-gray-800">{item.type}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">{item.part}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">{item.name}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">{item.description}</td>
+                <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">{item.new}</td>
                 </tr>
                 ))}
                 </tbody>
@@ -227,19 +184,13 @@ const Parts = () => {
                             scope="col"
                             className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
-                            Type
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
-                          >
-                            Part Number
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
-                          >
                             Name
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                          >
+                            Type
                           </th>
                           <th
                             scope="col"
@@ -251,7 +202,13 @@ const Parts = () => {
                             scope="col"
                             className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
-                            New/existing
+                            Length
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                          >
+                            Notes
                           </th>
                         </tr>
                       </thead>
@@ -262,20 +219,20 @@ const Parts = () => {
                             id={item.part}
                             className="divide-x"
                           >
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.type}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.part}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.name}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                              {item.type}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.description}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.new}
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                              {item.length}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800 text-wrap leading-loose text-justify">
+                              {item.notes}
                             </td>
                           </tr>
                         ))}
@@ -306,19 +263,13 @@ const Parts = () => {
                             scope="col"
                             className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
-                            Type
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
-                          >
-                            Part Number
-                          </th>
-                          <th
-                            scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
-                          >
                             Name
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                          >
+                            Type
                           </th>
                           <th
                             scope="col"
@@ -330,31 +281,37 @@ const Parts = () => {
                             scope="col"
                             className="px-6 py-3 text-center text-xs  text-black uppercase"
                           >
-                            New/existing
+                            Length
+                          </th>
+                          <th
+                            scope="col"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                          >
+                            Notes
                           </th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-200 font-regular font-inter">
-                        {contents.map((item) => (
+                        {contents.map((item, index) => (
                           <tr
-                            key={item.part}
+                            key={index}
                             id={item.part}
                             className="divide-x"
                           >
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.type}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.part}
-                            </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.name}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                              {item.type}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.description}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
-                              {item.new}
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                              {item.length}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800 text-wrap leading-loose text-justify">
+                              {item.notes}
                             </td>
                           </tr>
                         ))}
