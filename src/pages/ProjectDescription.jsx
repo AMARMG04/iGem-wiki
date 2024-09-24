@@ -118,7 +118,7 @@ const ProjectDescription = () => {
             ))}
           </ul>
         </div>
-        <div className="p-4 flex flex-col gap-20 ">
+        <div className="p-4 flex flex-col gap-20">
           {/* Plastic Pollution */}
           <div
             ref={(el) => (sectionsRef.current[`section-0`] = el)}
@@ -128,7 +128,7 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[0].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               {renderWithBold(description[0].content)}
             </p>
           </div>
@@ -150,7 +150,7 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[1].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               {description[1].content}
             </p>
           </div>
@@ -172,7 +172,7 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[2].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[2].content.map((con, index) => (
                   <li key={index}>{con}</li>
@@ -190,8 +190,8 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[3].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
-              <ul className="flex flex-col gap-4">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
+              <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[3].content.map((con, index) => (
                   <li key={index}>{con}</li>
                 ))}
@@ -208,10 +208,10 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[4].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               {description[4].subcontent}
             </p>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               <ul className="flex flex-col gap-4 list-disc pl-4">
                 {description[4].content.map((con, index) => (
                   <li key={index}>{con}</li>
@@ -229,7 +229,7 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[5].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               <ul className="flex flex-col gap-6 list-decimal pl-4">
                 {description[5].content.map((con, index) => (
                   <li key={index}>
@@ -237,7 +237,7 @@ const ProjectDescription = () => {
                       <h1 className="text-2xl font-nohemi_m">{con.subtitle}</h1>
                       <ul className="flex flex-col gap-4 list-disc pl-4">
                         {con.subcontent.map((subcon, subIndex) => (
-                          <li key={subIndex}>{subcon}</li>
+                          <li key={subIndex}>{renderWithBold(subcon)}</li>
                         ))}
                       </ul>
                     </div>
@@ -264,7 +264,7 @@ const ProjectDescription = () => {
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">
               {description[6].title}
             </h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               <ul className="flex flex-col gap-6 list-decimal pl-4">
                 {description[6].content.map((con, index) => (
                   <li key={index}>
@@ -301,7 +301,7 @@ const ProjectDescription = () => {
             className="flex flex-col gap-6"
           >
             <h1 className="font-nohemi_m text-3xl border-l-4 border-indigo-700 pl-6">{description[7].title}</h1>
-            <p className="font-inter font-medium text-justify text-lg">
+            <p className="font-inter font-medium text-justify text-lg leading-loose">
               <ul className="flex flex-col gap-4 list-decimal pl-4">
                 {description[7].links.map((ref, index) => (
                   <a href={ref.link} target="_blank">
