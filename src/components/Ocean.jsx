@@ -188,6 +188,7 @@ const Ocean = () => {
               </p>
             </div>
             <div className=" mt-12 ">
+              <h1 className='text-white text-[30px]'>Hover over me !</h1>
       <MagnifyImage src={fishImage2} />
     </div>
           </div>

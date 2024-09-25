@@ -47,7 +47,9 @@ export default {
         inter: ["variable", "sans-serif"]
       },
       backgroundImage:{
-        'hero-bg': "url('./src/assets/footer-bg2.jpg')"
+        'hero-bg': "url('./src/assets/footer-bg2.jpg')",
+        'bgimg': "url('./src/assets/bgimg.jpg')"
+
       }
     },
   },
