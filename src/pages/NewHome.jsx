@@ -46,7 +46,9 @@ const Home = () => {
       }
     }
 
-
+.micros{
+z-index: 1000;
+}
 body {
   background:#2EB5E5 ;
 }
@@ -296,7 +298,7 @@ body::-webkit-scrollbar-track {
   return (
     <div className="bg-black">
       <NewNavbar />
-      <div
+      {/* <div
         className="bg-bgimg h-screen bg-cover bg-center">
         <div className=" bg-black/60 h-screen">
           <div  >
@@ -306,39 +308,39 @@ body::-webkit-scrollbar-track {
           </div>
         </div>
  
-      </div>
-      <div className="h-screen flex items-center justify-center pt-[100px]">
+      </div> */}
+      {/* <div className="h-screen flex items-center justify-center pt-[100px]">
 <h1 className="font-nohemi_m text-[70px] text-center text-white" data-aos="fade-up"
      data-aos-duration="2000">“WE’RE LIVING ON THE EDGE WHERE PLASTICS POISON SOIL, WATER AND OUR LIVES.”<br /><h1 className="text-white font-nohemi_l text-[45px] text-end py-7 px-5">- A poor resident of Cooum river bank
 </h1> </h1>
-</div>
-<div className="h-screen flex items-center justify-center">
+</div> */}
+      {/* <div className="h-screen flex items-center justify-center">
   <style>{glowStyle}</style>
 <h1 className="font-nohemi_sb text-[70px] text-center text-white" data-aos="fade-up"
      data-aos-duration="2000" ><h1 className="mb-10 text-[90px]">With us,</h1> <h1 className='text-center text-white font-bold text-[150px] font-keania'>
      <span className='glow1 font-nohemi_b'>PLAST</span><span className='glow2 font-nohemi_b'>ICOPS</span>
    </h1 > <h1 className="pt-10">We can turn this situation around </h1></h1>
      
-</div>
+</div> */}
       <div className="bg-black h-fit mt-[10%] overflow-hidden relative">
         <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] ">
-          
+
           <div className="flex justify-center items-center">
 
             {/* <NewHome /> */}
 
 
 
-<div className="absolute left-[180px] top-[230px]">
+            {/* <div className="absolute left-[180px] top-[230px]">
 
 <h1 className="text-start text-white text-[90px]  font-nohemi_sb" data-aos="fade-left"
      data-aos-duration="3000">Lets </h1>
-</div>
+</div> */}
 
-<div className="absolute right-[180px] top-[230px]">
+            {/* <div className="absolute right-[180px] top-[230px]">
 <h1 className="text-start text-white text-[90px] font-nohemi_sb" data-aos="fade-right"
      data-aos-duration="3000">Clean </h1>
-</div>
+</div> */}
             <div className="absolute lg:top-[0px] xl:top-[100px] world-div">
               <img src={World} alt="World" className="lg:w-[390px] xl:w-[495px] h-auto" />
               <div ref={worldRef}>

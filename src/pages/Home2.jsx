@@ -20,6 +20,32 @@ const Home = () => {
 
   const glowStyle = `
 
+   .glow1 {
+      animation: glowRed 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowRed {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red, 0 0 60px red, 0 0 70px red, 0 0 80px red;
+      }
+    }
+
+    .glow2 {
+      animation: glowBlue 1s ease-in-out infinite alternate;
+    }
+
+    @keyframes glowBlue {
+      from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue;
+      }
+      to {
+        text-shadow: 0 0 20px #fff, 0 0 30px blue, 0 0 40px blue, 0 0 50px blue, 0 0 60px blue, 0 0 70px blue, 0 0 80px blue;
+      }
+    }
+
 body {
 
 
@@ -265,13 +291,66 @@ body::-webkit-scrollbar-track {
   return (
     <div className="bg-black">
       <NewNavbar />
+      <div
+        className="bg-bgimg h-screen bg-cover bg-center">
+        <div className=" bg-black/60 h-screen">
+          <div  >
+
+            <h1 className="font-nohemi_m text-[110px] items-center text-white px-10 pt-[22%] "  data-aos="fade-right" data-aos-duration="2000">Microplastics</h1>
+            <p className="font-nohemi_r text-[25px] w-[1000px] items-center text-white px-10"  data-aos="fade-right" data-aos-duration="2000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, sit! Sed molestiae autem rerum quos, qui rem? Exercitationem, eos reiciendis. Consequatur quidem expedita veritatis perspiciatis, beatae assumenda porro inventore repellat.</p>
+          </div>
+        </div>
+ 
+      </div> 
+
+
+
+      <div className="h-screen flex items-center justify-center pt-[100px]">
+<h1 className="font-nohemi_m text-[70px] text-center text-white" data-aos="fade-up"
+     data-aos-duration="2000">“WE’RE LIVING ON THE EDGE WHERE PLASTICS POISON SOIL, WATER AND OUR LIVES.”<br /><h1 className="text-white font-nohemi_l text-[45px] text-end py-7 px-5">- A poor resident of Cooum river bank
+</h1> </h1>
+</div>
+
+
+
+
+<div className="h-screen flex items-center justify-center">
+  <style>{glowStyle}</style>
+<h1 className="font-nohemi_sb text-[70px] text-center text-white" data-aos="fade-up"
+     data-aos-duration="3000" ><h1 className="mb-10 text-[90px]">With us,</h1> <h1 className='text-center text-white font-bold text-[150px] font-keania'>
+     <span className='glow1 font-nohemi_b'>PLAST</span><span className='glow2 font-nohemi_b'>ICOPS</span>
+   </h1 > <h1 className="pt-10">We can turn this situation around </h1></h1>
+     
+</div>
+
+
+
     <div className="bg-black h-fit  overflow-hidden">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"
+
+
+
+        <div className="absolute left-[180px] top-[230px]">
+
+<h1 className="text-start text-white text-[90px]  font-nohemi_sb" data-aos="fade-left"
+     data-aos-duration="3000">Lets </h1>
+</div>
+
+
+<div className="absolute right-[180px] top-[230px]">
+<h1 className="text-start text-white text-[90px] font-nohemi_sb" data-aos="fade-right"
+     data-aos-duration="3000">Clean </h1>
+</div> 
+
+
+
+
+
+          {/* <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"
      data-aos-duration="2000">
             PLASTICOPS
-          </h1>
+          </h1> */}
           {/* <NewHome /> */}
          
           <div className="absolute lg:top-[0px] xl:top-[100px]">
@@ -388,7 +467,7 @@ body::-webkit-scrollbar-track {
         </div>
 
         {/* Info Boxes and Scroll Down Section */}
-        <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+        {/* <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
         }} data-aos="fade-right"
         data-aos-offset="100"
@@ -396,9 +475,9 @@ body::-webkit-scrollbar-track {
           <h2 className="text-xl font-quick">PLASTIC MANUFACTURED</h2>
           <p className="text-3xl text-center my-2 font-keania">400 Million Tons</p>
           <p className="text-right text-3xl">/ year</p>
-        </div>
+        </div> */}
 
-        <div className=" absolute left-36 xl:left-40 top-[350px] xl:top-[390px] p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+        {/* <div className=" absolute left-36 xl:left-40 top-[350px] xl:top-[390px] p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 3px 0 #680783, 0px 0px 2px 0 #680783, 0px 0px 3px 0 #680783, 0px 0px 19px 0 #680783, 0px 0px 30px 0 #680783, 0px 0px 27.989999771118164px 0 #680783",
         }} data-aos="fade-right"
         data-aos-offset="300"
@@ -416,14 +495,14 @@ body::-webkit-scrollbar-track {
           <p className="text-3xl text-center my-2 font-keania text-orange-200">$400 Million</p>
           <p className="text-3xl text-center my-2 font-keania">To</p>
           <p className="text-3xl text-center my-2 font-keania text-orange-200">$2500 Million</p>
-        </div>
+        </div> */}
 
-        <div className="absolute right-24 top-[400px] pt-4 xl:pt-10 w-[300px] py-6 h-auto rounded-xl text-white bg-transparent" data-aos="fade-up" data-aos-duration="2000">
+        {/* <div className="absolute right-24 top-[400px] pt-4 xl:pt-10 w-[300px] py-6 h-auto rounded-xl text-white bg-transparent" data-aos="fade-up" data-aos-duration="2000">
           <h2 className="text-2xl pb-4 text-center font-quick">SCROLL DOWN</h2>
           <div className="text-center items-center justify-center flex">
             <IoIosArrowDropdown size={50} className="animate-bounce" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* New Section and Ocean Component */}
@@ -474,7 +553,7 @@ body::-webkit-scrollbar-track {
             <div className="wave wave3"></div>
             <div className="wave wave4"></div>
           </section>
-          <div className="wdiv  px-28">
+          <div className="wdiv z-0 px-28">
             <Ocean />
 
           </div>

@@ -153,7 +153,7 @@ const Food = () => {
 
   return (
     <div>
-      <div className="bg-blue-950 h-auto pb-[90px] pt-[120px]">
+      <div className="bg-gray-900 h-auto pb-[90px] pt-[120px]">
         <h1 className="font-nohemi_m text-[70px] text-center text-white " data-aos="fade-up" data-aos-duration="2000">How Does It Affect Food</h1>
 
         <div className="pt-[90px] grid grid-cols-2">
