@@ -12,12 +12,12 @@ import "../components/waves.css";
 import Ocean from "../components/Ocean";
 import Food from "../components/Food";
 import NewNavbar from "../components/NewNavbar";
+import PoliceSiren from "../components/PoliceSiren";
+import ScrollDown from "../components/ScrollDown";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-
-
   const glowStyle = `
 
 body {
@@ -170,7 +170,6 @@ body::-webkit-scrollbar-track {
 
   const lenisRef = useRef(null);
 
-
   useEffect(() => {
     const worldElement = worldRef.current;
 
@@ -223,9 +222,8 @@ body::-webkit-scrollbar-track {
 
     microsRef.current.forEach((micro) => {
       gsap.to(micro, {
-         opacity: 1 ,
+        opacity: 1,
         scrollTrigger: {
-          
           trigger: ".reach", // Ocean component's parent container
           start: "top bottom",
           end: "top top",
@@ -233,28 +231,23 @@ body::-webkit-scrollbar-track {
         },
         // Adjust the y value to move plastics down
         ease: "power2.out",
-       
       });
     });
 
     microsRef.current.forEach((micro, index) => {
       gsap.to(micro, {
-        
         scrollTrigger: {
-          
           trigger: ".wdiv", // Ocean component's parent container
           start: "top bottom",
           end: ".pimg",
           scrub: 30,
         },
         // Adjust the y value to move plastics down
-        
-        y:"200vh",
-        x:`${index * 3}vw`,
-        ease: "power2.out",
-       
-      });
 
+        y: "200vh",
+        x: `${index * 3}vw`,
+        ease: "power2.out",
+      });
     });
 
     return () => {
@@ -265,111 +258,175 @@ body::-webkit-scrollbar-track {
   return (
     <div className="bg-black">
       <NewNavbar />
-    <div className="bg-black h-fit  overflow-hidden">
-      <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
-        <div className="flex justify-center items-center">
-          <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] mt-6 font-abster" data-aos="fade-up"
-     data-aos-duration="2000">
-            PLASTICOPS
-          </h1>
-          {/* <NewHome /> */}
-         
-          <div className="absolute lg:top-[0px] xl:top-[100px]">
-            <img src={World} alt="World" className="lg:w-[390px] xl:w-[495px] h-auto" />
-            <div ref={worldRef}>
-            <div className=" animate-float">
+      <div className="bg-black h-fit  overflow-hidden">
+        <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
+          <div className="flex justify-center items-center">
+            <h1
+              className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] mt-6 font-abster"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              PLASTICOPS
+            </h1>
+            {/* <NewHome /> */}
 
+            <div className="absolute lg:top-[0px] xl:top-[100px]">
               <img
-                src={Plastic3}
-                alt=""
-                className="absolute left-0 bottom-[45px] w-32 animate-float"
-                ref={(el) => (plasticsRef.current[1] = el)}
+                src={World}
+                alt="World"
+                className="lg:w-[390px] xl:w-[495px] h-auto"
               />
-              <div className='micros z-0 opacity-0 rounded-full absolute left-10 bottom-[40px]  bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[1] = el)} ></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-20 bottom-[60px]  bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[2] = el)}></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-50 bottom-[80px]  bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[3] = el)}></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-[40px] bottom-[120px]  bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[4] = el)} ></div>
+              <div ref={worldRef}>
+                <div className=" animate-float">
+                  <img
+                    src={Plastic3}
+                    alt=""
+                    className="absolute left-0 bottom-[45px] w-32 animate-float"
+                    ref={(el) => (plasticsRef.current[1] = el)}
+                  />
+                  <div
+                    className="micros z-0 opacity-0 rounded-full absolute left-10 bottom-[40px]  bg-blue-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[1] = el)}
+                  ></div>
+                  <div
+                    className="micros z-0 opacity-0 rounded-full absolute left-20 bottom-[60px]  bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[2] = el)}
+                  ></div>
+                  <div
+                    className="micros z-0 opacity-0 rounded-full absolute left-50 bottom-[80px]  bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[3] = el)}
+                  ></div>
+                  <div
+                    className="micros z-0 opacity-0 rounded-full absolute left-[40px] bottom-[120px]  bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[4] = el)}
+                  ></div>
+                </div>
 
+                <div className=" animate-float">
+                  <img
+                    src={Plastic3}
+                    alt=""
+                    className="absolute right-[-40px] bottom-[300px] w-32 animate-float"
+                    ref={(el) => (plasticsRef.current[2] = el)}
+                  />
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[5] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[6] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[7] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[8] = el)}
+                  ></div>
+                </div>
+                <div className=" animate-float">
+                  <img
+                    src={Plastic1}
+                    alt=""
+                    className="absolute left-[-85px] bottom-[300px] w-[210px] animate-float"
+                    ref={(el) => (plasticsRef.current[3] = el)}
+                  />
+                  <div
+                    className="micros opacity-0 rounded-full absolute left-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[9] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute left-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[10] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute left-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[11] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute left-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[12] = el)}
+                  ></div>
+                </div>
 
+                <div className=" animate-float">
+                  <img
+                    src={Plastic2}
+                    alt=""
+                    className="absolute right-[-40px] bottom-[80px] w-[180px] animate-float"
+                    ref={(el) => (plasticsRef.current[4] = el)}
+                  />
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[-10px] bottom-[140px] bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[13] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[40px] bottom-[60px] bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[14] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[-20px] bottom-[80px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[15] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[40px] bottom-[120px] bg-blue-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[16] = el)}
+                  ></div>
+                </div>
 
-            </div>
+                <div className=" animate-float">
+                  <img
+                    src={Plastic1}
+                    alt=""
+                    className="absolute right-[120px] bottom-[-70px] w-[200px] animate-float"
+                    ref={(el) => (plasticsRef.current[5] = el)}
+                  />
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[190px] bottom-[40px] bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[17] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[240px] bottom-[20px] bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[18] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[190px] bottom-[-20px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[19] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[230px] bottom-[-40px] bg-blue-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[20] = el)}
+                  ></div>
+                </div>
 
+                <div className=" animate-float">
+                  <img
+                    src={Plastic2}
+                    alt=""
+                    className="absolute right-[160px] bottom-[400px] w-[160px] animate-float"
+                    ref={(el) => (plasticsRef.current[6] = el)}
+                  />
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[190px] bottom-[400px] bg-yellow-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[21] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[180px] bottom-[450px] bg-green-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[22] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[240px] bottom-[430px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[23] = el)}
+                  ></div>
+                  <div
+                    className="micros opacity-0 rounded-full absolute right-[220px] bottom-[490px] bg-red-600 w-[9px] h-[15px]"
+                    ref={(el) => (microsRef.current[24] = el)}
+                  ></div>
+                </div>
 
-           <div className=" animate-float">
-              <img
-                src={Plastic3}
-                alt=""
-                className="absolute right-[-40px] bottom-[300px] w-32 animate-float"
-                ref={(el) => (plasticsRef.current[2] = el)}
-              />
-              <div className='micros opacity-0 rounded-full absolute right-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[5] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[6] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[7] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[8] = el)} ></div>
-
-
-
-            </div>
-            <div className=" animate-float">
-              <img
-                src={Plastic1}
-                alt=""
-                className="absolute left-[-85px] bottom-[300px] w-[210px] animate-float"
-                ref={(el) => (plasticsRef.current[3] = el)}
-              />
-              <div className='micros opacity-0 rounded-full absolute left-[-40px] bottom-[300px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[9] = el)}  ></div>
-              <div className='micros opacity-0 rounded-full absolute left-[-20px] bottom-[350px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[10] = el)}  ></div>
-              <div className='micros opacity-0 rounded-full absolute left-[0px] bottom-[300px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[11] = el)}  ></div>
-              <div className='micros opacity-0 rounded-full absolute left-[10px] bottom-[350px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[12] = el)}  ></div>
-
-
-
-            </div>
-
-            <div className=" animate-float">
-              <img
-                src={Plastic2}
-                alt=""
-                className="absolute right-[-40px] bottom-[80px] w-[180px] animate-float"
-                ref={(el) => (plasticsRef.current[4] = el)}
-              />
-              <div className='micros opacity-0 rounded-full absolute right-[-10px] bottom-[140px] bg-yellow-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[13] = el)}  ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[40px] bottom-[60px] bg-green-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[14] = el)}  ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[-20px] bottom-[80px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[15] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[40px] bottom-[120px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[16] = el)}  ></div>
-
-            </div>
-
-            <div className=" animate-float">
-              <img
-                src={Plastic1}
-                alt=""
-                className="absolute right-[120px] bottom-[-70px] w-[200px] animate-float"
-                ref={(el) => (plasticsRef.current[5] = el)}
-              />
-              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[40px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[17] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[240px] bottom-[20px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[18] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[-20px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[19] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[230px] bottom-[-40px] bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[20] = el)}  ></div>
-            </div>
-
-
-            <div className=" animate-float">
-              <img
-                src={Plastic2}
-                alt=""
-                className="absolute right-[160px] bottom-[400px] w-[160px] animate-float"
-                ref={(el) => (plasticsRef.current[6] = el)}
-              />
-              <div className='micros opacity-0 rounded-full absolute right-[190px] bottom-[400px] bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[21] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[180px] bottom-[450px] bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[22] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[240px] bottom-[430px] bg-red-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[23] = el)} ></div>
-              <div className='micros opacity-0 rounded-full absolute right-[220px] bottom-[490px] bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[24] = el)} ></div>
-            </div>
- 
-
-        
-{/* 
+                {/* 
             
             
 
@@ -383,12 +440,13 @@ body::-webkit-scrollbar-track {
               <div className='rounded-full bg-red-600 w-[9px] h-[15px]' ></div>
 
             </div> */}
+              </div>
+            </div>
           </div>
-          </div>  
-        </div>
 
-        {/* Info Boxes and Scroll Down Section */}
-        {/* <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+          {/* Info Boxes and Scroll Down Section */}
+          <PoliceSiren></PoliceSiren>
+          {/* <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
         }} data-aos="fade-right"
         data-aos-offset="100"
@@ -424,68 +482,103 @@ body::-webkit-scrollbar-track {
             <IoIosArrowDropdown size={50} className="animate-bounce" />
           </div>
         </div> */}
-      </div>
 
-      {/* New Section and Ocean Component */}
-      <section className=" new-section relative">
-
-        <div className="items-center justify-center h-auto grid grid-cols-2">
-          <div>
-        <img src={Micros} alt="" className="absolute top-[280px] left-[210px] lg:w-[270px] xl:w-[320px]" />
-
-          <div className="next-section flex items-center justify-center h-screen px-20 text-white">
-          
+          <div className="absolute left-14 top-56" data-aos="fade-right" data-aos-duration="2000">
+            <h1 className="text-[52px] font-inter font-bold text-white max-w-[200px] uppercase">
+              Tiny Plastics, Big Problem
+            </h1>
           </div>
+
+          <div className="absolute right-14 top-56" data-aos="fade-left" data-aos-duration="2000">
+            <h1 className="text-[52px] font-inter font-bold text-right text-white max-w-[300px] uppercase">
+              We’re here with the solution.
+            </h1>
           </div>
-          <div className="w-[80%] reach col-span-1">
-            <style>{glowStyle}</style>
-            <div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
-              <div className="sun">
-                <div className="ray_box">
-                  <div className="ray ray1"></div>
-                  <div className="ray ray2"></div>
-                  <div className="ray ray3"></div>
-                  <div className="ray ray4"></div>
-                  <div className="ray ray5"></div>
-                  <div className="ray ray6"></div>
-                  <div className="ray ray7"></div>
-                  <div className="ray ray8"></div>
-                  <div className="ray ray9"></div>
-                  <div className="ray ray10"></div>
+          <div className="absolute right-14 top-[780px]">
+             <ScrollDown></ScrollDown>
+           
+          </div>
+
+          {/* <div className="fixed bottom-12 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div className="w-10 h-10 border-b-4 border-r-4 rounded-sm border-white transform rotate-45 animate-pulse"></div>
+          </div> */}
+
+        </div>
+
+        {/* New Section and Ocean Component */}
+        <section className=" new-section relative">
+          <div className="items-center justify-center h-auto grid grid-cols-2">
+            <div>
+              <img
+                src={Micros}
+                alt=""
+                className="absolute top-[280px] left-[210px] lg:w-[270px] xl:w-[320px]"
+              />
+
+              <div className="next-section flex items-center justify-center h-screen px-20 text-white"></div>
+            </div>
+            <div className="w-[80%] reach col-span-1">
+              <style>{glowStyle}</style>
+              <div className="rounded-full w-[170px] h-[170px] absolute top-4 right-[650px] bg-white glow">
+                <div className="sun">
+                  <div className="ray_box">
+                    <div className="ray ray1"></div>
+                    <div className="ray ray2"></div>
+                    <div className="ray ray3"></div>
+                    <div className="ray ray4"></div>
+                    <div className="ray ray5"></div>
+                    <div className="ray ray6"></div>
+                    <div className="ray ray7"></div>
+                    <div className="ray ray8"></div>
+                    <div className="ray ray9"></div>
+                    <div className="ray ray10"></div>
+                  </div>
                 </div>
               </div>
+
+              <h2
+                className="text-[45px] ml-12 text-white font-nohemi_sb mb-4"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
+                WHAT ARE THEY?
+              </h2>
+              {/* <img src={Micros} alt="" className="z-100 w-96" /> */}
+
+              <p
+                className="text-lg text-white leading-relaxed font-nohemi_r"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
+                Microplastics are small plastic particles less than 5mm in size,
+                which are pervasive in our environment. They come from a variety
+                of sources, including the breakdown of larger plastic debris,
+                microbeads in personal care products, and synthetic fibers from
+                textiles. These tiny particles pose significant risks to marine
+                ecosystems, as they are ingested by marine organisms and can
+                cause physical harm, chemical contamination, and even enter the
+                human food chain.
+              </p>
             </div>
-
-
-            <h2 className="text-[45px] ml-12 text-white font-nohemi_sb mb-4" data-aos="fade-left" data-aos-duration="2000">WHAT ARE THEY?</h2>
-            {/* <img src={Micros} alt="" className="z-100 w-96" /> */}
-
-            <p className="text-lg text-white leading-relaxed font-nohemi_r" data-aos="fade-left" data-aos-duration="2000">
-              Microplastics are small plastic particles less than 5mm in size, which are pervasive in our environment. They come from a variety of sources, including the breakdown of larger plastic debris, microbeads in personal care products, and synthetic fibers from textiles. These tiny particles pose significant risks to marine ecosystems, as they are ingested by marine organisms and can cause physical harm, chemical contamination, and even enter the human food chain.
-            </p>
-            
           </div>
-        </div>
 
-        <div className="container2">
-          <section className="new-sec">
-            <div className="wave wave1"></div>
-            <div className="wave wave2"></div>
-            <div className="wave wave3"></div>
-            <div className="wave wave4"></div>
-          </section>
-          <div className="wdiv  px-28">
-            <Ocean />
-
+          <div className="container2">
+            <section className="new-sec">
+              <div className="wave wave1"></div>
+              <div className="wave wave2"></div>
+              <div className="wave wave3"></div>
+              <div className="wave wave4"></div>
+            </section>
+            <div className="wdiv  px-28">
+              <Ocean />
+            </div>
           </div>
+        </section>
+        <div>
+          <Food />
         </div>
-      </section>
-        <div >
-    <Food />
+      </div>
     </div>
-      </div>
-     
-      </div>
   );
 };
 

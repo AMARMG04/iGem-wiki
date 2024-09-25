@@ -2,8 +2,8 @@ import React from 'react';
 
 const ScrollDown = () => {
   return (
-    <div className="relative flex items-center justify-center h-screen bg-[#0b1d2a]">
-      <svg className="arrows w-15 h-18 absolute left-1/2 transform -translate-x-1/2 bottom-5">
+    <div className="w-full">
+      <svg className="arrows absolute bottom-12 left-1/2 right-1/2 transform -translate-x-1/2">
         <path className="a1" d="M0 0 L30 32 L60 0"></path>
         <path className="a2" d="M0 20 L30 52 L60 20"></path>
         <path className="a3" d="M0 40 L30 72 L60 40"></path>
@@ -13,7 +13,7 @@ const ScrollDown = () => {
         .arrows path {
           stroke: #2994D1;
           fill: transparent;
-          stroke-width: 1px;  
+          stroke-width: 4px;  
           animation: arrow 2s infinite;
         }
 
