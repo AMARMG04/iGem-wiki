@@ -22,6 +22,23 @@
     url("./src/assets/PlusJakartaSans.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "Abster";
+    src: local("Abster"),
+    url("./src/assets/Abster.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Mono";
+    src: local("Monometric"),
+    url("./src/assets/Monometric.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Nike";
+    src: local("Nikea"),
+    url("./src/assets/NIKEA.otf") format("opentype");
+}
 
 @font-face {
     font-family: "Thin";

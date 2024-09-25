@@ -268,7 +268,7 @@ body::-webkit-scrollbar-track {
     <div className="bg-black h-fit  overflow-hidden">
       <div className="text-black z-20 lg:h-[80%] xl:h-[100vh] relative">
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] font-keania" data-aos="fade-up"
+          <h1 className="text-center text-white font-bold lg:text-[75px] xl:text-[100px] mt-6 font-abster" data-aos="fade-up"
      data-aos-duration="2000">
             PLASTICOPS
           </h1>
@@ -388,7 +388,7 @@ body::-webkit-scrollbar-track {
         </div>
 
         {/* Info Boxes and Scroll Down Section */}
-        <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
+        {/* <div className="absolute left-24 top-50 p-4 py-6 rounded-[13px] bg-violet-800 border-2 border-[#9d57f7]/[0.47] text-white" style={{
           boxShadow: "0px 0px 175.5799560546875px 0 #680783, 0px 0px 271.760009765625px 0 #680783, 0px 0px 231.8599853515625px 0 #680783, 0px 0px 65.92999267578125px 0 #680783, 0px 0px 20.97999954223633px 0 #680783, 0px 0px 7.989999771118164px 0 #680783",
         }} data-aos="fade-right"
         data-aos-offset="100"
@@ -423,7 +423,7 @@ body::-webkit-scrollbar-track {
           <div className="text-center items-center justify-center flex">
             <IoIosArrowDropdown size={50} className="animate-bounce" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* New Section and Ocean Component */}

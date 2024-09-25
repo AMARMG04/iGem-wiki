@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { contents, links } from "../data/table";
+import { contents, contents2, links } from "../data/table";
 import NewBanner from "../components/NewBanner";
 import Navbar from "../components/Navbar";
 
@@ -112,7 +112,7 @@ const Parts = () => {
                   majority of the microplastics present. These chosen peptides
                   are hydrophobic in nature and therefore carry an affinity for
                   these microplastics due to their hydrophobic nature as well.
-                  We further equip this fusion protein with a 6X His tag for
+                  We further equip these peptides with a 6X His tag for
                   efficient purification with the Ni-NTA affinity column. <br /><br />
                   Molecular dynamics simulations, in conjunction with
                   experiments through in vitro has established that the moieties
@@ -182,25 +182,25 @@ const Parts = () => {
                         <tr className="divide-x divide-gray-200">
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[2%]"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[5%]"
                           >
                             Type
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[5%]"
                           >
                             Description
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[2%]"
                           >
                             Length
                           </th>
@@ -220,12 +220,12 @@ const Parts = () => {
                             className="divide-x"
                           >
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
-                              {item.name}
+                            <a href={item.link} target="_blank" className="text-blue-500 underline">{item.name}</a>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.type}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-wrap text-md text-gray-800">
                               {item.description}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
@@ -261,25 +261,25 @@ const Parts = () => {
                         <tr className="divide-x divide-gray-200">
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[2%]"
                           >
                             Name
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[5%]"
                           >
                             Type
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[5%]"
                           >
                             Description
                           </th>
                           <th
                             scope="col"
-                            className="px-6 py-3 text-center text-xs  text-black uppercase"
+                            className="px-6 py-3 text-center text-xs  text-black uppercase w-[2%]"
                           >
                             Length
                           </th>
@@ -292,19 +292,19 @@ const Parts = () => {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-gray-200 font-regular font-inter">
-                        {contents.map((item, index) => (
+                        {contents2.map((item, index) => (
                           <tr
                             key={index}
                             id={item.part}
                             className="divide-x"
                           >
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
-                              {item.name}
+                              <a href={item.link} target="_blank" className="text-blue-500 underline">{item.name}</a>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
                               {item.type}
                             </td>
-                            <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
+                            <td className="px-6 py-4 whitespace-nowrap text-wrap text-md text-gray-800">
                               {item.description}
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap text-md text-gray-800">
