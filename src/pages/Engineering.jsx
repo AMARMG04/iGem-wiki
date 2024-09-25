@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Cycle from "../components/Cycle";
 import NewBanner from "../components/NewBanner"
 import Navbar from "../components/Navbar"
+import DenationCard_Engg from "../components/DenationCard_Engg";
 
 const Engineering = () => {
   const content1 = {
@@ -18,6 +19,7 @@ const Engineering = () => {
     <div className="bg-customCream">
       <Navbar></Navbar>
       <NewBanner title="Engineering" color="customCream" />
+      <DenationCard_Engg/>
       <Cycle content={content1} position="left" title="Cycle 1" />
       <Cycle content={content1} position="right" title="Cycle 2" />
       <Cycle content={content1} position="left" title="Cycle 3" />

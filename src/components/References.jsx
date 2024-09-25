@@ -26,18 +26,18 @@ export default function References({references}) {
       >
         <div className="">
           {references.map((ref, index) => (
-            <a href={ref.link} target="_blank">
+            <a href={ref.DOI} target="_blank">
               <div
                 key={index}
                 className="border-b py-8 p-4 space-y-4 hover:bg-indigo-700 hover:text-white"
               >
-                <h3 className="font-nohemi_m text-2xl">{ref.title} {ref.year}</h3>
+                <h3 className="font-nohemi_m text-2xl">{ref.title} ({ref.year})</h3>
                 <p className="text-md font-inter font-medium">
-                  {ref.authors}
+                  {ref.author}
                 </p>
                 <div className="flex justify-between font-inter font-semibold">
                 <p>{ref.volume !== "NA" ? `${ref.journal}, ${ref.volume}` : ref.journal}</p>
-                {ref.page !== "NA" && <p>{ref.page}</p>}
+                {ref.pages !== "NA" && <p>{ref.pages}</p>}
                 </div>
               </div>
             </a>

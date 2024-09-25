@@ -36,6 +36,7 @@ export default {
         float: 'float 3s ease-in-out infinite',
         blob: "blob 10s infinite",
       },
+      
       fontFamily: {
         nohemi_l: ["Light", "sans-serif"],
         nohemi_t: ["Thin", "sans-serif"],
@@ -44,7 +45,12 @@ export default {
         nohemi_sb: ["SemiBold", "sans-serif"],
         nohemi_b: ["Bold", "sans-serif"],
         nohemi_eb: ["ExtraBold", "sans-serif"],
-        inter: ["variable", "sans-serif"]
+        inter: ["variable", "sans-serif"],
+        abster: ["Abster", "sans"],
+        monometric: ["Mono", "sans"],
+        biggerdisplay: ["Bigger", "sans"],
+        nike: ["Nike", "sans"],
+      
       },
       backgroundImage:{
         'hero-bg': "url('./src/assets/footer-bg2.jpg')",
