@@ -19,6 +19,7 @@ import Education from "./pages/Education"
 import Modeling from "./pages/Modeling"
 import Safety from "./pages/Safety";
 import Implementation from "./pages/Implementation";
+import Game from "./pages/Game";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='/modeling' element={<Modeling />} />
         <Route path='/safety' element={<Safety />} />
         <Route path='/implementation' element={<Implementation />} />
+        <Route path='/game' element={<Game />} />
       </Routes>
       <Footer />
       {/* <Mentors /> */}

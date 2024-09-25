@@ -96,13 +96,14 @@ const NewNavbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a
-              href="https://igem-plasticop.netlify.app"
-              className="text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-3 rounded-md"
-            >
-              Play A Game
-            </a>
-          </div>
+  <a
+    href="/game" 
+    className="text-white font-nohemi_r bg-gradient-to-r from-blue-900 to-pink-700 py-2 px-3 rounded-md"
+  >
+    Play A Game
+  </a>
+</div>
+
           <div className="lg:hidden md:flex flex-col justify-end">
             <button onClick={toggleNavbar}>
               {mobileDrawerOpen ? <X /> : <Menu />}

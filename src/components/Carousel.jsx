@@ -122,13 +122,13 @@ const Carousel = ({ team_members }) => {
                 <div className="absolute inset-0 flex justify-between items-center px-5">
                   <button
                     onClick={handlePrevSlide}
-                    className="bg-black/30 backdrop-blur-lg border border-white/30 shadow-lg pl-8 rounded-full hover:bg-white/50 transition duration-300"
+                    className="bg-black/30 backdrop-blur-lg border border-white/30 shadow-lg pl-8 rounded-full hover:bg-black transition duration-300"
                   >
                     <IoMdArrowDropleftCircle className="text-white text-6xl" />
                   </button>
                   <button
                     onClick={handleNextSlide}
-                    className="bg-black/30 backdrop-blur-lg border border-white/30 shadow-lg pr-8 rounded-full hover:bg-white/50 transition duration-300"
+                    className="bg-black/30 backdrop-blur-lg border border-white/30 shadow-lg pr-8 rounded-full hover:bg-black transition duration-300"
                   >
                     <IoMdArrowDroprightCircle className="text-white text-6xl" />
                   </button>
