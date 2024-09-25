@@ -285,10 +285,10 @@ body::-webkit-scrollbar-track {
                 className="absolute left-0 bottom-[45px] w-32 animate-float"
                 ref={(el) => (plasticsRef.current[1] = el)}
               />
-              <div className='micros z-0 opacity-0 rounded-full absolute left-10 bottom-[40px]  bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[1] = el)} ></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-20 bottom-[60px]  bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[2] = el)}></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-50 bottom-[80px]  bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[3] = el)}></div>
-              <div className='micros z-0 opacity-0 rounded-full absolute left-[40px] bottom-[120px]  bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[4] = el)} ></div>
+              <div className='micros z-40 opacity-0 rounded-full absolute left-10 bottom-[40px]  bg-blue-600 w-[9px] h-[15px]' ref={(el) => (microsRef.current[1] = el)} ></div>
+              <div className='micros z-40 opacity-0 rounded-full absolute left-20 bottom-[60px]  bg-red-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[2] = el)}></div>
+              <div className='micros z-40 opacity-0 rounded-full absolute left-50 bottom-[80px]  bg-yellow-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[3] = el)}></div>
+              <div className='micros z-40 opacity-0 rounded-full absolute left-[40px] bottom-[120px]  bg-green-600 w-[9px] h-[15px]'  ref={(el) => (microsRef.current[4] = el)} ></div>
 
 
 
@@ -354,7 +354,7 @@ body::-webkit-scrollbar-track {
             </div>
 
 
-            <div className=" animate-float">
+            <div className="z-50 animate-float">
               <img
                 src={Plastic2}
                 alt=""

@@ -93,7 +93,7 @@ const Ocean = () => {
   // };
 
   return (
-    <div className='grid grid-cols-1 ocean relative'>
+    <div className='grid grid-cols-1  ocean relative'>
       {/* Fish Background */}
       <div className='absolute inset-0 overflow-hidden'>
         <img

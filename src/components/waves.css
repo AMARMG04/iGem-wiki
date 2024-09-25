@@ -78,4 +78,5 @@ body, html {
 .wdiv {
     flex:3; /* Allow this div to grow and fill remaining space */
     background-color: #183E8F;
+    z-index: 0;
 }
