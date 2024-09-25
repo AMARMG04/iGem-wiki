@@ -94,7 +94,7 @@ const DenationCard_Engg = () => {
           <div className="text-4xl font-nohemi_b text-gray-800 mb-2">
             Design
           </div>
-          <div className="text-2xl font-nohemi_b text-gray-800 mb-2">
+          <div className="text-2xl font-nohemi_m text-gray-800 mb-2">
             Creating engaging user interfaces.
           </div>
           <div className="border-t-2 border-gray-200 w-full mt-2"></div>
@@ -115,7 +115,7 @@ const DenationCard_Engg = () => {
           <div className="text-4xl font-nohemi_b text-gray-800 mb-2">
             Build
           </div>
-          <div className="text-2xl font-nohemi_b text-gray-800 mb-2">
+          <div className="text-2xl font-nohemi_m text-gray-800 mb-2">
             Developing functional applications.
           </div>
           <div className="border-t-2 border-gray-200 w-full mt-2"></div>
@@ -136,7 +136,7 @@ const DenationCard_Engg = () => {
           <div className="text-4xl font-nohemi_b text-gray-800 mb-2">
             Test
           </div>
-          <div className="text-2xl font-nohemi_b text-gray-800 mb-2">
+          <div className="text-2xl font-nohemi_m text-gray-800 mb-2">
             Ensuring quality and performance.
           </div>
           <div className="border-t-2 border-gray-200 w-full mt-2"></div>
@@ -157,7 +157,7 @@ const DenationCard_Engg = () => {
           <div className="text-4xl font-nohemi_b text-gray-800 mb-2">
             Learn
           </div>
-          <div className="text-2xl font-nohemi_b text-gray-800 mb-2">
+          <div className="text-2xl font-nohemi_m text-gray-800 mb-2">
             Continuous knowledge acquisition.
           </div>
           <div className="border-t-2 border-gray-200 w-full mt-2"></div>
