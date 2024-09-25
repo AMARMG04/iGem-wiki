@@ -172,7 +172,7 @@ const Food = () => {
             <div className='z-50 micro-plastics rounded-full absolute right-[30px] top-[190px] bg-yellow-600 w-[9px] h-[15px]' ref={microRef8}></div>
           </div>
           <div className="col-span-1 justify-start" data-aos="fade-left" data-aos-duration="2000">
-            <p className='font-nohemi_l text-justify text-[25px] text-white pt-9 mr-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
+            <p className='font-nohemi_l text-justify text-[35px] text-white pt-9 mr-[100px]'>When humans eat contaminated seafood or crops, microplastics enter the body through biomagnification. .</p>
           </div>
         </div>
 
@@ -180,7 +180,7 @@ const Food = () => {
         <div className='mt-[180px]'>
           <div className="grid grid-cols-2 body-image" data-aos="fade-right" data-aos-duration="2000">
             <div className="col-span-1 justify-start">
-              <p className='font-nohemi_l text-justify text-[25px] text-white pt-9 ml-[100px]'>Lorem ipsum dolor sit amet consectetur...</p>
+              <p className='font-nohemi_l text-justify text-[25px] text-white pt-9  ml-[100px]'>These toxic particles can accumulate in the bloodstream, liver, kidneys, and placenta, leading to oxidative stress, gastrointestinal issues, and immune system damage.</p>
             </div>
             <div className="col-span-1 flex mx-auto items-center justify-center" data-aos="fade-left" data-aos-duration="2000">
               <img src={Body} alt="Body" className='w-[600px] mb-20 z-0' />

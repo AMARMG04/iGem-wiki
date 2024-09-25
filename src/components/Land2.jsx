@@ -112,44 +112,26 @@ const Land2 = () => {
         </div>
 
         <div className="absolute top-[-400px] ml-12">
+      
           <h1
-            className="font-nohemi_sb text-3xl pb-3"
+            className="font-nohemi_r  text-[25px] w-1/3 text-justify"
             data-aos="fade-right"
             data-aos-duration="2000"
           >
-            Heading
-          </h1>
-          <h1
-            className="font-nohemi_r text-xl w-1/3 text-justify"
-            data-aos="fade-right"
-            data-aos-duration="2000"
-          >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-            voluptates nostrum? Amet recusandae porro iure tenetur illo
-            explicabo est accusamus. Consequatur eaque illo dolor soluta fuga
-            quo voluptatem architecto quam. Lorem ipsum dolor sit amet
-            consectetur adipisicing elit. Corporis, voluptates nostrum? Amet
-            recusandae porro iure tenetur illo explicabo est accusamus.
-          </h1>
+Microplastics contaminate soil through fertilizers, sewage sludge, and wastewater, eventually entering our food supply through crops          </h1>
         </div>
 
         <div className="rightside absolute top-[-395px] left-[1000px]">
-          <h1
-            className="font-nohemi_sb text-3xl pb-3"
-            data-aos="fade-left"
-            data-aos-duration="2000"
-          >
-            Heading
-          </h1>
+      
 
           <h1
-            className="font-nohemi_r text-xl w-4/5 text-justify"
+            className="font-nohemi_r text-[25px]  w-4/5 text-justify"
             data-aos="fade-left"
             data-aos-duration="2000"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            totam autem harum optio numquam magni nihil illum! Dolorem, ut? Et
-            vitae natus magnam, culpa reprehenderit ipsa aut odio veniam ea.
+        Bringing these invisible pollutants straight to our plates. 
+Moving from plant to human body
+
           </h1>
         </div>
       </div>

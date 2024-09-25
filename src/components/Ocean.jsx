@@ -156,7 +156,7 @@ const Ocean = () => {
 
         {/* Content Sections */}
         <h1 className='pt-[70px] pb-[20px] text-center text-white font-nohemi_m text-[70px]'>
-                    How It Affects The Ocean
+        Oceans are choking on plastics
                 </h1>
         <div className='grid grid-rows-1'>
           <div className='flex flex-col items-end justify-end pt-35'>
@@ -164,11 +164,9 @@ const Ocean = () => {
               data-aos='fade-left'
               className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
             >
-              <h1 className='text-[50px] font-nohemi_m my-7'>What is it?</h1>
-              <p className='font-nohemi_l'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
-                Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
-                maxime adipisci deserunt sit corporis voluptates!
+              {/* <h1 className='text-[50px] font-nohemi_m my-7'>What is it?</h1> */}
+              <p className='font-nohemi_l my-7 text-[30px]'>
+              With 8 million tons of plastic waste dumped into them annually.
               </p>
             </div>
           </div>
@@ -180,11 +178,9 @@ const Ocean = () => {
               data-aos='fade-left'
               className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
             >
-              <h1 className='text-[50px] font-nohemi_m my-7'>Why is it?</h1>
-              <p className='font-nohemi_l'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
-                Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
-                maxime adipisci deserunt sit corporis voluptates!
+              {/* <h1 className='text-[50px] font-nohemi_m my-7'>Why is it?</h1> */}
+              <p className='font-nohemi_l my-7 text-[30px] justify-center'>
+              These toxic particles block digestive tracts, reduce feeding, and poison marine creatures.
               </p>
             </div>
             <div className=" mt-12 ">
@@ -200,11 +196,9 @@ const Ocean = () => {
               data-aos='fade-left'
               className='text-white w-[600px] text-justify p-4 text-2xl m-20 backdrop-blur-lg'
             >
-              <h1 className='text-[50px] font-nohemi_m my-7'>What is it?</h1>
-              <p className='font-nohemi_l'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nulla incidunt numquam libero?
-                Architecto est molestias odit repudiandae, laboriosam error et consequatur praesentium, assumenda
-                maxime adipisci deserunt sit corporis voluptates!
+              <p className='font-nohemi_l text-[30px] my-7'>
+              This disruption of ecosystems threatens not only marine life but also the global food chain​. 
+
               </p>
             </div>
           </div>
