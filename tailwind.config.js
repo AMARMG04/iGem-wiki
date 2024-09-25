@@ -36,6 +36,7 @@ export default {
         float: 'float 3s ease-in-out infinite',
         blob: "blob 10s infinite",
       },
+      
       fontFamily: {
         nohemi_l: ["Light", "sans-serif"],
         nohemi_t: ["Thin", "sans-serif"],

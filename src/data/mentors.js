@@ -1,6 +1,6 @@
 export const mentors = [
     {
-      name: "Dr M Shankar",
+      name: "Dr M Sankar",
       role: "Primary Investigator",
       image: "/src/assets/Shankar.png",
       description:"As the Head of the Biotechnology Department at Rajalakshmi Engineering College, Dr. M. Sankar brings extensive expertise to his role. His leadership is dedicated to advancing biotechnological research and education, fostering innovation, and mentoring the next generation of scientists. Dr. Sankar is passionate about driving progress and excellence in biotechnology, and his contributions to the field aim to inspire and support both students and colleagues in their scientific endeavors.",
